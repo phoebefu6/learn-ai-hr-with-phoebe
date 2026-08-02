@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 3 · Governing AI in hiring - learn AI + HR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-hr-with-phoebe</a> / Leader session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe · Leader track · Session 3 of 6</div>
+    <h1>Governing AI in hiring: <span class="accent">the machinery that makes a boundary real</span></h1>
+    <p class="sub">A boundary that lives in a slide deck is not a boundary. Tonight you build the three pieces of machinery that make it one: a vendor gate that a salesperson cannot talk their way through, an audit and notice process that runs on a calendar rather than on good intentions, and a record that can still answer a question eight months after the slate closed. Kestrel is 120 roles into a hiring wave with three tools in the funnel and no register of any of them.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">CHROs · HR directors</span>
+      <span class="chip audience">Governance checklist</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The vendor gate</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: gate + escalation</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">Session a1 drew the boundary: AI drafts, a person decides. Session a2 mapped the law around it, from NYC's Local Law 144 to the EU AI Act's Annex III. Both of those are statements of position. Tonight is the part nobody puts on a conference slide, because it looks like admin: the <strong>machinery</strong>. Who asks the vendor the awkward question. Who commissions the audit and who is allowed to run it. Who writes the candidate notice and how many days ahead it goes out. What exists in writing afterwards, and who owns each piece of it. Kestrel's hiring wave is already running, so every one of these has a name attached by the end of the session or it does not exist.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A ten-question vendor gate scored red, amber and green on a tool you already use, a clear view of why the bias audit has to be independent and annual and the notice has to arrive before the tool is used, the six artifacts that make up a defensible record with an owner against each, and a written escalation path for the day an impact check fails.
+    </div>
+    <div class="callout tip">
+      <strong>Read this first</strong>
+      This session is education for HR professionals, not legal advice, and obligations vary by jurisdiction. Everything here is designed so that your own counsel, DPO or regulator can check it. Where a date or a threshold matters, verify the current position rather than quoting a course page - including this one.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE VENDOR GATE ============ -->
+  <section class="section" id="vendor-gate">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers vendor due diligence + the employer's duty</span>
+      <h2>The vendor gate: questions that actually discriminate between vendors <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Every HR tech vendor answers "is your tool fair?" with a yes. That question sorts nothing. The questions that sort are the ones a good vendor can answer in a sentence and a weak vendor has to schedule a call about. Four of them do most of the work.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 336" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A vendor gate of four checkpoints - audited, what data, behaviour when uncertain, and contractual commitment - each with a green and a red signal beneath it">
+        <style>
+          .a3gT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .a3gI { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .a3gX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a3gXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .a3gXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .a3gN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .a3gH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="a3gH" x="30" y="30">THE FOUR THAT SORT VENDORS</text>
+        <rect x="30" y="44" width="195" height="100" rx="12" fill="#6E2A18"/>
+        <text class="a3gT" x="52" y="76">1 Audited?</text>
+        <text class="a3gX" x="52" y="100">independent, annual,</text>
+        <text class="a3gX" x="52" y="118">and may I read it</text>
+        <rect x="240" y="44" width="195" height="100" rx="12" fill="#A6472E"/>
+        <text class="a3gT" x="262" y="76">2 What data?</text>
+        <text class="a3gX" x="262" y="100">which population, and</text>
+        <text class="a3gX" x="262" y="118">validated on whom</text>
+        <rect x="450" y="44" width="195" height="100" rx="12" fill="#C9704F"/>
+        <text class="a3gI" x="472" y="76">3 When unsure?</text>
+        <text class="a3gXi" x="472" y="100">does it abstain, or</text>
+        <text class="a3gXi" x="472" y="118">always emit a score</text>
+        <rect x="660" y="44" width="195" height="100" rx="12" fill="#E9B6A2"/>
+        <text class="a3gI" x="682" y="76">4 In the contract?</text>
+        <text class="a3gXi" x="682" y="100">model changes, exit,</text>
+        <text class="a3gXi" x="682" y="118">and our data back</text>
+        <rect x="30" y="156" width="195" height="48" rx="10" fill="#FBEFE9"/>
+        <text class="a3gXi" x="52" y="180">Green: the report</text>
+        <text class="a3gXi" x="52" y="198">Red: a summary PDF</text>
+        <rect x="240" y="156" width="195" height="48" rx="10" fill="#FBEFE9"/>
+        <text class="a3gXi" x="262" y="180">Green: named sources</text>
+        <text class="a3gXi" x="262" y="198">Red: "proprietary"</text>
+        <rect x="450" y="156" width="195" height="48" rx="10" fill="#FBEFE9"/>
+        <text class="a3gXi" x="472" y="180">Green: it flags doubt</text>
+        <text class="a3gXi" x="472" y="198">Red: always certain</text>
+        <rect x="660" y="156" width="195" height="48" rx="10" fill="#FBEFE9"/>
+        <text class="a3gXi" x="682" y="180">Green: a clause</text>
+        <text class="a3gXi" x="682" y="198">Red: a slide promise</text>
+        <rect x="30" y="222" width="825" height="64" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="a3gI" x="52" y="250">Most teams stall on question two</text>
+        <text class="a3gXw" x="52" y="272">If nobody can say what the tool learned from, nobody can say what it learned.</text>
+        <rect x="30" y="306" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="a3gN" x="54" y="318">The duty to audit and to notify sits on the employer, not only on the vendor.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four checkpoints, each with the answer that passes and the answer that fails</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four questions, and what a real answer sounds like<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Ask these in the room, in this order, and write the answers down verbatim. The wording matters because vague answers survive paraphrasing.</p>
+        <ul>
+          <li><strong>"Has this tool been independently audited for bias, when, by whom, and may I see the report rather than the marketing summary?"</strong> Three of those four clauses do the work. Plenty of vendors have an audit. Fewer have an independent one, fewer still have one from this year, and a small number will hand over the document.</li>
+          <li><strong>"What data was it trained and validated on?"</strong> Which population, from which years, from which labour market, and validated against what outcome. A tool trained on one country's hiring history and sold into another is not obviously wrong, but it is obviously a question.</li>
+          <li><strong>"What does it do when it is uncertain?"</strong> A system that abstains, flags low confidence, or refuses to score a thin application is a system someone designed carefully. One that always returns a confident number has been designed to look decisive, which is a product decision, not a scientific one.</li>
+          <li><strong>"What will you commit to contractually?"</strong> Specifically: notifying you of material model changes, supporting your audit obligation with data, telling you what happens to candidate data, and letting you exit with your records. Everything else is a slide.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The silent model update.</strong> A team ran the same screening tool for two years and was pleased with its consistency. Between one quarter and the next, the vendor shipped a scoring change that nobody told them about, because nothing in the contract required it. The team's own numbers moved and they spent six weeks looking for the cause in their process. The lesson is not that the vendor behaved badly. It is that "tell us when the model changes" was a sentence nobody had asked for, so it did not exist.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The other six questions, and how to score all ten<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Score every answer red, amber or green, and record the score with the date and the person who answered. Amber is a legitimate outcome. "We do not know yet, here is who will find out and by when" is an amber. "Trust us" is a red wearing a smile.</p>
+        <table class="clean">
+          <thead><tr><th>Question</th><th>What green looks like</th></tr></thead>
+          <tbody>
+            <tr><td>5 · What exactly does the tool decide or influence?</td><td>A written description of where it sits in the funnel, which we can verify</td></tr>
+            <tr><td>6 · What happens to our candidates' data?</td><td>Where it is stored, how long, who can see it, whether it trains anything</td></tr>
+            <tr><td>7 · Can a human override it, and is the override recorded?</td><td>Yes, and the override plus the reason lands in an exportable log</td></tr>
+            <tr><td>8 · What accessibility and accommodation provision exists?</td><td>A documented alternative route that does not disadvantage the candidate</td></tr>
+            <tr><td>9 · Which jurisdictions have you supported through an audit?</td><td>Named ones, with what the vendor did and what the employer had to do</td></tr>
+            <tr><td>10 · What have you seen go wrong at other customers?</td><td>A specific story. A vendor with no failure stories has no memory</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>The tell</strong>
+          Question ten is the cheapest question on the list and the most revealing. A vendor who has genuinely deployed into regulated hiring has watched something go sideways and can describe it. A vendor who says "nothing has ever gone wrong" is telling you either that they are new, or that they are not listening to their customers.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why buying does not transfer the duty<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Under NYC Local Law 144, which has been live since 1 January 2023 and enforced by the Department of Consumer and Worker Protection since 5 July 2023, the employer using an automated employment decision tool needs an independent annual bias audit, a public summary of the results, and at least 10 business days' notice to the candidate before the tool is used. Penalties run from $500 per violation up to $1,500 per day for continuing ones. The obligations attach to the employer, not only to the vendor who built the thing.</p>
+        <p>In the EU, Annex III point 4 of the AI Act places recruitment and selection AI - targeted job ads, filtering applications, evaluating candidates - alongside performance evaluation, task allocation, monitoring, promotion and termination in the high-risk category, with obligations on risk management, data governance, technical documentation, record-keeping, transparency, human oversight, accuracy and robustness. Those Annex III obligations were postponed by the Digital Omnibus agreement from 2 August 2026 to <strong>2 December 2027</strong>. That is the position as of mid-2026, and it has moved once already, so check it. None of this is legal advice, and your jurisdiction may differ from both.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: AUDIT AND NOTICE ============ -->
+  <section class="section" id="audit-notice">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the bias audit + the candidate notice</span>
+      <h2>The audit and the notice are processes, not paperwork <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Both of these get treated as documents to produce once and file. They are not documents. They are recurring processes with owners, dates and dependencies, and the moment you draw them as processes you discover they constrain how your funnel is allowed to run.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Independent, annual, and published<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three words, each of which has teeth.</p>
+        <ul>
+          <li><strong>Independent.</strong> Your own data science team scoring your own tool is a useful internal check and it is not an independent audit. Neither, generally, is the vendor auditing the vendor. Someone has to be able to reach an inconvenient conclusion without it costing them a customer or a bonus.</li>
+          <li><strong>Annual.</strong> Not once at procurement. A cadence, on a calendar, with a named commissioner who books it before the wave rather than after the complaint. If the audit is older than a year when the tool is in use, the cadence has quietly lapsed.</li>
+          <li><strong>Published.</strong> A public summary of the results is a very different artifact from an internal memo, and writing something you know will be read outside the building changes what you are willing to leave vague. That is a feature.</li>
+        </ul>
+        <p>Practically, someone owns commissioning it, someone owns supplying the data to the auditor, someone owns reviewing the findings, someone owns publishing the summary, and someone owns the actions that come out of it. In most organisations at least three of those five are the same overworked person, which is fine as long as it is written down.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The audit that could not be run.</strong> A people team commissioned an independent audit, got a quote, signed it, and then discovered the auditor needed selection outcomes broken down by monitored group per stage of the funnel. Their ATS could export applicants and hires but not the stages in between, and the screening tool's scores were not exportable at all. The audit slipped a quarter, not for legal reasons but for plumbing ones. Ask the auditor what data they need <em>before</em> you buy the tool, and put the answer in question four.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The notice is a calendar problem<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The candidate notice looks like copywriting. It is scheduling. Notice has to arrive <em>before</em> the tool is used on the candidate, and NYC's floor is at least 10 business days ahead. Ten business days is two working weeks. That has consequences your talent team will feel immediately.</p>
+        <ul>
+          <li><strong>It sets a floor under your funnel speed.</strong> A role posted Monday cannot have its applications machine-screened on Wednesday if the notice went out with the posting. Either the notice goes out earlier, or the screen happens later, or the screen does not happen.</li>
+          <li><strong>It has to reach people who never apply.</strong> If a tool is used at the sourcing stage, the notice question arrives before the application does, which is a different plumbing problem entirely.</li>
+          <li><strong>Somebody writes it, and it should not be the vendor.</strong> The notice describes your process, including the parts the vendor knows nothing about. HR writes it, compliance checks it, and talent operations owns delivering it on time.</li>
+          <li><strong>It has to be true.</strong> The fastest way to find an ungoverned tool is to try to write an honest notice and discover a sentence you cannot write.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The test that costs nothing</strong>
+          Take your current job posting flow and mark the day each candidate first meets an automated step. Then count backwards. If the notice cannot be sent by that day with the lead time your jurisdiction requires, you have found the design change, and you have found it before a regulator did.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the notice should actually say<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Short, specific and in the candidate's language. Four things: what automated tools are used and at which stage, what they are used for and what they are not used for, that a named human makes the decision, and how to request a human review or an accommodation. Add the qualifications or characteristics the tool considers, and where required, how to ask about the data retention policy.</p>
+        <p>Avoid two temptations. The first is legal padding, which converts a notice into something nobody reads and no regulator admires. The second is soft language - "we may use technology to help us" - which is not a notice, it is a hedge. If you cannot describe the tool plainly, you do not understand the tool well enough to be using it on people.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE RECORD ============ -->
+  <section class="section" id="the-record">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers record-keeping + human oversight evidence</span>
+      <h2>The record: six things that must exist afterwards <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Rail 1 says a person decides and the record shows which person. This is what "the record" means in practice. It is not a folder. It is six specific artifacts, each with an owner, produced at the time rather than assembled later.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 416" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A stack of six record artifacts - criteria, slate, evidence, named decision-maker, impact check and tool version - each paired with the person or system that owns it">
+        <style>
+          .a3rT { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a3rXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .a3rN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .a3rH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="a3rH" x="30" y="30">WHAT MUST EXIST AFTERWARDS</text>
+        <text class="a3rH" x="512" y="30">WHO OWNS IT</text>
+        <rect x="30" y="44" width="470" height="42" rx="10" fill="#6E2A18"/>
+        <text class="a3rT" x="50" y="70">The criteria used, in job-related language</text>
+        <rect x="512" y="44" width="343" height="42" rx="10" fill="#FBEFE9"/>
+        <text class="a3rXi" x="532" y="70">Hiring manager, countersigned by HR</text>
+        <rect x="30" y="94" width="470" height="42" rx="10" fill="#6E2A18"/>
+        <text class="a3rT" x="50" y="120">The slate: who applied, who advanced, who did not</text>
+        <rect x="512" y="94" width="343" height="42" rx="10" fill="#FBEFE9"/>
+        <text class="a3rXi" x="532" y="120">The ATS, exported per wave</text>
+        <rect x="30" y="144" width="470" height="42" rx="10" fill="#A6472E"/>
+        <text class="a3rT" x="50" y="170">The evidence behind every rating</text>
+        <rect x="512" y="144" width="343" height="42" rx="10" fill="#FBEFE9"/>
+        <text class="a3rXi" x="532" y="170">Each rater, the same day</text>
+        <rect x="30" y="194" width="470" height="42" rx="10" fill="#A6472E"/>
+        <text class="a3rT" x="50" y="220">The named decision-maker, the reason, the date</text>
+        <rect x="512" y="194" width="343" height="42" rx="10" fill="#FBEFE9"/>
+        <text class="a3rXi" x="532" y="220">The person who decided</text>
+        <rect x="30" y="244" width="470" height="42" rx="10" fill="#C9704F"/>
+        <text class="a3rXi" x="50" y="270">The impact check, its inputs and its result</text>
+        <rect x="512" y="244" width="343" height="42" rx="10" fill="#FBEFE9"/>
+        <text class="a3rXi" x="532" y="270">Named in advance, not volunteered</text>
+        <rect x="30" y="294" width="470" height="42" rx="10" fill="#E9B6A2"/>
+        <text class="a3rXi" x="50" y="320">The tool, its version and its settings that day</text>
+        <rect x="512" y="294" width="343" height="42" rx="10" fill="#FBEFE9"/>
+        <text class="a3rXi" x="532" y="320">Whoever keeps the tool register</text>
+        <rect x="30" y="344" width="825" height="36" rx="10" fill="#FBEFE9"/>
+        <text class="a3rXi" x="52" y="367">A challenge arrives eight months later, and a reconstructed rationale reads exactly like one.</text>
+        <rect x="30" y="390" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="a3rN" x="54" y="402">Keep the slate, not just the outcome. An impact check needs who was in the pool.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - six artifacts, and the named owner who has to produce each one</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why it has to be written at the time<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Because a rationale written after a challenge lands is a rationale written by someone who already knows there is a challenge, and everybody reading it knows that. The document is not lying. It simply cannot carry the weight you need it to carry.</p>
+        <ul>
+          <li><strong>Criteria before the slate, not after it.</strong> Criteria written after you have seen the candidates are a description of your preferences with job-related vocabulary applied.</li>
+          <li><strong>The slate matters as much as the outcome.</strong> Who was in the pool is the denominator of every fairness number you will ever need. Systems that only keep hires throw the denominator away.</li>
+          <li><strong>Human oversight has to leave a trace.</strong> The AI Act's oversight expectations, and any serious auditor, will look for evidence that a person could have said no and sometimes did. An override log with zero overrides in it is a finding, not a clean record.</li>
+          <li><strong>Version the tool.</strong> "The screen scored her 62" is meaningless in eighteen months unless you can say which screen, configured how.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The rejection nobody could explain.</strong> Eleven months after a hiring wave closed, a candidate asked why they had not progressed. The team still had the outcome, the ATS status and a date. They did not have the criteria used at the time, the evidence behind the rating, or the name of the person who made the call, because the manager who ran it had left. Three people spent two days reconstructing a story that was probably true and looked exactly like a story reconstructed over two days. Recording it live would have cost about ninety seconds.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Retention, access and the tool register<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Keep it long enough to answer a challenge, no longer.</strong> Retention that is too short leaves you defenceless and retention that is indefinite is its own data protection problem. Your DPO sets the number, and it belongs in writing next to the record itself.</li>
+          <li><strong>Decide who can read it.</strong> Decision records contain judgements about identifiable people. Access should be narrower than the ATS as a whole.</li>
+          <li><strong>Keep a tool register.</strong> Every tool touching the funnel, what it does, whether it substantially assists a decision, when it was last audited, who the vendor contact is, and which of your ten gate answers were amber. Most organisations do not have this list, which is why most organisations cannot answer the AEDT question quickly.</li>
+          <li><strong>Include the things nobody calls AI.</strong> CV parsers, knockout questions, keyword filters and ranked search all sit in the funnel and can filter a person out before a human sees them.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Run the vendor gate on a tool you already use <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Not a tool you are evaluating. One that is live in your funnel right now, ideally one nobody thinks of as AI. Ten questions, honest answers, one colour per answer. Most teams discover they cannot answer question two.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick the tool. If your instinct is to pick the newest, resist it and pick the oldest instead - the one that arrived before anyone was watching.</p></div>
+      <div class="step"><p>Write the ten questions down the left of a page. Answer each one from what you actually know today, not from what you could find out. Blank is a legitimate answer and it scores red.</p></div>
+      <div class="step"><p>Colour each answer. Green means you have the artifact. Amber means you know who will get it and by when. Red means nobody in your organisation knows.</p></div>
+      <div class="step"><p>Count the reds. Then decide, out loud, whether the tool keeps running while they are open. That decision is the actual governance moment, and it belongs to a person in the room.</p></div>
+      <div class="step"><p>Send the reds to the vendor as written questions with a date. Verbal answers to written questions have a way of not surviving contact with an auditor.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - draft the vendor gate for your own register</span>Draft a ten-question vendor due diligence gate for an HR tool that influences hiring
+decisions, using the policies and tool register in this workspace.
+
+For each question, give me three things:
+1) The question, phrased so a vendor cannot answer it with a yes.
+2) What a GREEN answer looks like, as a concrete artifact I could put in a folder.
+3) What a RED answer looks like, including the polite version vendors actually use.
+
+Cover at least: independent bias audit and its date, training and validation data,
+behaviour under uncertainty, contractual commitments including notification of material
+model changes, where the tool sits in the funnel, candidate data handling and retention,
+human override and whether it is logged, accessibility and accommodation routes,
+jurisdictions supported through an audit, and what has gone wrong at other customers.
+
+Then list the questions I will not be able to answer from our own side, and name the
+internal role that has to answer each. Do not state a legal position on any of it, and
+flag anything I should take to counsel or the DPO.</div>
+
+    <div class="prompt-box bad"><span class="label">The version that produces a procurement checklist nobody uses</span>Write me a vendor questionnaire for AI HR tools covering fairness, security and compliance. Make it comprehensive.</div>
+
+    <div class="callout tip">
+      <strong>Why the second one fails</strong>
+      "Comprehensive" produces sixty questions, all of which a vendor can answer yes to, none of which name an artifact you could hold in your hand. A gate that cannot fail anybody is not a gate. Ten questions with a defined green answer will sort your vendor list in one meeting; sixty vague ones will sort nothing in six weeks and will make everyone feel diligent while it happens.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write the escalation path for a failed impact check <span class="tag demo">★ 10 min · build your own</span></h2>
+    </div>
+    <p class="lede">In b4 the practitioners watch a slate score 0.09 against a 0.80 threshold. Suppose that happens on a Tuesday in your organisation. What happens next, by name, by hour? "Review it" is not an answer. It is the absence of one.</p>
+
+    <div class="steps">
+      <div class="step"><p>Name who is told, and within how long. Twenty-four hours is a reasonable default and any number is better than none. Include who tells them.</p></div>
+      <div class="step"><p>Name who has the authority to pause the slate. This is the sentence most teams have never written, and it is the one that decides whether the process is real, because pausing a slate costs somebody their week.</p></div>
+      <div class="step"><p>Name who decides the remedy: re-run the screen with fixes, re-design the criteria, or reopen the pool. Different remedies, different owners, different costs. Decide the routing now, not at 4pm on the Tuesday.</p></div>
+      <div class="step"><p>Say what gets recorded and where: the number, the inputs, the decision, the remedy, and the date. This lands in the record from Part 3.</p></div>
+      <div class="step"><p>Add the sentence about what you do <em>not</em> do: you do not explain the number away in the room, and you do not hold it until it improves. A finding that is only escalated when it is bad news is a finding nobody will bring you twice.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - the escalation path</span>Draft a one-page escalation path for the case where an adverse impact check on a hiring
+slate comes back below the 0.80 four-fifths threshold, using our roles and policies in
+this workspace.
+
+It must name, as roles rather than adjectives:
+1) Who is informed, by whom, and within what time. Default to 24 hours if we have no rule.
+2) Who has the authority to pause the slate, and what "paused" means for candidates
+   already in the process, including what they are told and when.
+3) Who decides the remedy, and the three routes: re-run with fixes, re-design criteria,
+   or reopen the pool. Give the trigger conditions for each.
+4) What is recorded, where it is stored, who can read it, and how long it is kept.
+5) What we do NOT do: no explaining the number away in the room, no waiting for it to
+   improve, no quiet fix without a record.
+6) Who reviews the aggregate across the whole hiring wave, and on what cadence.
+
+Then list every role above that does not exist in our organisation today.
+Do not state whether anything is lawful or unlawful. Flag those for counsel.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The escalation path with no brake.</strong> One organisation had a beautiful monitoring dashboard, a monthly fairness review and a named owner. What it did not have was anyone with the authority to stop a live hiring slate, so when a number came back badly during a wave, the review noted it, the wave finished, and the fix went into the next cycle. Everybody behaved reasonably. Twelve people were hired through a process the organisation had already decided was defective. The missing sentence was eleven words long.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 45-60 min total</span></h2>
+    </div>
+    <ul>
+      <li>Build the tool register. Every tool touching your funnel, including CV parsers and knockout questions. Mark which of them substantially assist a decision. This is the list a regulator would ask for first and it usually takes an afternoon.</li>
+      <li>Run the ten-question gate against your two highest-risk tools and send the reds to each vendor in writing, with a date for a reply.</li>
+      <li>Find out when your last independent bias audit was, if there was one, and who commissioned it. If the answer is nobody, book the conversation rather than the audit - the conversation is the finding.</li>
+      <li>Map the notice timing against your actual funnel calendar. Mark the day a candidate first meets an automated step and count backwards.</li>
+      <li>Finish the escalation path and get the person named as having pause authority to confirm, in writing, that they know they have it.</li>
+      <li>Bring one open governance question to a4, where the fairness arithmetic and the candidate-facing explanation get built.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public regulation, published guidance and vendor documentation. This course is education for HR professionals, not legal advice, and obligations vary by jurisdiction. Any actual legal position stays with your counsel and your DPO. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NYC Local Law 144 - independent annual audit, public summary, 10 business days' notice</span><span class="note">Parts 1-2 · the employer's duty and the penalty range</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act - Annex III point 4 governance, record-keeping and human oversight</span><span class="note">Parts 1 and 3 · the 2 Dec 2027 position after the Digital Omnibus</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">EEOC Uniform Guidelines - the four-fifths rule</span><span class="note">Demo 2 · the trigger for the escalation path; full arithmetic in a4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The b4 screening simulator - the 61/0.09 slate</span><span class="note">Demo 2 · what a failed impact check looks like in practice</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · A vendor tells you their tool was "audited for bias by our data science team last year". What is missing?</p>
+      <button class="qopt" type="button">A · Nothing, an audit is an audit and last year is recent enough</button>
+      <button class="qopt" type="button">B · Independence and cadence - NYC's requirement is an independent annual audit with a public summary, and a self-audit is neither</button>
+      <button class="qopt" type="button">C · The audit should have been quarterly rather than annual</button>
+      <p class="qwhy">Three words carry the weight: independent, annual, published. A team scoring its own tool cannot reach an inconvenient conclusion at no cost to itself, and "last year" needs a date before you can tell whether the cadence has lapsed. Ask for the report, not the summary.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · An impact check on a live slate comes back at 0.42. What must your escalation path already name?</p>
+      <button class="qopt" type="button">A · The vendor, so they can retrain the model before the next wave</button>
+      <button class="qopt" type="button">B · Nobody in particular, because 0.42 settles the question on its own</button>
+      <button class="qopt" type="button">C · Who is told within 24 hours, who can pause the slate, who decides the remedy, and where all of it is recorded</button>
+      <p class="qwhy">The ratio is a screening signal that starts an investigation, not a verdict. What turns it into action is having named the roles in advance, especially the pause authority - the one sentence most organisations have never written, because using it costs somebody their week.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why must the decision-maker and the reason be recorded at the time rather than when asked?</p>
+      <button class="qopt" type="button">A · Because a challenge arrives months later, and a rationale reconstructed then reads exactly like a reconstruction</button>
+      <button class="qopt" type="button">B · Because auditors prefer paperwork to conversations</button>
+      <button class="qopt" type="button">C · Because most tools cannot store free text alongside a score</button>
+      <p class="qwhy">Rail 1 in its operational form. The reconstructed version may well be true and still cannot carry the weight, because everyone reading it knows when it was written. Ninety seconds at the time replaces two days of archaeology later.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The four that sort</b><span>audited by whom and may I read it · trained on what data · what it does when unsure · what is in the contract.</span></div>
+      <div class="cheat-item"><b>Question two</b><span>if nobody can say what the tool learned from, nobody can say what it learned.</span></div>
+      <div class="cheat-item"><b>The duty is yours</b><span>LL144 obligations sit on the employer, not only on the vendor who built the tool.</span></div>
+      <div class="cheat-item"><b>Audit</b><span>independent, annual, with a public summary. Self-audit and vendor self-audit are not it.</span></div>
+      <div class="cheat-item"><b>Notice</b><span>arrives before the tool is used. NYC's floor is 10 business days, which is a calendar constraint on your funnel.</span></div>
+      <div class="cheat-item"><b>The record, six parts</b><span>criteria · slate · evidence per rating · named decider and reason · impact check · tool version.</span></div>
+      <div class="cheat-item"><b>Pause authority</b><span>name the person who can stop a live slate. Without it the escalation path has no brake.</span></div>
+      <div class="cheat-item"><b>Not legal advice</b><span>this is education for HR professionals. Obligations vary by jurisdiction and the EU date has moved once.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 3 of 6 · learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a2-legal-map.html">← Previous: The legal map</a> &nbsp;·&nbsp; <a href="a4-fairness-in-practice.html">Next: Fairness in practice →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

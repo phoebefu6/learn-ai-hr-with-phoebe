@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR session 4 · The screening slate - learn AI + HR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+<style>
+  /* ---- hr-live simulator (scoped hrw-*) ---- */
+  .hrw-shell { display: grid; grid-template-columns: 15.5rem 1fr; gap: 1rem; border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#FAEDE7); padding: 1rem; margin: 1.2rem 0 .4rem; }
+  @media (max-width: 720px) { .hrw-shell { grid-template-columns: 1fr; } }
+  .hrw-ctitle { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: var(--indigo); margin-bottom: .5rem; }
+  .hrw-q { font-size: .8rem; color: var(--muted); line-height: 1.5; margin-bottom: .7rem; }
+  .hrw-q b { color: var(--ink); }
+  .hrw-levers { display: flex; flex-direction: column; gap: .5rem; }
+  .hrw-lever { display: flex; align-items: center; gap: .6rem; text-align: left; border: 1px solid var(--hairline); background: #fff; border-radius: 12px; padding: .55rem .7rem; cursor: pointer; transition: all .14s ease; font: inherit; color: var(--ink); }
+  .hrw-lever:hover { border-color: var(--indigo-soft); }
+  .hrw-lever.hrw-active { border-color: var(--indigo); background: var(--indigo-50); }
+  .hrw-auditlever { border-style: dashed; }
+  .hrw-auditlever.hrw-active { border-style: solid; border-color: var(--amber); background: var(--amber-50); }
+  .hrw-auditlever.hrw-active .hrw-sw { background: var(--amber); }
+  .hrw-sw { flex: none; width: 2rem; height: 1.15rem; border-radius: 999px; background: var(--faint); position: relative; transition: background .14s ease; }
+  .hrw-sw::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.15rem - 4px); height: calc(1.15rem - 4px); border-radius: 50%; background: #fff; transition: transform .14s ease; box-shadow: 0 1px 2px rgba(42,26,21,.3); }
+  .hrw-lever.hrw-active .hrw-sw { background: var(--indigo); }
+  .hrw-lever.hrw-active .hrw-sw::after { transform: translateX(.85rem); }
+  .hrw-ltext { display: flex; flex-direction: column; line-height: 1.25; }
+  .hrw-ltext b { font-size: .84rem; font-weight: 700; }
+  .hrw-ltext span { font-size: .72rem; color: var(--muted); }
+  .hrw-modes { display: flex; gap: .4rem; margin-top: .9rem; }
+  .hrw-mode { flex: 1; border: 1px solid var(--hairline); background: #fff; border-radius: 999px; padding: .38rem .5rem; font-size: .72rem; font-weight: 700; cursor: pointer; color: var(--muted); transition: all .14s ease; }
+  .hrw-mode.hrw-on { background: var(--indigo); color: #fff; border-color: var(--indigo); }
+  .hrw-stage { min-width: 0; }
+  .hrw-meters { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: .7rem; }
+  .hrw-meter { flex: 1; min-width: 10rem; border: 1px solid var(--hairline); border-radius: 12px; background: #fff; padding: .6rem .8rem; }
+  .hrw-mlabel { display: block; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--muted); }
+  .hrw-mval { font-size: 1.7rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.2; color: var(--ink); }
+  .hrw-mval.hrw-good { color: #146B72; }
+  .hrw-mval.hrw-bad { color: #991B1B; }
+  .hrw-mval.hrw-unknown { font-size: 1rem; color: var(--faint); font-weight: 700; }
+  .hrw-bar { height: 7px; border-radius: 999px; background: var(--hairline); margin-top: .35rem; overflow: hidden; }
+  .hrw-bar i { display: block; height: 100%; background: linear-gradient(90deg,var(--indigo-mid),var(--indigo)); transition: width .3s ease; }
+  .hrw-bar i.hrw-barbad { background: linear-gradient(90deg,#FCA5A5,#991B1B); }
+  .hrw-flag { font-size: .82rem; line-height: 1.55; border-radius: 10px; padding: .55rem .75rem; margin-bottom: .7rem; font-weight: 600; }
+  .hrw-flag.hrw-warn { background: var(--amber-50); color: var(--amber-ink); }
+  .hrw-flag.hrw-block { background: #FEF2F2; color: #991B1B; border-left: 4px solid #991B1B; }
+  .hrw-flag.hrw-ok { background: var(--indigo-50); color: var(--indigo-deep); border-left: 4px solid var(--indigo); }
+  .hrw-draftlabel, .hrw-scorehead { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--indigo); margin-bottom: .4rem; }
+  .hrw-scorehead { text-transform: none; font-size: .95rem; letter-spacing: 0; color: var(--ink); }
+  .hrw-table { width: 100%; border-collapse: collapse; margin: .3rem 0 .5rem; font-size: .84rem; }
+  .hrw-table th { text-align: left; text-transform: uppercase; font-size: .66rem; letter-spacing: .07em; color: var(--muted); padding: .35rem .5rem; border-bottom: 1px solid var(--hairline); }
+  .hrw-table td { padding: .38rem .5rem; border-bottom: .5px solid var(--hairline); vertical-align: top; }
+  .hrw-r-bad td { background: #FEF2F2; }
+  .hrw-g { display: inline-block; font-size: .66rem; font-weight: 700; border-radius: 5px; padding: .08rem .4rem; }
+  .hrw-gA { background: var(--indigo-50); color: var(--indigo-deep); }
+  .hrw-gB { background: var(--amber-50); color: var(--amber-ink); }
+  .hrw-note, .hrw-rail { font-size: .78rem; color: var(--muted); line-height: 1.55; }
+  .hrw-missnote { color: #991B1B; }
+  .hrw-rail { margin-top: .8rem; border-top: 1px dashed var(--hairline); padding-top: .6rem; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-hr-with-phoebe</a> / HR session 4 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe · HR track · Session 4 of 10</div>
+    <h1>The screening slate: <span class="accent">a reasonable shortlist that fails the law</span></h1>
+    <p class="sub">Week 4 at Kestrel. 24 applicants, 12 interview slots, an AI screen doing the ranking. The shortlist looks fine. It scores 61 out of 100 on quality, which nobody would call alarming, and its adverse impact ratio is 0.09 against a 0.80 threshold - except nobody is measuring that, so nobody knows. Tonight you fix the screen one lever at a time and watch both numbers climb together.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 HR track</span>
+      <span class="chip audience">HR partners · recruiters · hiring managers</span>
+      <span class="chip audience">Live simulator on this page</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-15 · How screens go wrong</span>
+      <span class="a3" style="flex:6">15-42 · The simulator + your own funnel</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">You have a workspace and house rules (b1), five roles defined against real scorecards (b2), and a sourcing engine that filled the top of the funnel without spamming anyone (b3). Now 24 people have applied for the Senior Support Engineer role and there are 12 interview slots. This is the session where AI stops drafting and starts <em>deciding</em> - which is exactly the boundary rail 1 draws, and exactly where the law is waiting.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The four-fifths rule computed by hand and understood in your bones, first-hand experience of a screen that looks reasonable and fails it, the five fixes that raise quality and fairness at the same time, the reason "we measured it" is not the same as "we fixed it", and a screening protocol you can put in front of your DPO.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: HOW SCREENS GO WRONG ============ -->
+  <section class="section" id="how-wrong">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the four-fifths rule + AEDT obligations</span>
+      <h2>How a screen goes wrong without anyone writing a bad rule <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Nobody types "prefer candidates from prestigious universities". The screen just rewards what is visible on a CV - polish, prestige, an unbroken timeline, fluent phrasing - because that is what a document contains and what a language model is good at reading. Those signals travel with background. The result is a shortlist that looks defensible line by line and is indefensible in aggregate.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four-fifths rule: selection rate of the lower group divided by the higher group, with a 0.80 threshold, shown against the five defects that push a slate below it">
+        <style>
+          .b4fT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b4fI { font: 700 14px Inter, sans-serif; fill: #2A1A15; }
+          .b4fX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b4fXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .b4fXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .b4fN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .b4fH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="b4fH" x="30" y="30">THE TEST</text>
+        <rect x="30" y="44" width="250" height="88" rx="12" fill="#6E2A18"/>
+        <text class="b4fT" x="52" y="74">Lower group's rate</text>
+        <text class="b4fX" x="52" y="98">divided by the higher</text>
+        <text class="b4fX" x="52" y="116">group's rate</text>
+        <rect x="300" y="44" width="250" height="88" rx="12" fill="#A6472E"/>
+        <text class="b4fT" x="322" y="74">Below 0.80</text>
+        <text class="b4fX" x="322" y="98">evidence of adverse</text>
+        <text class="b4fX" x="322" y="116">impact. Investigate.</text>
+        <rect x="570" y="44" width="280" height="88" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="b4fI" x="592" y="74">Above 0.80</text>
+        <text class="b4fXw" x="592" y="98">not a clean bill of health.</text>
+        <text class="b4fXw" x="592" y="116">A signal, never a defence.</text>
+        <text class="b4fH" x="30" y="168">WHAT PUSHES A SLATE UNDER IT</text>
+        <rect x="30" y="182" width="160" height="66" rx="10" fill="#C9704F"/>
+        <text class="b4fI" x="46" y="206">Vague criteria</text>
+        <text class="b4fXi" x="46" y="228">polish wins</text>
+        <rect x="202" y="182" width="160" height="66" rx="10" fill="#C9704F"/>
+        <text class="b4fI" x="218" y="206">Proxies</text>
+        <text class="b4fXi" x="218" y="228">school, postcode</text>
+        <rect x="374" y="182" width="160" height="66" rx="10" fill="#E9B6A2"/>
+        <text class="b4fI" x="390" y="206">No evidence</text>
+        <text class="b4fXi" x="390" y="228">ratings from vibes</text>
+        <rect x="546" y="182" width="150" height="66" rx="10" fill="#E9B6A2"/>
+        <text class="b4fI" x="562" y="206">Rater drift</text>
+        <text class="b4fXi" x="562" y="228">never calibrated</text>
+        <rect x="708" y="182" width="142" height="66" rx="10" fill="#E9B6A2"/>
+        <text class="b4fI" x="724" y="206">Auto-reject</text>
+        <text class="b4fXi" x="724" y="228">no human look</text>
+        <rect x="30" y="266" width="820" height="34" rx="10" fill="#FBEFE9"/>
+        <text class="b4fXi" x="52" y="288">Each defect costs a specific person a specific seat. In the simulator, each one is worth exactly one.</text>
+        <rect x="30" y="312" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="b4fN" x="54" y="324">Small slates swing hard: one seat moves the ratio a lot. Check the wave, not just the slate.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four-fifths test, and the five defects that push a slate under it</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four-fifths rule, by hand<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is one division. Take the selection rate for each group - shortlisted divided by applicants in that group - then divide the lower rate by the higher. Below 0.80 is treated as evidence of adverse impact under the long-standing US selection guidelines, and it is the number a bias audit reports.</p>
+        <table class="clean">
+          <thead><tr><th>Group</th><th>Applicants</th><th>Shortlisted</th><th>Selection rate</th></tr></thead>
+          <tbody>
+            <tr><td>Group A</td><td>12</td><td>11</td><td>92%</td></tr>
+            <tr><td>Group B</td><td>12</td><td>1</td><td>8%</td></tr>
+            <tr><td colspan="3"><strong>Ratio = 8% / 92%</strong></td><td><strong>0.09 - fails</strong></td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li><strong>It is a screening signal, not a verdict.</strong> Failing starts an investigation. It does not by itself prove unlawful discrimination.</li>
+          <li><strong>Passing is not a defence.</strong> A ratio above 0.80 with junk criteria underneath is still a bad process, and the criteria are what you would have to justify.</li>
+          <li><strong>Aggregate as well as slate.</strong> Twelve seats means one person swings the number. Run it across the hiring wave too.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Nobody ran the division.</strong> A team used the same screen for eleven months. Every individual decision had a rationale, every rejection looked reasonable in isolation, and no one ever divided one selection rate by the other - the tool did not offer the number and nobody asked for it. The pattern was there from month one and was visible in about ninety seconds once someone finally looked. That ninety seconds is the entire content of the sixth lever below.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>When your screen becomes a regulated tool<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Drafting a job ad is not an automated employment decision. Ranking or filtering a slate can be. Where a tool substantially assists or replaces a decision on hiring or promotion, obligations start attaching - and in New York City they already have: an independent annual bias audit, a public summary of its results, and at least 10 business days' notice to the candidate before the tool is used on them, enforced with penalties from $500 per violation up to $1,500 per day for continuing ones.</p>
+        <p>In the EU, recruitment and selection AI sits in the AI Act's high-risk category, with obligations covering risk management, data governance, record-keeping, transparency and human oversight - now applying from 2 December 2027 after the Digital Omnibus postponement. As of mid-2026 that is the position; it has moved once already, so check it rather than quoting this page. Leader sessions a2 and a3 go through both in full. None of this is legal advice.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE SIMULATOR ============ -->
+  <section class="section" id="simulator">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the live simulator</span>
+      <h2>Fix the screen, one lever at a time <span class="tag demo">★ 14 min · everyone plays</span></h2>
+    </div>
+    <p class="lede">Below is Kestrel's slate with every fix switched off. Read the shortlist first: twelve names, each with a reason, and the reasons sound like reasons. Then turn on the impact check - the dashed lever - and look at what was true the whole time. After that, fix it one lever at a time. Both numbers are computed live from whichever shortlist your levers produce; toggle them in any order you like and neither number ever goes backwards.</p>
+
+    <div id="hr-live"></div>
+
+    <div class="callout tip">
+      <strong>How to play it in session</strong>
+      Start with everything off: quality 61, and the impact ratio hidden. Turn on <em>only</em> the impact check - the ratio appears at 0.09 and the slate is blocked, while quality does not move a single point. That is the lesson most teams learn the expensive way. Now add the five real fixes in any order: structured criteria, scrub the proxies, evidence per rating, calibrate the raters, human decision gate. Each one is worth exactly one seat, and the ladder runs 61/0.09 to 68/0.20 to 75/0.33 to 83/0.50 to 91/0.71 to 100/1.00. Watch the red rows in the shortlist disappear one at a time, and read the list of people who were cut while being better at the job than someone you kept.
+    </div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What each lever is, on a real funnel<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Structured criteria</strong> - the must-haves from the role scorecard (b2), each one written so it can be evidenced. Replaces "strong communicator" with "explained a technical failure to a non-technical audience".</li>
+          <li><strong>Scrub the proxies</strong> - remove school, employer prestige, postcode, name, photo, dates that reveal age, and stop penalising an employment gap. None of them are the job.</li>
+          <li><strong>Evidence per rating</strong> - every score cites the work sample, the answer, or the artifact. A rating with nothing under it is an impression wearing a number.</li>
+          <li><strong>Calibrate the raters</strong> - the same rubric, two independent reads on a sample, and a conversation about the gaps. Drift is not bias yet, but it is the vehicle bias travels in.</li>
+          <li><strong>Human decision gate</strong> - no auto-reject at a score threshold. A person looks at the near-misses, which is where the best under-polished candidate always is.</li>
+          <li><strong>The impact check</strong> - the dashed lever, and the one that behaves differently: it does not improve the ratio by a single point. It reveals it and blocks the slate. Measuring is not fixing - but a screen that never measures fails silently for eleven months.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The honesty rail</strong>
+          The slate is synthetic and the AI screen here is a scripted teaching model. The arithmetic is real: both numbers are computed from your shortlist, and the ratio is the actual four-fifths division. A genuine bias audit under NYC LL144 is an independent annual audit by a third party - not a number on a course page, and not something you run on yourself.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Run the division on your own last hire <span class="tag demo">★ 8 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Not a hypothetical funnel - the last role you actually filled. You will need applicants in, shortlisted out, split by whichever characteristic your organisation lawfully monitors. If you cannot get the data, that is the finding.</p>
+
+    <div class="steps">
+      <div class="step"><p>Take the last completed role. Count applicants per group and shortlisted per group. Use only data your organisation already collects lawfully for monitoring, aggregated - never build a new dataset about individuals for this exercise.</p></div>
+      <div class="step"><p>Compute each selection rate, then divide the lower by the higher. Write the number down before you interpret it.</p></div>
+      <div class="step"><p>If it is under 0.80, do not panic and do not explain it away in the room. Note it, check the aggregate across several roles, and take it to whoever owns this - it is a process question, not a personal verdict.</p></div>
+      <div class="step"><p>Now look at your criteria list for that role and mark every criterion you could not evidence from the application. Those are where the polish got in.</p></div>
+      <div class="step"><p>If you could not get the numbers at all: that is the most important thing you will find today. A process nobody can measure is a process nobody can defend.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The number that was fine and the criteria that were not.</strong> One team ran the division and passed comfortably at 0.91, then did the second half of the exercise anyway. Four of their nine criteria could not be evidenced from anything a candidate had submitted - they were rater impressions with numbers attached. The ratio had passed on a small sample and would not have kept passing. Passing the test is not the same as having a defensible process, which is why the exercise has a second half.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write the screening protocol <span class="tag demo">★ 10 min · build your own</span></h2>
+    </div>
+    <p class="lede">Turn tonight's six levers into a one-page protocol your team follows and your DPO can read. This is the artifact that makes the fix survive you being on leave.</p>
+
+    <div class="steps">
+      <div class="step"><p>Draft it with the prompt below, in your Kestrel workspace, with the scorecards loaded.</p></div>
+      <div class="step"><p>Edit hard. Add who runs the impact check, when, and what happens when a slate fails - the answer must be a real action, not "review".</p></div>
+      <div class="step"><p>Add the notice question from b1: what candidates are told, and how far in advance.</p></div>
+      <div class="step"><p>Take it to whoever owns compliance before the next slate, not after it.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - the screening protocol</span>Draft a one-page screening protocol for this role, from the scorecard in this workspace.
+
+It must specify:
+1) The must-have criteria, each written so it can be evidenced from something the
+   candidate actually submitted. No criterion I cannot point at evidence for.
+2) What is never a criterion or a tiebreaker: school, employer prestige, postcode, name,
+   photo, age signals, employment gaps, writing fluency.
+3) For each rating: what evidence is cited, and where it is recorded.
+4) Calibration: how many applications get a second independent read, and who reconciles
+   the gaps.
+5) The decision gate: no automated rejection. Name the person who reviews near-misses.
+6) The impact check: selection rate per monitored group, the four-fifths ratio, who runs
+   it, and what happens if it comes out below 0.80.
+
+Then list every question you could not answer from the pack and who I should ask.
+Do not rank, score or name any individual candidate.</div>
+
+    <div class="prompt-box bad"><span class="label">The version that produces the 0.09 slate</span>Here are the applications for the Senior Support Engineer role. Score each candidate out of 10 on fit, communication and potential, and give me the top 12 to interview.</div>
+
+    <div class="callout tip">
+      <strong>Why the second one fails before it starts</strong>
+      Three undefined criteria, no evidence requirement, no calibration, an implicit auto-cut at rank 12, no impact check, and a model asked to score named individuals - which rail 1 says it never does. It is also the prompt most teams write first, because it sounds efficient. Efficient is what a bad screen is: it produces the same defensible-looking wrong answer faster than a person could.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the division on your last role if you did not get the data in session, and run it across your last five roles in aggregate. The aggregate is the number that means something.</li>
+      <li>Rewrite one vague criterion from a live role into an evidenceable one. Just one, properly.</li>
+      <li>Finish the screening protocol and get one other person to try to break it.</li>
+      <li>Find out whether any tool in your funnel filters candidates before a human sees them - including CV parsers and knockout questions nobody calls AI. That is the AEDT question, and the answer is often "yes, and we forgot".</li>
+      <li>Bring one criterion you are not sure about to session b5, where interviews get structured and raters get calibrated.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public regulation and long-standing selection guidance. This course is education for HR professionals, not legal advice, and obligations vary by jurisdiction. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EEOC Uniform Guidelines - the four-fifths rule</span><span class="note">Part 1 + simulator · computed live on the slate</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NYC Local Law 144 - AEDT scope, independent annual audit, notice</span><span class="note">Part 1 · when a screen becomes a regulated tool</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">EU AI Act - Annex III employment high-risk, human oversight</span><span class="note">Part 1 · the 2 Dec 2027 position; full map in a2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Structured selection research</span><span class="note">Part 2 · why the fairness fixes are also quality fixes</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · In the simulator, what does turning on the impact check do to the ratio?</p>
+      <button class="qopt" type="button">A · Raises it above 0.80 by rebalancing the slate</button>
+      <button class="qopt" type="button">B · Lowers quality slightly as the price of fairness</button>
+      <button class="qopt" type="button">C · Nothing - it reveals the ratio and blocks the slate. Measuring is not fixing</button>
+      <p class="qwhy">The check is the only lever worth zero points on both meters, and that is the design. It makes a silent failure visible so the five real fixes can be applied. A screen that never measures fails for months without anyone noticing.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Group A: 12 applicants, 9 shortlisted. Group B: 12 applicants, 3 shortlisted. What is the ratio and what does it mean?</p>
+      <button class="qopt" type="button">A · 0.33 - below 0.80, evidence of adverse impact, and the start of an investigation</button>
+      <button class="qopt" type="button">B · 0.75 - borderline but acceptable for a small slate</button>
+      <button class="qopt" type="button">C · 3 to 9, which cannot be judged without knowing the candidates</button>
+      <p class="qwhy">25% divided by 75% is 0.33. Below the 0.80 threshold it is evidence of adverse impact - a signal that starts an investigation, not a verdict on its own, and not something a small sample excuses.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Fixing the screen raised fairness from 0.09 to 1.00. What happened to shortlist quality?</p>
+      <button class="qopt" type="button">A · It fell - fairness and quality trade off against each other</button>
+      <button class="qopt" type="button">B · It rose from 61 to 100, because the screen had been measuring polish rather than the job</button>
+      <button class="qopt" type="button">C · It stayed flat, since the same number of people were hired either way</button>
+      <p class="qwhy">This is the whole argument of the session. The defects were not protecting quality, they were costing it: every seat given to polish was taken from someone better at the job. Structure, evidence and calibration are selection quality practices first.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>HR session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four-fifths rule</b><span>lower group's selection rate over the higher group's. Under 0.80 is evidence of adverse impact.</span></div>
+      <div class="cheat-item"><b>It is a signal</b><span>failing starts an investigation; passing is not a defence and not a clean bill of health.</span></div>
+      <div class="cheat-item"><b>Measure the wave</b><span>twelve seats swing hard. Run the check on the aggregate as well as the slate.</span></div>
+      <div class="cheat-item"><b>The five fixes</b><span>structured criteria · scrub proxies · evidence per rating · calibrated raters · human decision gate.</span></div>
+      <div class="cheat-item"><b>Measuring ≠ fixing</b><span>the impact check moves neither number. It reveals and blocks, so the fixes can happen.</span></div>
+      <div class="cheat-item"><b>No trade-off</b><span>quality 61 to 100 as the ratio went 0.09 to 1.00. The defects were costing quality all along.</span></div>
+      <div class="cheat-item"><b>AEDT question</b><span>does anything filter candidates before a human sees them? CV parsers and knockouts count.</span></div>
+      <div class="cheat-item"><b>Never</b><span>ask a model to rank or reject named people. Draft criteria and guides; a person decides.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>HR session 4 of 10 · learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b3-sourcing-outreach.html">← Previous: Sourcing and outreach</a> &nbsp;·&nbsp; <a href="b5-structured-interviews.html">Next: Structured interviews →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/hr-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

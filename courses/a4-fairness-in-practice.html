@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 4 · Fairness in practice - learn AI + HR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-hr-with-phoebe</a> / Leader session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe · Leader track · Session 4 of 6</div>
+    <h1>Fairness in practice: <span class="accent">a measurement discipline with a number attached</span></h1>
+    <p class="sub">Fairness in a values statement costs nothing and proves nothing. Tonight it gets a number, a denominator and an owner. You will see how a screen becomes biased without anyone writing a biased rule, compute the four-fifths ratio by hand on Kestrel's hiring wave, find the three things leaders reliably get wrong about that number, and write the answer your organisation gives to a rejected candidate who asks why.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">CHROs · HR directors</span>
+      <span class="chip audience">Impact review</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · Proxies and the arithmetic</span>
+      <span class="a3" style="flex:5">18-42 · Impact review + the answer</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are, and what fairness means tonight</h2>
+    </div>
+    <p class="lede">a1 drew the boundary, a2 mapped the law, a3 built the machinery: the vendor gate, the audit and notice processes, the six-part record. What the machinery is missing is a number, because governance with no measurement is a committee. Tonight fairness stops being a value statement and becomes a <strong>measurement discipline</strong>: a specific division, run on a specific population, on a cadence, by a named person, with a written consequence when it fails. That reframing is the whole session. Values do not survive a hiring wave. Numbers with owners do.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The proxy chain explained well enough to teach a hiring manager in five minutes, the four-fifths ratio computed by hand on a realistic wave, the three leadership errors around that number, the evidence that the fairness-versus-quality trade-off you are braced for is often not there at all, and a candidate-facing rejection answer with a human-review route in it.
+    </div>
+    <div class="callout tip">
+      <strong>Read this first</strong>
+      This session is education for HR professionals, not legal advice, and obligations vary by jurisdiction. Nothing here tells you whether a given outcome is lawful. The arithmetic is a screening signal that starts a conversation with your counsel and your DPO, not a substitute for one.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: PROXIES ============ -->
+  <section class="section" id="proxies">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers proxy variables + selection criteria design</span>
+      <h2>How a screen becomes biased with nobody writing a biased rule <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">This is the part leaders most often get wrong, because they are looking for intent. There is rarely any. A CV is a document, a document contains what it contains, and anything visible on it is available to be scored. Some of what is visible tracks background rather than ability. Score it and you have a proxy, and the proxy does not care that you never meant it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 368" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The proxy chain from what is visible on a CV, to what travels with background, to what becomes a criterion, with the eight usual suspects listed beneath">
+        <style>
+          .a4pT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .a4pI { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .a4pX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a4pXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .a4pXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .a4pN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .a4pH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <defs>
+          <marker id="a4pAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#E9B6A2"/>
+          </marker>
+        </defs>
+        <text class="a4pH" x="30" y="30">HOW A PROXY BECOMES A CRITERION</text>
+        <rect x="30" y="44" width="250" height="92" rx="12" fill="#6E2A18"/>
+        <text class="a4pT" x="52" y="76">Visible on a CV</text>
+        <text class="a4pX" x="52" y="100">school, employer, postcode,</text>
+        <text class="a4pX" x="52" y="118">name, photo, dates</text>
+        <line x1="286" y1="90" x2="309" y2="90" stroke="#E9B6A2" stroke-width="2" marker-end="url(#a4pAh)"/>
+        <rect x="315" y="44" width="250" height="92" rx="12" fill="#A6472E"/>
+        <text class="a4pT" x="337" y="76">Travels with background</text>
+        <text class="a4pX" x="337" y="100">who could afford what,</text>
+        <text class="a4pX" x="337" y="118">who got hired before</text>
+        <line x1="571" y1="90" x2="594" y2="90" stroke="#E9B6A2" stroke-width="2" marker-end="url(#a4pAh)"/>
+        <rect x="600" y="44" width="250" height="92" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="a4pI" x="622" y="76">Now a criterion</text>
+        <text class="a4pXw" x="622" y="100">and nobody anywhere</text>
+        <text class="a4pXw" x="622" y="118">wrote a biased rule</text>
+        <text class="a4pH" x="30" y="172">THE EIGHT USUAL SUSPECTS</text>
+        <rect x="30" y="186" width="195" height="44" rx="10" fill="#C9704F"/>
+        <text class="a4pXi" x="52" y="214">School and degree</text>
+        <rect x="240" y="186" width="195" height="44" rx="10" fill="#C9704F"/>
+        <text class="a4pXi" x="262" y="214">Employer prestige</text>
+        <rect x="450" y="186" width="195" height="44" rx="10" fill="#C9704F"/>
+        <text class="a4pXi" x="472" y="214">Postcode or address</text>
+        <rect x="660" y="186" width="195" height="44" rx="10" fill="#C9704F"/>
+        <text class="a4pXi" x="682" y="214">Name and photo</text>
+        <rect x="30" y="238" width="195" height="44" rx="10" fill="#E9B6A2"/>
+        <text class="a4pXi" x="52" y="266">Age signals in dates</text>
+        <rect x="240" y="238" width="195" height="44" rx="10" fill="#E9B6A2"/>
+        <text class="a4pXi" x="262" y="266">An unbroken timeline</text>
+        <rect x="450" y="238" width="195" height="44" rx="10" fill="#E9B6A2"/>
+        <text class="a4pXi" x="472" y="266">Writing fluency</text>
+        <rect x="660" y="238" width="195" height="44" rx="10" fill="#E9B6A2"/>
+        <text class="a4pXi" x="682" y="266">General CV polish</text>
+        <rect x="30" y="296" width="825" height="36" rx="10" fill="#FBEFE9"/>
+        <text class="a4pXi" x="52" y="319">None of these is the job. All are easy to see, easy to score, and easy for a model to reward.</text>
+        <rect x="30" y="342" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="a4pN" x="54" y="354">Scrubbing them is one of the five fixes in b4. It costs quality nothing.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the proxy chain, and the eight signals that walk down it</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The chain, in three links<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every proxy failure has the same shape, and once you can see the shape you stop needing to look for villains.</p>
+        <ul>
+          <li><strong>Link one: it is visible.</strong> A CV shows a school, an employer, an address, a name, sometimes a photo, dates that imply an age, a timeline with or without gaps, and prose of a certain fluency. Anything on the page can be read, and anything readable can be scored.</li>
+          <li><strong>Link two: it travels with background.</strong> Which school you attended reflects where you grew up and what your family could afford. Employer prestige reflects who hired you before, which reflects the same chain one step back. Writing fluency tracks first language and whether anyone edited your CV. None of these are neutral facts about capability. They are facts about a life.</li>
+          <li><strong>Link three: it becomes a criterion.</strong> Someone writes "strong communicator" or "top-tier background" or leaves the criterion undefined entirely, and raters or models fill the gap with what they can see. The rule was never written. It was inherited.</li>
+        </ul>
+        <p>The uncomfortable part for leaders is that a language model is unusually good at link three. It reads documents, it rewards fluent structured prose, and it has no way to know that fluency was not the job. A model asked to score "fit" with no rubric will produce a confident number built out of exactly these signals, and every individual result will look reasonable when you read it.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The tidy timeline.</strong> A screen quietly penalised employment gaps because "consistent progression" was on the criteria list and nobody defined it. The people it filtered hardest were those who had taken parental leave, cared for a relative, recovered from illness or been through a redundancy round. Nobody in the organisation would have written any of those as a screening rule, and everyone had signed off on a criterion that did the same work. The fix was two words: define "progression" as demonstrated growth in scope, evidenced from what the candidate submitted.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Removing the field is not the same as removing the signal<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Anonymising a CV is worth doing and it is not a solution on its own. Strip the name and the postcode still implies it. Strip the postcode and the school still implies both. Strip the school and the phrasing of the personal statement still carries a signal. Proxies are correlated in bundles, which is why redaction alone plateaus.</p>
+        <p>What actually moves the number is the positive side: defining what the job requires, in job-related language, so specifically that a rater has something better to look at than the surface of the document. The b4 simulator makes this visible - "scrub the proxies" is one of five fixes, and on its own it buys back exactly one seat. Structure, evidence and calibration buy the rest. Removing a bad signal helps. Supplying a good one helps more.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE ARITHMETIC ============ -->
+  <section class="section" id="arithmetic">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the four-fifths rule + its limits</span>
+      <h2>The arithmetic, and the three things leaders get wrong <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The four-fifths rule is one division and you should be able to do it in your head in a meeting. Take each group's selection rate - selected divided by applicants in that group - then divide the lower rate by the higher. Below 0.80 is treated as evidence of adverse impact. That is the entire calculation. Everything difficult about it is what people do with the answer.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Kestrel's wave, by hand<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Not one slate. The wave: 300 applications across the first tranche of Kestrel's 120 roles, split by a characteristic Kestrel already monitors lawfully in aggregate.</p>
+        <table class="clean">
+          <thead><tr><th>Group</th><th>Applicants</th><th>Advanced to interview</th><th>Selection rate</th></tr></thead>
+          <tbody>
+            <tr><td>Group A</td><td>180</td><td>54</td><td>30%</td></tr>
+            <tr><td>Group B</td><td>120</td><td>18</td><td>15%</td></tr>
+            <tr><td colspan="3"><strong>Ratio = 15% / 30%</strong></td><td><strong>0.50 - fails</strong></td></tr>
+          </tbody>
+        </table>
+        <p>0.50 against a 0.80 threshold. Note what this number is and is not. It is a screening signal drawn from the long-standing US selection guidelines, and it starts an investigation. It is not a verdict, it does not by itself establish that anything unlawful happened, and it is not the only fairness measure in existence. It is, however, the one a bias audit reports and the one you should be able to produce for any wave you run.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Nobody ran the division.</strong> A team used the same screen for eleven months. Every rejection had a rationale, every rationale looked reasonable on its own, and nobody ever divided one selection rate by the other, because the tool did not offer the number and nobody asked for it. The pattern had been there since month one and took about ninety seconds to see once someone finally looked. It was not a hard number to compute. It was a number nobody owned.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The three errors, in the order leaders make them<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Treating a pass as a defence.</strong> A ratio of 0.86 tells you one screening signal came back clean on this population. It says nothing about whether your criteria are job-related, evidenced or defensible, and those are what you would actually have to justify. Passing the test is the beginning of the answer, not the answer.</li>
+          <li><strong>Running it on one small slate.</strong> Twelve interview seats means a single person swings the ratio by a wide margin. A small slate can pass by luck and fail by luck in consecutive weeks, and a team that only ever looks at slates will spend its time chasing noise. <strong>Aggregate the wave.</strong> Run the check per role for operational awareness and across the whole wave for the number that means something.</li>
+          <li><strong>Treating a fail as a verdict.</strong> A number under 0.80 is the start of an investigation: which stage, which criteria, which raters, which tool, and does it persist when you aggregate. Teams that treat it as a guilty finding either panic or start explaining it away in the room, and the second is much more common and much more damaging, because it teaches everyone that bringing you a bad number is expensive.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The sentence worth saying out loud in the exec meeting</strong>
+          "This number is a smoke alarm, not a court. It tells us where to look, and the only wrong response is to take the battery out."
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The trade-off you are braced for may not exist<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most executives arrive at this conversation assuming fairness costs quality: that a fairer slate is a slightly weaker slate, and the organisation is being asked to pay a small price for doing the right thing. The b4 simulator, which your HR practitioners run live, is built to settle that assumption with arithmetic.</p>
+        <p>A slate scores <strong>61 on quality</strong> with an adverse impact ratio of <strong>0.09</strong>. Five fixes get applied one at a time - structured criteria, scrub the proxies, evidence per rating, calibrated raters, human decision gate - and the slate climbs to <strong>100 quality and a 1.00 ratio</strong>. Both numbers move together, every time, in whichever order the fixes are applied. A sixth lever, the impact check itself, changes neither number: it reveals the ratio and blocks the slate. <strong>Measuring is not fixing.</strong></p>
+        <p>The reading for leaders is blunt. Those five defects were not protecting quality, they were costing it. Every seat handed to polish was taken from someone better at the job. Structured criteria, evidence and calibration are selection quality practices that happen to be fairness practices, which is why this is a management argument and not only a compliance one.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The comfortable number and the uncomfortable criteria.</strong> One team ran the division, passed at 0.91, and did the second half of the exercise anyway: mark every criterion you could not evidence from what the candidate actually submitted. Four of their nine failed. They were rater impressions with numbers attached, and the ratio had passed on a sample small enough that it would not have kept passing. They had a clean signal sitting on top of a process they could not have defended for ten minutes.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: EXPLAINABILITY ============ -->
+  <section class="section" id="explainability">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers transparency + human oversight from outside</span>
+      <h2>Explainability, from the candidate's side of the table <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Every governance conversation so far has been internal. Now flip the chair around. A person applied, was rejected, and has asked why. What are they owed, and what does a useful answer sound like? This is the test your whole governance stack has to pass, because an organisation that cannot explain a rejection has not been governing anything - it has been documenting.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 288" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three answers to a rejected candidate: a useless one with no criteria, a dangerous one naming the system as decider, and a defensible one giving criteria, evidence, the named decider and a human review route">
+        <style>
+          .a4eT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .a4eI { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .a4eX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a4eXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .a4eXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .a4eN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .a4eH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="a4eH" x="30" y="30">THREE ANSWERS TO "WHY WAS I REJECTED?"</text>
+        <rect x="30" y="44" width="265" height="152" rx="12" fill="#C9704F"/>
+        <text class="a4eI" x="52" y="76">Useless</text>
+        <text class="a4eXi" x="52" y="100">"You were not a fit on</text>
+        <text class="a4eXi" x="52" y="118">this occasion."</text>
+        <text class="a4eXi" x="52" y="146">No criteria, no evidence,</text>
+        <text class="a4eXi" x="52" y="164">no person, and no route</text>
+        <text class="a4eXi" x="52" y="182">back to a human.</text>
+        <rect x="308" y="44" width="265" height="152" rx="12" fill="#A6472E"/>
+        <text class="a4eT" x="330" y="76">Dangerous</text>
+        <text class="a4eX" x="330" y="100">"The system scored you</text>
+        <text class="a4eX" x="330" y="118">fourth."</text>
+        <text class="a4eX" x="330" y="146">Names a machine as the</text>
+        <text class="a4eX" x="330" y="164">decider, which is the one</text>
+        <text class="a4eX" x="330" y="182">thing it must not be.</text>
+        <rect x="586" y="44" width="265" height="152" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="a4eI" x="608" y="76">Defensible</text>
+        <text class="a4eXw" x="608" y="100">The criteria that applied,</text>
+        <text class="a4eXw" x="608" y="118">the evidence considered,</text>
+        <text class="a4eXw" x="608" y="146">who decided, and how to</text>
+        <text class="a4eXw" x="608" y="164">ask a person to look at</text>
+        <text class="a4eXw" x="608" y="182">it again.</text>
+        <rect x="30" y="212" width="821" height="36" rx="10" fill="#FBEFE9"/>
+        <text class="a4eXi" x="52" y="235">The third takes a recruiter ninety seconds to send, because the record already exists.</text>
+        <rect x="30" y="258" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="a4eN" x="54" y="270">Explainability is what human oversight looks like from outside the building.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - useless, dangerous, defensible, and why the third one is cheap</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What a useful answer contains<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Four elements, in plain language, without legal padding.</p>
+        <ul>
+          <li><strong>Which criteria applied.</strong> The job-related requirements this role was assessed against. Not all of them in exhaustive detail - the ones that mattered for this decision.</li>
+          <li><strong>What evidence was considered.</strong> The application, the work sample, the interview answers. This is where the record from a3 earns its keep, and where an organisation without one goes quiet.</li>
+          <li><strong>Who decided.</strong> A role, at minimum, and a named person where your process allows it. This is rail 1 pointed outwards. The candidate should never be told that a system decided, because a system should not have.</li>
+          <li><strong>How to ask for a human review.</strong> An actual route: a named inbox, a stated response time, and a description of what will happen. An offer of review with no address behind it is worse than no offer.</li>
+        </ul>
+        <p>Notice how much of this is already sitting in the six-part record. If your governance is real, this letter is a formatting exercise. If writing it requires an investigation, the letter is not the problem.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The template that changed the process.</strong> A team drafted their rejection template and got stuck on the second line, because they could not say what evidence had been considered for candidates who were cut at the automated stage. There was no evidence. There was a score. Writing a sentence to a stranger did what three governance workshops had not: it made the gap concrete. The template shipped six weeks later, after the stage it described had been redesigned.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the two bad answers are bad in different ways<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>"You were not a fit"</strong> is useless. It gives the candidate nothing to learn from, no way to check whether the process worked, and no route back. It is also, quietly, a confession that you may not have a better answer available. Its main cost is trust and reputation, and it is the industry default.</p>
+        <p><strong>"The system scored you fourth"</strong> is worse, and it is worse in a way that should get a leader's attention. It is transparent, specific, and it names a machine as the decision-maker. That is the exact thing every framework in this course says must not happen, and saying it out loud to the affected person is an admission that the human oversight your governance claims does not exist in this case. Transparency is not the goal on its own. Transparency about a defensible process is.</p>
+        <p>The EU AI Act's high-risk obligations include transparency and human oversight for exactly this category of system, and where notice obligations apply, as under NYC LL144, candidates are already entitled to know a tool is being used before it is used on them. This is education, not legal advice, and what your organisation owes a rejected candidate varies by jurisdiction - so build the defensible answer as your default and let counsel tell you where more is required.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Run an impact review on your last five roles <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">In aggregate, not role by role, and using only monitoring data your organisation already collects lawfully. You are not building a new dataset about individuals for a workshop exercise. If the data does not exist, that is your finding and it is a bigger one than any ratio.</p>
+
+    <div class="steps">
+      <div class="step"><p>Take your last five completed roles. For each, get applicants per monitored group and advanced-to-interview per monitored group. Aggregate the five before you divide anything.</p></div>
+      <div class="step"><p>Compute each group's selection rate, then divide the lower by the higher. Write the number down before anyone in the room interprets it. The order matters, because interpretation is where the explaining-away starts.</p></div>
+      <div class="step"><p>Now do it per role as well, and compare. If individual roles swing wildly around a stable aggregate, you are looking at small-sample noise. If the aggregate is low and steady, you are looking at a process.</p></div>
+      <div class="step"><p>Second half, and do not skip it even if the number passed: list every criterion used across those five roles and mark each one you could not evidence from something the candidate actually submitted. Those are where the polish got in.</p></div>
+      <div class="step"><p>If you could not get the numbers at all, stop and write that down as the primary output of the session. A process nobody can measure is a process nobody can defend, and it is also a process that cannot be independently audited.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - the impact review brief</span>Draft a one-page impact review brief for our hiring wave, using the policies and role
+scorecards in this workspace. I will run it on aggregate monitoring data we already
+collect lawfully. Do not ask me for any individual's data.
+
+Specify:
+1) The population: which roles, which stages of the funnel, and why the aggregate rather
+   than a single slate.
+2) The calculation: selection rate per monitored group, then the lower rate divided by
+   the higher, against the 0.80 four-fifths threshold.
+3) The caveats to print on the page itself: it is a screening signal not a verdict,
+   passing is not a defence, small samples swing hard.
+4) The criteria audit: for every criterion used, can it be evidenced from what the
+   candidate submitted? Yes or no, with the evidence named.
+5) Who runs it, on what cadence, who receives it, and what happens if it comes back
+   below 0.80 - referencing the escalation path from session a3.
+
+Then list what we cannot compute from the data we hold, and what we would need.
+Do not state any legal conclusion. Flag those questions for counsel and the DPO.</div>
+
+    <div class="prompt-box bad"><span class="label">The version that manufactures a problem instead of finding one</span>Analyse our hiring data for bias. Here is the candidate spreadsheet with names, addresses and ethnicity fields. Tell me which managers are biased.</div>
+
+    <div class="callout tip">
+      <strong>Why the second one is wrong three times over</strong>
+      It puts identifiable special-category data into a tool, which rail 3 forbids outright. It asks for a conclusion about named individuals, which turns a process question into an accusation and guarantees nobody cooperates with the next review. And it skips the aggregate entirely, so whatever comes back will be noise wearing a confident tone. Impact review is done on aggregated monitoring data, about processes, by someone who owns the number.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write your answer to "why was I rejected?" <span class="tag demo">★ 10 min · build your own</span></h2>
+    </div>
+    <p class="lede">A template a recruiter could actually send on a Thursday afternoon without escalating to legal. Short, honest, and with a human-review route that goes somewhere real.</p>
+
+    <div class="steps">
+      <div class="step"><p>Draft it for one real role, not in the abstract. Use the criteria that role actually used.</p></div>
+      <div class="step"><p>Include all four elements: the criteria that applied, the evidence considered, who decided as a role or a name, and how to ask a person to look again.</p></div>
+      <div class="step"><p>Now stress-test it. Read every sentence and ask whether the record from a3 would let a recruiter fill it in within two minutes. Any sentence that needs an investigation marks a gap in the record, not a gap in the writing.</p></div>
+      <div class="step"><p>Name the review route properly: which inbox, who monitors it, what response time you commit to, and what the reviewer is actually empowered to change. "We will look into it" with nobody behind it is worse than silence.</p></div>
+      <div class="step"><p>Read it aloud as if you were the candidate. If it sounds like it was written to protect the organisation rather than to answer the person, rewrite it once more.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - the rejection answer template</span>Draft a candidate-facing template answering "why was I not selected", for the role
+scorecard in this workspace. Written for a recruiter to send, not for a lawyer to file.
+
+Include, in plain language and under 200 words:
+1) The job-related criteria this role was assessed against.
+2) What evidence was considered: application, work sample, interview answers.
+3) That a named person or role made the decision. Never say a system decided.
+4) How to request a human review: the route, who monitors it, the response time, and
+   what the reviewer can change.
+5) How to request an adjustment or accommodation for any future application.
+
+Rules: no legal padding, no "we receive many strong applications", no adjectives about
+the candidate as a person, and nothing we cannot support from the decision record.
+Then list every sentence in your draft that our record could not currently evidence.</div>
+
+    <div class="callout tip">
+      <strong>The two-minute test</strong>
+      A defensible rejection answer should take a recruiter about ninety seconds to personalise, because everything in it already exists in the record: the criteria, the evidence, the decider, the reason. If your template needs an investigation to complete, the session a3 record is what you are actually missing. The letter is a symptom, and it is the cheapest diagnostic you will ever run.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 45-60 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the aggregate impact review across your last five roles, and put a name and a cadence against it so it happens again without you.</li>
+      <li>Complete the criteria audit for those roles. Count how many criteria could not be evidenced from what candidates submitted. That count is a better health metric than the ratio.</li>
+      <li>Rewrite the worst one properly. One criterion, from a proxy or a vague adjective into something evidenceable. Take the rewrite to the hiring manager who owns the role.</li>
+      <li>Finish the rejection template and get one recruiter to complete it for three real past candidates, timed. Anything over two minutes is a record gap.</li>
+      <li>Ask whether your organisation has ever explained a rejection to a candidate who challenged one, and what happened. Somebody remembers.</li>
+      <li>Bring one unresolved data question to a5, where people data, monitoring and trust get their own session.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public regulation and long-standing selection guidance. This course is education for HR professionals, not legal advice, and obligations vary by jurisdiction. No statement here is a legal conclusion about your process. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EEOC Uniform Guidelines - the four-fifths rule and its limits</span><span class="note">Part 2 · computed by hand on the Kestrel wave</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">NYC Local Law 144 - notice, audit and the employer's duty</span><span class="note">Part 3 · what candidates are told; full machinery in a3</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act - Annex III point 4 transparency and human oversight</span><span class="note">Part 3 · the 2 Dec 2027 position after the Digital Omnibus</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Structured selection research</span><span class="note">Parts 1-2 · why the fairness fixes are quality fixes</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Group A: 180 applicants, 54 advanced. Group B: 120 applicants, 18 advanced. What is the ratio?</p>
+      <button class="qopt" type="button">A · 0.33, because 18 divided by 54 is a third</button>
+      <button class="qopt" type="button">B · 0.60, comparing the two headcounts against each other</button>
+      <button class="qopt" type="button">C · 0.50 - rates first (30% and 15%), then the lower over the higher. Below 0.80, so investigate</button>
+      <p class="qwhy">Rates, then the division. 54/180 is 30%, 18/120 is 15%, and 15 over 30 is 0.50. Comparing raw counts skips the denominator, which is the single most common arithmetic slip in this whole exercise.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Your wave passes at 0.86. What have you actually established?</p>
+      <button class="qopt" type="button">A · That the process is defensible and the file can be closed</button>
+      <button class="qopt" type="button">B · That one screening signal came back clean on this population. It is not a defence, and the criteria still have to be job-related and evidenced</button>
+      <button class="qopt" type="button">C · Nothing at all, since the four-fifths rule is too crude to tell you anything</button>
+      <p class="qwhy">Error one of the three. Passing is a signal, not a clean bill of health - which is exactly why the exercise has a second half where you mark every criterion you could not evidence. A comfortable number sitting on unevidenced criteria is a process you could not defend for ten minutes.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · In the b4 simulator, quality climbed 61 to 100 while the ratio climbed 0.09 to 1.00. What follows for leaders?</p>
+      <button class="qopt" type="button">A · The trade-off was not real here - the five defects were costing quality as well as fairness</button>
+      <button class="qopt" type="button">B · Quality gains reliably come at a fairness cost, so the two must be balanced case by case</button>
+      <button class="qopt" type="button">C · Fairness fixes are worth doing anyway, even though they cost you the stronger candidates</button>
+      <p class="qwhy">Both numbers move together because structured criteria, scrubbed proxies, evidence, calibration and a human decision gate are selection quality practices first. Every seat handed to polish was taken from someone better at the job. The sixth lever, the impact check, moves neither number - measuring is not fixing.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Fairness is a measurement</b><span>a specific division, on a named population, on a cadence, with a written consequence.</span></div>
+      <div class="cheat-item"><b>The proxy chain</b><span>visible on a CV → travels with background → becomes a criterion. Nobody wrote a biased rule.</span></div>
+      <div class="cheat-item"><b>The eight suspects</b><span>school · employer prestige · postcode · name and photo · age signals · unbroken timeline · fluency · polish.</span></div>
+      <div class="cheat-item"><b>The division</b><span>rates first, then lower over higher. 30% and 15% gives 0.50. Below 0.80 is evidence of adverse impact.</span></div>
+      <div class="cheat-item"><b>Error one</b><span>a pass is not a defence. Audit the criteria whether or not the number was comfortable.</span></div>
+      <div class="cheat-item"><b>Error two</b><span>one small slate swings on one seat. Aggregate the wave, then look per role for noise.</span></div>
+      <div class="cheat-item"><b>Error three</b><span>a fail starts an investigation, not a verdict. Explaining it away in the room is the costly move.</span></div>
+      <div class="cheat-item"><b>No trade-off</b><span>b4: quality 61 to 100 as the ratio went 0.09 to 1.00. The defects were costing quality all along.</span></div>
+      <div class="cheat-item"><b>The defensible answer</b><span>criteria · evidence considered · who decided · how to ask a person to look again.</span></div>
+      <div class="cheat-item"><b>Not legal advice</b><span>education for HR professionals. Obligations vary by jurisdiction; take conclusions to counsel.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 4 of 6 · learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a3-governing-ai-hiring.html">← Previous: Governing AI in hiring</a> &nbsp;·&nbsp; <a href="a5-people-data.html">Next: People data, monitoring and trust →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

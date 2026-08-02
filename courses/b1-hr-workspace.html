@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR session 1 · Your HR workspace - learn AI + HR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-hr-with-phoebe</a> / HR session 1 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe · HR track · Session 1 of 10</div>
+    <h1>Your HR workspace: <span class="accent">drafts from the machine, decisions from a person</span></h1>
+    <p class="sub">HR is the one function where a sloppy AI shortcut does not just embarrass you - it can be unlawful, and it lands on a real person's career. Tonight you build a workspace that makes the good version fast: the documents that let AI draft something useful, the hard list of what never goes near it, and the three rails that run through all ten sessions. Kestrel's hiring wave starts next week.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 HR track</span>
+      <span class="chip audience">HR partners · recruiters · L&amp;D · people ops</span>
+      <span class="chip audience">No code · any AI assistant</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · What moves, what must not</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: the workspace</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this track works</h2>
+    </div>
+    <p class="lede">Ten hands-on sessions across the whole people lifecycle, all on one running company: <strong>Kestrel</strong>, a fictional 400-person services firm scaling to 600. There is a 120-role hiring wave, a performance cycle, and an engineering attrition problem, and you will work all three. Tonight is setup. b2 defines roles and writes job descriptions that widen the pool, b3 does sourcing at volume, <strong>b4 is the live screening simulator where a perfectly reasonable-looking shortlist fails the four-fifths rule</strong>, b5-b6 take it through structured interviews to offer, b7-b9 cover onboarding, performance and internal mobility, and b10 runs a full wave end to end with the audit trail. The leader track (a1-a6) runs alongside for CHROs and HR directors - a2 there is the legal map, and it is worth reading even if you never attend.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      An honest map of where AI helps across the people lifecycle and the two decisions it must never make, a live Kestrel workspace with a real HR context pack, a never-goes-in list you can defend to your DPO, a candidate-facing AI notice line, and the three rails the rest of the track assumes.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT MOVES ============ -->
+  <section class="section" id="what-moves">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the people lifecycle + the regulated boundary</span>
+      <h2>Where AI helps, and the line it does not cross <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Most of HR's week is drafting and collating: job descriptions, outreach, interview guides, onboarding plans, feedback wording, policy answers. AI is genuinely good at all of it. Then there is a second pile - who gets hired, who gets promoted, who gets managed out - and that pile is not slow because we lack a tool. It is deliberate, it is regulated, and a person owns it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The people lifecycle: AI drafts job descriptions, outreach, interview guides, onboarding and feedback wording, while a named person decides on hiring, promotion and exit">
+        <style>
+          .h1lT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .h1lI { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .h1lX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .h1lXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .h1lXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .h1lN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .h1lH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="h1lH" x="30" y="30">AI DRAFTS THIS</text>
+        <text class="h1lH" x="660" y="30">A PERSON DECIDES</text>
+        <rect x="30" y="44" width="195" height="94" rx="12" fill="#6E2A18"/>
+        <text class="h1lT" x="52" y="80">Attract</text>
+        <text class="h1lX" x="52" y="102">role scorecards, job ads,</text>
+        <text class="h1lX" x="52" y="120">outreach at volume</text>
+        <rect x="240" y="44" width="195" height="94" rx="12" fill="#A6472E"/>
+        <text class="h1lT" x="262" y="80">Assess</text>
+        <text class="h1lX" x="262" y="102">interview guides,</text>
+        <text class="h1lX" x="262" y="120">scorecards, summaries</text>
+        <rect x="450" y="44" width="195" height="94" rx="12" fill="#C9704F"/>
+        <text class="h1lI" x="472" y="80">Grow</text>
+        <text class="h1lXi" x="472" y="102">onboarding plans,</text>
+        <text class="h1lXi" x="472" y="120">feedback wording, L&amp;D</text>
+        <rect x="660" y="44" width="195" height="94" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="h1lI" x="682" y="80">Decide</text>
+        <text class="h1lXw" x="682" y="102">hire · promote · exit ·</text>
+        <text class="h1lXw" x="682" y="120">pay. Never the model.</text>
+        <rect x="30" y="176" width="825" height="60" rx="12" fill="#FBEFE9"/>
+        <text class="h1lXi" x="52" y="200">The first three boxes are most of your week and none of your legal exposure.</text>
+        <text class="h1lXi" x="52" y="222">The fourth is a small part of your week and all of it. Move the first three, guard the fourth.</text>
+        <rect x="30" y="262" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="h1lN" x="54" y="274">Recruitment and selection AI is high-risk under the EU AI Act. Treat the fourth box as regulated.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three boxes AI can draft, one box a named human owns</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why HR is the highest-stakes AI domain in the business<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Marketing gets a bad campaign. Finance gets a wrong number in a deck. HR gets a person who did not get the job, a protected characteristic quietly doing the work of a criterion, and a regulator who is entitled to ask how the tool was audited.</p>
+        <ul>
+          <li><strong>It is explicitly regulated.</strong> The EU AI Act classes AI used for recruitment, filtering applications, evaluating candidates, performance evaluation, promotion and termination as high-risk. The obligations for those systems now apply from 2 December 2027 after the Digital Omnibus postponement - later than first legislated, and still coming.</li>
+          <li><strong>Some of it is regulated already.</strong> New York City's Local Law 144 has been enforceable since 2023: if an automated employment decision tool is used on a candidate in NYC, the employer needs an independent annual bias audit, a public summary of it, and at least 10 business days' notice to the candidate. That obligation sits on the employer, not only on the vendor.</li>
+          <li><strong>The harm is individual and durable.</strong> A campaign gets rerun next quarter. A rejection is a person's year.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The screen that worked exactly as designed.</strong> A hiring team fed a model years of "successful hire" data and asked it to rank applicants. It learned the pattern in the data faithfully - including who had historically been hired - and reproduced it. Nobody wrote a discriminatory rule; the rule was learned from the past and applied at speed. The tool was not broken. It was doing its job on the wrong objective, which is the failure mode you will meet in b4.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The dates, and why you must check them yourself<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>As of mid-2026: the EU AI Act's Annex III high-risk obligations, which cover employment, were moved from 2 August 2026 to <strong>2 December 2027</strong>. Systems already in use before that date fall outside the obligations unless they are significantly changed in design; public authorities have longer. NYC LL144 is live now, with penalties starting at $500 per violation and rising to $1,500 per day for continuing ones.</p>
+        <p>One of those dates has already moved once, which is the actual lesson: <strong>check the current position before you act, and never let a course page be your compliance source.</strong> The leader session a2 is the full legal map, a3 is the governance you build around it, and none of it is legal advice.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE WORKSPACE ============ -->
+  <section class="section" id="workspace">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the pack, and the hard boundary</span>
+      <h2>The HR workspace: what goes in, what never does <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">An empty chat window can only give you generic HR advice, which you do not need and which is occasionally wrong for your jurisdiction. A workspace holding Kestrel's role scorecards, comp bands, interview guides and policies can draft the actual artifact. But an HR workspace has a boundary no other function has: most of your most useful-looking material is other people's personal data.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The HR context pack and house rules feed one workspace that produces drafts a named person reviews and signs; candidate and employee personal data never enters">
+        <style>
+          .h2wT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .h2wI { font: 700 14px Inter, sans-serif; fill: #2A1A15; }
+          .h2wX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .h2wXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .h2wXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .h2wN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+        </style>
+        <defs>
+          <marker id="h2wAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#E9B6A2"/>
+          </marker>
+        </defs>
+        <rect x="26" y="40" width="190" height="112" rx="12" fill="#6E2A18"/>
+        <text class="h2wT" x="46" y="70">The HR pack</text>
+        <text class="h2wX" x="46" y="92">role scorecards · bands</text>
+        <text class="h2wX" x="46" y="110">policies · guides</text>
+        <text class="h2wX" x="46" y="128">past decision records</text>
+        <rect x="26" y="168" width="190" height="88" rx="12" fill="#A6472E"/>
+        <text class="h2wT" x="46" y="198">The house rules</text>
+        <text class="h2wX" x="46" y="220">how we rate, what is</text>
+        <text class="h2wX" x="46" y="238">never a criterion</text>
+        <line x1="222" y1="96" x2="286" y2="130" stroke="#E9B6A2" stroke-width="2" marker-end="url(#h2wAh)"/>
+        <line x1="222" y1="212" x2="286" y2="176" stroke="#E9B6A2" stroke-width="2" marker-end="url(#h2wAh)"/>
+        <rect x="296" y="104" width="190" height="96" rx="12" fill="#6E2A18"/>
+        <text class="h2wT" x="316" y="140">One workspace</text>
+        <text class="h2wX" x="316" y="162">per function, refreshed</text>
+        <text class="h2wX" x="316" y="180">every hiring wave</text>
+        <line x1="492" y1="152" x2="556" y2="152" stroke="#E9B6A2" stroke-width="2" marker-end="url(#h2wAh)"/>
+        <rect x="566" y="104" width="190" height="96" rx="12" fill="#E9B6A2"/>
+        <text class="h2wI" x="586" y="140">Drafts, not calls</text>
+        <text class="h2wXi" x="586" y="162">ads, guides, plans,</text>
+        <text class="h2wXi" x="586" y="180">feedback wording</text>
+        <line x1="762" y1="152" x2="812" y2="152" stroke="#E9B6A2" stroke-width="2" marker-end="url(#h2wAh)"/>
+        <text class="h2wI" x="788" y="220">You</text>
+        <text class="h2wXi" x="766" y="240">decide</text>
+        <text class="h2wXi" x="768" y="258">+ record</text>
+        <rect x="296" y="228" width="460" height="76" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="h2wI" x="316" y="256">Never in the pack</text>
+        <text class="h2wXw" x="316" y="278">CVs and candidate data · health and accommodations ·</text>
+        <text class="h2wXw" x="316" y="296">grievance and disciplinary files · named pay data</text>
+        <rect x="26" y="300" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="h2wN" x="50" y="312">Approved tool, lawful basis, minimum data. Ask your DPO before the first CV, not after.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the pack and the rules go in, drafts come out, personal data stays outside</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The six documents worth loading<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>None of these are personal data. All of them are what makes a draft specific to your company instead of specific to the internet.</p>
+        <table class="clean">
+          <thead><tr><th>Document</th><th>What it unlocks</th></tr></thead>
+          <tbody>
+            <tr><td>Role scorecards - what good looks like per role</td><td>Rating against the job instead of against CV polish</td></tr>
+            <tr><td>Comp bands and levelling framework</td><td>Offers and ads that do not contradict your own structure</td></tr>
+            <tr><td>Interview guides and scorecards you already use</td><td>New guides in your house format, comparable across raters</td></tr>
+            <tr><td>Policies: hiring, performance, leave, conduct</td><td>Answers that match your policy, not a generic one</td></tr>
+            <tr><td>Anonymised past decision records and rationales</td><td>Consistency - and a sense of what your bar actually is</td></tr>
+            <tr><td>A glossary of your levels, teams and acronyms</td><td>Drafts that speak Kestrel instead of speaking HR-in-general</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>The de-identification habit</strong>
+          When you genuinely need to work over a real document - an interview note, a feedback draft - strip it first: no name, no contact details, no employer, no dates of birth, no protected characteristics, no free-text about health or family. If stripping it makes the task impossible, that is a sign the task itself needs a person, not a prompt.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Approved tools, and the question to ask first<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Ask what is approved before you build anything.</strong> HR data usually has a tighter tool list than the rest of the business. If nobody can tell you, that is a finding worth raising - the leader session a3 is exactly this conversation.</li>
+          <li><strong>Ask whether it is an AEDT.</strong> If a tool substantially assists or replaces a hiring or promotion decision, obligations attach in some jurisdictions - independent bias audit, public summary, candidate notice. Drafting a job ad is not that. Ranking a slate is.</li>
+          <li><strong>Ask who else can see the workspace.</strong> HR content is confidential by default. A shared workspace with the wrong members is a data incident waiting for a slow Tuesday.</li>
+          <li><strong>Availability and features change fast.</strong> If a button named here has moved, the exercise still works - the artifact is the point.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE RAILS ============ -->
+  <section class="section" id="rails">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the rails every later session assumes</span>
+      <h2>Three rails, each one scar tissue <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Techniques change every quarter. These three do not, because each is a specific way AI-assisted HR goes wrong.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rail 1 - a person decides, and the record shows which person<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every decision about an individual - shortlist, reject, offer, rating, promotion, exit - is made by a named human who can say why, in writing, from evidence. "The system ranked them fourth" is not a reason, and in a regulated process it is close to an admission.</p>
+        <ul>
+          <li><strong>Write the reason at the time.</strong> Reconstructing a rationale six months later, after a complaint, is exactly when it looks reconstructed.</li>
+          <li><strong>Keep the slate, not just the outcome.</strong> Who was in the pool matters as much as who came out of it - that is what an impact check needs.</li>
+          <li><strong>Meaningful review means you could have said no.</strong> A human who rubber-stamps a ranked list has not reviewed anything, and both the AI Act's human-oversight expectations and any serious auditor will read it that way.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rail 2 - rate the job, not the polish<span class="mini">1 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The fastest way to build a biased screen is to rate what a CV looks like instead of what the job needs. Polish, prestige, fluent phrasing, an unbroken timeline - all of them travel with background rather than ability, and all of them are exactly what a language model finds easiest to reward. Structured criteria drawn from the actual job, with evidence attached to each rating, is the fix. It is also, independently, the thing that predicts performance better. In b4 you will watch both numbers move together.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The "communication skills" criterion.</strong> A team scored every candidate on communication. Nobody defined it, so raters used the CV's prose. The highest scores went to people who write English as a first language and had someone edit their CV; the lowest went to two engineers who, in the interview, explained a distributed-systems failure more clearly than anyone in the room. The criterion was not wrong. It was undefined, which meant it quietly measured background.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rail 3 - people data is not prompt fodder<span class="mini">1 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>No CVs, no candidate contact details, no health or accommodation information, no grievance or disciplinary material, no named pay data - not into an unapproved tool, and not into an approved one without a lawful basis and the minimum necessary data. Candidates and employees did not hand you their information so it could become context for a chat window.</p>
+        <div class="callout tip">
+          <strong>Say it once, out loud</strong>
+          "A person decides and the record shows who. Rate the job, not the polish. People data is not prompt fodder." That is the spine of the whole HR track.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Build the Kestrel workspace <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Build it for Kestrel now, rebuild it for your own function this week. Fifteen minutes once, and every session after this assumes it exists.</p>
+
+    <div class="steps">
+      <div class="step"><p>Create a workspace named for the function and the wave: <em>Kestrel - hiring wave and people cycle</em>. Check who else can see it before you put anything in it.</p></div>
+      <div class="step"><p>Load the six documents. For Kestrel tonight: three role scorecards, the levelling and comp band sheet, the standard interview guide, the hiring policy, and a glossary of levels and teams. No CVs. None.</p></div>
+      <div class="step"><p>Write the workspace instructions from the skeleton below, including the never-list.</p></div>
+      <div class="step"><p>Test it with a question that is impossible without the pack: <em>"For the Senior Support Engineer role, what are the five must-have criteria, and which of them is most often faked on a CV?"</em> A loaded workspace answers from your scorecard. An empty one gives you a listicle.</p></div>
+      <div class="step"><p>If the answer was generic, do not rewrite the question. Add the missing document.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - the HR workspace instructions</span>You support one HR function. Work only from the documents in this workspace.
+
+COMPANY: Kestrel, 400 people scaling to 600. A 120-role hiring wave is running, a
+performance cycle lands in month 5, and engineering attrition is elevated.
+ME: an HR partner. I draft, a named manager or I decide, and every decision gets recorded.
+
+HOW TO WORK WITH ME
+- Answer from the attached scorecards, bands, guides, policies and glossary. If something
+  is not in them, say "not in the pack" and name who I should ask. Do not fill it in from
+  general knowledge, and never from what other companies do.
+- Never rank, score, shortlist or reject a named individual. You draft criteria, guides,
+  questions and wording. People decide about people.
+- Rate against the job, never against CV polish, school, employer prestige, an unbroken
+  timeline, or how fluent the writing is. If I ask for a criterion that is a proxy for a
+  protected characteristic, say so and offer the job-related version instead.
+- No personal data lives here. If I paste something that looks like a CV, a health detail,
+  a grievance, or a named salary, stop and tell me to remove it.
+- Every artifact ends with the evidence it rests on and who signs it.</div>
+
+    <div class="prompt-box bad"><span class="label">The version that gets a company into trouble</span>You are an expert recruiter with 20 years of experience. Here are 60 CVs - rank them from best to worst for this role and tell me who to interview.</div>
+
+    <div class="callout tip">
+      <strong>Why the second one is the whole course in miniature</strong>
+      It puts 60 people's personal data into a tool that may not be approved, asks a model to make the one decision it must not make, gives it no definition of "best" so it optimises for polish, produces no evidence for any ranking, and creates an automated employment decision with no audit, no notice and no reviewable rationale. It also feels like the most useful prompt on the page, which is precisely why it is the dangerous one.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write the house rules and the candidate notice <span class="tag demo">★ 10 min · build your own</span></h2>
+    </div>
+    <p class="lede">Two artifacts. The house rules are internal and you will carry them from job to job. The notice is external, it is what a candidate reads, and in some jurisdictions a version of it is required - with lead time.</p>
+
+    <div class="steps">
+      <div class="step"><p>Start the house rules from the three rails, then add your own hard "never" lines - the ones that come from something that has actually gone wrong where you work.</p></div>
+      <div class="step"><p>Add your artifact standards: what a criterion must look like, that every rating carries evidence, that every rejection has a recorded reason.</p></div>
+      <div class="step"><p>Now draft the candidate-facing notice: what AI is used for in your process, what it is not used for, that a person decides, and how to ask for a human review or an adjustment.</p></div>
+      <div class="step"><p>Check the timing question with whoever owns compliance. Where notice is required, it typically has to arrive <em>before</em> the tool is used - NYC's rule is at least 10 business days ahead - which means this is a process design question, not a footer.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The house rules starter - edit hard, then keep</span>HOUSE RULES (apply to every HR artifact you draft for me)
+
+NEVER
+- Rank, score or reject a named person. No exceptions, no "just a first pass".
+- Use school, employer prestige, postcode, name, photo, age, an employment gap, or
+  writing fluency as a criterion or a tiebreaker.
+- Accept personal data in this workspace: CVs, contact details, health or accommodation
+  information, grievance or disciplinary material, named pay.
+- Assert a legal position. Flag the question and name who I ask.
+
+ALWAYS
+- Criteria come from the role scorecard, in job-related language, with a way to evidence each.
+- Every rating cites the evidence: the work sample, the answer given, the artifact seen.
+- Every decision names the person who made it and the reason, recorded the same day.
+- Where wording touches a protected characteristic, flag it rather than smoothing it.
+
+VOICE
+- Plain, specific, no adjectives about people. Describe behaviour and evidence, not character.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The notice that improved the process.</strong> A team wrote their candidate AI notice honestly - AI drafts the job ad and the interview guide, a person reads every application, a person decides - and then noticed they could not honestly write the third line, because a tool was auto-filtering on years of experience before any human saw a CV. Writing the notice is what surfaced it. Nothing sharpens a process like having to describe it to the people it is done to.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Build the workspace for your own function. Six documents, none of them containing a named person's data.</li>
+      <li>Finish the house rules. Add two "never" lines that come from your own organisation's history.</li>
+      <li>Write your candidate AI notice, then check every sentence in it against what your process actually does today. Any sentence you cannot honestly write is this week's real finding.</li>
+      <li>List every tool already touching your hiring process, including the ones nobody calls AI. Mark which of them substantially assist a decision. Bring that list to b4 - it is the list that matters.</li>
+      <li>Ask who owns AI decisions in HR where you work: DPO, legal, or nobody. If it is nobody, leader session a3 is the one to forward.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public regulation, selection research, and vendor documentation. Certification (SHRM, CIPD) and any actual legal position stay with their owners. This course is education for HR professionals, not legal advice, and obligations vary by jurisdiction. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act - Annex III employment high-risk scope</span><span class="note">Part 1 · what counts, and the move to 2 Dec 2027</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NYC Local Law 144 - AEDT audit, public summary, candidate notice</span><span class="note">Part 1 + Demo 2 · the live obligation; full depth in a2-a3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">GDPR + PDPA - personal data, minimisation, automated decisions</span><span class="note">Part 2-3 · the never-list; depth in a5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Anthropic docs - workspaces, context, Skills</span><span class="note">Part 2 · the pack; connectors in b9-b10</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · A manager asks you to paste 60 CVs in and get a ranked shortlist back by Friday. What is the first problem?</p>
+      <button class="qopt" type="button">A · It will be slow and the formatting will be inconsistent</button>
+      <button class="qopt" type="button">B · It puts 60 people's personal data into the tool and asks the model to make the one decision a person must make</button>
+      <button class="qopt" type="button">C · Nothing, as long as you check the top five yourself</button>
+      <p class="qwhy">Rails 1 and 3 at once. It is an automated employment decision with no defined criteria, no evidence, no audit and no notice - and the personal data should not be there in the first place. Checking the top five afterwards is a rubber stamp, not review.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Your draft screening criteria include "strong communication skills". What is wrong with it?</p>
+      <button class="qopt" type="button">A · Nothing - it is a normal requirement in most roles</button>
+      <button class="qopt" type="button">B · It is too vague to write in a job ad</button>
+      <button class="qopt" type="button">C · Undefined, it gets scored off CV polish and fluency, which travel with background rather than ability</button>
+      <p class="qwhy">Rail 2. An undefined criterion is not neutral - raters fill the gap with what they can see, which is writing style. Define what communication means for this job and how it will be evidenced, or drop it.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which statement about the legal position is accurate as taught here?</p>
+      <button class="qopt" type="button">A · NYC LL144 is enforceable now and needs an independent annual audit, a public summary and advance candidate notice; the EU AI Act's employment obligations were postponed to 2 Dec 2027</button>
+      <button class="qopt" type="button">B · Nothing applies until the EU AI Act fully bites, so there is time</button>
+      <button class="qopt" type="button">C · These rules bind the tool vendor, so an employer buying a tool has no obligation</button>
+      <p class="qwhy">The live obligation lands on the employer, not just the vendor, and it is live today in some places. The EU timeline moved once already - which is why you check the current position instead of trusting any page, including this one.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>HR session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The split</b><span>AI drafts attract, assess and grow material. A person decides hire, promote, pay and exit.</span></div>
+      <div class="cheat-item"><b>Why HR is different</b><span>the mistake is regulated and lands on one person's career, not on next quarter's campaign.</span></div>
+      <div class="cheat-item"><b>Live today</b><span>NYC LL144: independent annual bias audit, public summary, 10 business days' candidate notice.</span></div>
+      <div class="cheat-item"><b>Coming</b><span>EU AI Act employment high-risk obligations, moved to 2 Dec 2027. Check the current position.</span></div>
+      <div class="cheat-item"><b>The pack</b><span>scorecards, bands, interview guides, policies, anonymised decision records, glossary.</span></div>
+      <div class="cheat-item"><b>Rail 1</b><span>a person decides and the record shows who, with the reason written the same day.</span></div>
+      <div class="cheat-item"><b>Rail 2</b><span>rate the job, not the polish. Undefined criteria quietly measure background.</span></div>
+      <div class="cheat-item"><b>Rail 3</b><span>people data is not prompt fodder. No CVs, health, grievances or named pay in the workspace.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>HR session 1 of 10 · learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-role-and-jd.html">Next: Role definition and the job description →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

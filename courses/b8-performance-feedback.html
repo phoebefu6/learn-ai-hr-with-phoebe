@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR session 8 · Performance and feedback - learn AI + HR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-hr-with-phoebe</a> / HR session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe · HR track · Session 8 of 10</div>
+    <h1>Performance and feedback: <span class="accent">evidence over vibes, and the rating stays yours</span></h1>
+    <p class="sub">Week 20 at Kestrel. Four hundred reviews are due in a fortnight, written by managers who left every one of them to the last weekend. The temptation to hand the whole cycle to a model has never been stronger, and this is the second regulated boundary in the course. Tonight: what AI may gather, what it may draft, and the one thing it never does.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 HR track</span>
+      <span class="chip audience">HR partners · people ops · managers</span>
+      <span class="chip audience">Review clinic</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The boundary and the evidence</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: the review clinic</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">The hiring wave is half done and the people you hired in b4 to b6 are now inside the performance cycle with everyone else. You already know the discipline this session needs, because you built it for interviews in b5: a defined scale, evidence against every rating, and a named person who decides. What changes here is the stakes on the other side - a review follows someone through promotion, pay and, eventually, whether they stay. It is also, like hiring, explicitly inside the regulated category.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A clear line between the three jobs inside a review, a rewrite drill that turns vague lines into evidenced ones, the bias check that is a re-read rather than a feeling, first-hand experience of the smoothing trap where a model politely deletes the useful part, and a review-clinic prompt your managers can actually use this fortnight.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE BOUNDARY ============ -->
+  <section class="section" id="boundary">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the AI Act's performance-evaluation scope</span>
+      <h2>Three jobs inside a review, and the line between them <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A performance review looks like one task and is really three: gathering the evidence, writing the words, and making the judgment. AI is genuinely useful at the first, useful with supervision at the second, and must not touch the third. Drawing that line is not caution for its own sake - performance evaluation, promotion and termination sit inside the same high-risk employment category as hiring under the EU AI Act, with the same expectation of real human oversight.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A review splits into three jobs: gathering evidence where AI helps, writing the words where AI drafts under supervision, and making the judgment which stays with a named person">
+        <style>
+          .b8pT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b8pI { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .b8pX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b8pXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .b8pXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .b8pN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .b8pH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <defs>
+          <marker id="b8pAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#E9B6A2"/>
+          </marker>
+        </defs>
+        <text class="b8pH" x="30" y="32">ONE TASK, THREE JOBS</text>
+        <rect x="30" y="48" width="245" height="98" rx="12" fill="#6E2A18"/>
+        <text class="b8pT" x="52" y="82">1 · Gather evidence</text>
+        <text class="b8pX" x="52" y="106">tickets, artifacts, dates,</text>
+        <text class="b8pX" x="52" y="124">the manager's own notes</text>
+        <line x1="281" y1="97" x2="311" y2="97" stroke="#E9B6A2" stroke-width="2" marker-end="url(#b8pAh)"/>
+        <rect x="318" y="48" width="245" height="98" rx="12" fill="#A6472E"/>
+        <text class="b8pT" x="340" y="82">2 · Write the words</text>
+        <text class="b8pX" x="340" y="106">organise it, tighten it,</text>
+        <text class="b8pX" x="340" y="124">keep every specific</text>
+        <line x1="569" y1="97" x2="599" y2="97" stroke="#E9B6A2" stroke-width="2" marker-end="url(#b8pAh)"/>
+        <rect x="606" y="48" width="245" height="98" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="b8pI" x="628" y="82">3 · The judgment</text>
+        <text class="b8pXw" x="628" y="106">the rating, the ranking,</text>
+        <text class="b8pXw" x="628" y="124">the consequence</text>
+        <rect x="606" y="158" width="245" height="34" rx="9" fill="#FBEFE9"/>
+        <text class="b8pXi" x="628" y="180">A named manager. Never a model.</text>
+        <rect x="30" y="212" width="821" height="58" rx="12" fill="#FBEFE9"/>
+        <text class="b8pXi" x="52" y="236">Job one saves the weekend. Job two saves the manager from writing "solid contributor" again.</text>
+        <text class="b8pXi" x="52" y="256">Job three is the reason the role exists. Cross that line and the review is nobody's.</text>
+        <rect x="30" y="292" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="b8pN" x="54" y="304">Performance evaluation sits in the same high-risk category as hiring. Oversight must be real.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - gather, draft, decide - and the one of the three that never moves</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why the third job is not negotiable<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The AI Act's employment high-risk scope is wider than most HR teams assume. It covers recruitment and selection, and it also covers performance evaluation, task allocation, monitoring of workers, promotion and termination. A tool that rates or ranks your employees is in the same regulated category as a screening tool - with obligations around record-keeping, transparency and human oversight, and with oversight meaning someone who could actually have decided differently. As of mid-2026 those obligations apply from 2 December 2027 after the Digital Omnibus postponement, and that date has already moved once, so check the current position rather than trusting this page.</p>
+        <ul>
+          <li><strong>A rating is a consequence, not a summary.</strong> It moves pay, promotion and, in a downturn, who is on a list. That is why it needs an accountable human name on it.</li>
+          <li><strong>"The system suggested it" is the worst possible answer</strong> in an appeal, a grievance, or a tribunal - and it is exactly what a manager will say if you let a draft arrive with a number already in it.</li>
+          <li><strong>Rail 1 does the work here.</strong> A person decides, the record shows who, and the reason is written the same day - not reconstructed after somebody objects.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The number that arrived first.</strong> One team let a tool pre-populate a suggested rating at the top of each review form, on the reasonable theory that managers could change it. Almost nobody did. The suggestion became the anchor, the written evidence got reverse-engineered to fit it, and the cycle produced a distribution nobody could explain when asked. The fix was one line of process: the evidence gets written before any number exists, and the number is typed by the manager.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the data rail means in a performance cycle<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Rail 3 does not soften because these are your own employees. Performance material, grievance and disciplinary records, health and accommodation information, and named pay data stay out of a general AI workspace. Under GDPR and PDPA you need a lawful basis, the minimum necessary data, a retention limit, and meaningful human involvement in anything that decides something about a person.</p>
+        <p>The practical version for this fortnight: managers work from their own notes about their own reports, de-identified where a tool is involved, and nobody pastes a review of one person into a workspace that another manager can read. If your organisation has an approved HR-specific tool with the right terms, that is where this belongs. If nobody can tell you what is approved, that is a finding worth escalating - leader session a5 is the conversation.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: EVIDENCE OVER VIBES ============ -->
+  <section class="section" id="evidence">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the rewrite discipline</span>
+      <h2>Evidence over vibes <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">A defensible review contains behaviours, artifacts, dates and impact. An indefensible one contains adjectives doing the work that examples should be doing. The test is simple and unforgiving: for every claim, can you point at the thing? If not, it is an impression, and impressions are where everything unfair in a performance cycle hides.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The rewrite table - three vague lines, fixed<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Vague, and unusable</th><th>Evidenced, and actionable</th></tr></thead>
+          <tbody>
+            <tr><td>"Strong team player, well liked."</td><td>"Ran the March incident bridge for four hours, kept two customer teams informed on a 30-minute cadence, and wrote the postmortem that support now uses as a template."</td></tr>
+            <tr><td>"Needs to be more strategic."</td><td>"Escalated three recurring ticket patterns as individual issues rather than proposing the underlying fix. Next quarter: bring one root-cause proposal per month to the ops review."</td></tr>
+            <tr><td>"Communication could improve."</td><td>"Two customer updates in Q2 went out without a next step or an owner, and both generated a follow-up call. Use the update template from the support playbook."</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li><strong>Behaviour, not character.</strong> "Is disorganised" describes a person. "Missed three of eight agreed follow-up dates" describes something that can change.</li>
+          <li><strong>No unnamed comparisons.</strong> "Not as strong as others on the team" is unappealable and tells the person nothing.</li>
+          <li><strong>Developmental advice as concrete as the praise.</strong> This is where reviews quietly become unequal - specific praise and vague growth advice is a pattern, not an accident.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The review that could not survive being read aloud.</strong> A manager wrote that an engineer "sometimes lacks executive presence". Asked in a calibration session what that meant, he could not produce a single incident, and eventually said she was quiet in large meetings. The rewrite - "in three architecture reviews she raised her objection afterwards in writing rather than in the room; agree in advance which meetings she will speak in" - was something she could act on, and something he could defend. Same observation, one of them fair.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The bias check, and the smoothing trap<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Written feedback shows systematic differences by group: more personality language and less concrete achievement language for some people, vaguer developmental advice for others. The check is a re-read against three questions, not a feeling.</p>
+        <ul>
+          <li>Does every claim cite an artifact, a date or an incident?</li>
+          <li>Is the developmental advice as specific as the praise?</li>
+          <li>Would this sentence survive being read aloud to the person, in their words, in a room?</li>
+        </ul>
+        <p><strong>Then the trap.</strong> Ask a model to "improve" or "soften" a review and it will regress toward corporate mush - the specific incident becomes "some challenges around delivery", the actionable advice becomes "continue to develop in this area". That is the opposite of what a review needs. Use it to organise and tighten; keep the manager's specifics verbatim, and fix wording only.</p>
+        <div class="callout tip">
+          <strong>The one-line instruction that prevents it</strong>
+          "Keep every specific - name, date, artifact, number - exactly as written. Improve only sentence structure and clarity. If a sentence has no specific in it, flag it rather than rewriting it." Paste that into every drafting prompt this fortnight.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE THREE STATES ============ -->
+  <section class="section" id="three-states">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · what smoothing costs</span>
+      <h2>The same feedback in three states <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Vague, smoothed, evidenced. The middle one is the dangerous state, because it reads better than the first and is just as useless - it has been polished into unfalsifiability, which is the same failure the status report and the screening slate both had earlier in this course.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The same feedback line vague, smoothed by a model, and evidenced - showing that smoothing removes the specific detail that makes feedback actionable">
+        <style>
+          .b8sT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b8sI { font: 700 14px Inter, sans-serif; fill: #2A1A15; }
+          .b8sX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b8sXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .b8sXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .b8sN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+        </style>
+        <rect x="30" y="40" width="255" height="120" rx="12" fill="#C9704F"/>
+        <text class="b8sI" x="52" y="70">Vague</text>
+        <text class="b8sXi" x="52" y="94">"Communication could</text>
+        <text class="b8sXi" x="52" y="112">improve."</text>
+        <text class="b8sXi" x="52" y="138">Nothing to act on.</text>
+        <rect x="305" y="40" width="255" height="120" rx="12" fill="#6E2A18"/>
+        <text class="b8sT" x="327" y="70">Smoothed by a model</text>
+        <text class="b8sX" x="327" y="94">"Continue developing in</text>
+        <text class="b8sX" x="327" y="112">stakeholder communication."</text>
+        <text class="b8sX" x="327" y="138">Reads better. Still nothing.</text>
+        <rect x="580" y="40" width="270" height="120" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="b8sI" x="602" y="70">Evidenced</text>
+        <text class="b8sXw" x="602" y="94">"Two Q2 updates went out</text>
+        <text class="b8sXw" x="602" y="112">with no next step or owner.</text>
+        <text class="b8sXw" x="602" y="138">Use the update template."</text>
+        <rect x="30" y="190" width="820" height="58" rx="12" fill="#FBEFE9"/>
+        <text class="b8sXi" x="52" y="214">The middle state is the one to watch for: polish reads like quality and hides the same emptiness.</text>
+        <text class="b8sXi" x="52" y="234">Anything a person cannot act on this month is decoration, however well it is written.</text>
+        <rect x="30" y="270" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="b8sN" x="54" y="282">Draft to organise, never to soften. The specifics are the review; the wording is packaging.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - vague, smoothed, evidenced - and what the middle state quietly deletes</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Calibration, from b5, applied to reviews<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The interview calibration drill from b5 works unchanged here: several managers rate the same written sample independently, reveal, and discuss the widest gap. Rating drift across managers is the performance cycle's version of rater drift, and it produces exactly the same result - two people doing the same work getting different numbers because their managers use the scale differently.</p>
+        <p>Run it before the cycle opens, not after the ratings are in. Once numbers exist, calibration turns into negotiation, and the person with the most confident manager wins.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>The review clinic <span class="tag demo">★ 14 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Take a manager's rough notes - the real kind, half sentences and a couple of dates - and produce an evidenced draft with the gaps flagged rather than filled. This is the artifact you hand to Kestrel's managers this fortnight.</p>
+
+    <div class="steps">
+      <div class="step"><p>Collect the manager's own material: their notes, the artifacts they can point at, and the role's capabilities from the scorecard (b2). Nothing about anyone else's report.</p></div>
+      <div class="step"><p>Run the prompt below. Read the flagged list first - the claims with no artifact behind them are the real output.</p></div>
+      <div class="step"><p>Send the manager back to find the evidence, or to drop the claim. Both are acceptable; inventing an example is not.</p></div>
+      <div class="step"><p>The manager writes the rating themselves, after the evidence is settled, and records the reason the same day.</p></div>
+      <div class="step"><p>Run the three-question bias check on the finished draft before it goes to the employee.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - the review clinic prompt</span>Organise the notes below into a performance review draft, against the capabilities in
+the role scorecard in this workspace.
+
+RULES
+- Use only what is in my notes. Never invent an example, a date, a number, or an outcome.
+- Group each point under the capability it evidences. If a note evidences nothing in the
+  scorecard, put it under "unmapped" rather than forcing a fit.
+- Keep every specific exactly as I wrote it: names of artifacts, dates, numbers, incidents.
+  Improve sentence structure and clarity only.
+- FLAG, do not rewrite, any claim with no artifact, date or incident behind it. List these
+  first, under "claims needing evidence".
+- Describe behaviour, never character. No comparisons to other people, named or unnamed.
+- Make the developmental points as concrete as the positive ones, with a suggested action
+  the person could take this month.
+- Do NOT produce a rating, a score, a ranking, or a recommendation. I write those.
+
+NOTES: [paste the manager's raw notes]</div>
+
+    <div class="prompt-box bad"><span class="label">The version that produces an indefensible cycle</span>Here are my notes on my 8 reports. Write each of their reviews, suggest a rating out of 5 for each one, and rank them so I know who to put forward for promotion.</div>
+
+    <div class="callout tip">
+      <strong>Why the flagged list matters more than the draft</strong>
+      A model asked to write a review will always produce one - fluently, and with the gaps invisibly filled. Forcing it to declare which claims have nothing behind them turns a writing tool into an audit of the manager's actual evidence. Most managers find two or three claims they cannot support, every cycle. Those were always there; the prose just used to hide them.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>The read-aloud test <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Eight minutes on one real paragraph of your own. This is the drill that changes how people write for the rest of their careers, and it needs no tooling at all.</p>
+
+    <div class="steps">
+      <div class="step"><p>Take one paragraph of feedback you have written about a real person. Strip the name.</p></div>
+      <div class="step"><p>Underline every claim. Next to each, write the artifact, date or incident that supports it. Any claim with a blank next to it is not feedback yet.</p></div>
+      <div class="step"><p>Find the vaguest developmental sentence. Rewrite it as something the person could do this month, with a way to tell whether it happened.</p></div>
+      <div class="step"><p>Read the paragraph aloud as if the person were in the room. The sentences you would soften while speaking are the ones to fix on the page - not by softening them, but by adding the specific that makes them fair.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The blank column.</strong> A people team ran this drill across one department before the cycle opened. Managers underlined their claims and filled in the evidence column, and roughly a third of the cells came back empty - not because the managers were careless, but because they had never been asked. The next cycle's reviews were shorter, more specific, and produced half as many appeals. Nothing about the tooling changed; one column did.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the review clinic on one real set of manager notes and keep the flagged list. Count how many claims had nothing behind them.</li>
+      <li>Add the keep-every-specific instruction to whatever drafting prompt your managers are already using. It takes one line and it is the highest-value edit in this session.</li>
+      <li>Run the three-question bias check across five finished reviews from different managers, and compare how concrete the developmental advice is between them.</li>
+      <li>Check whether any tool in your cycle pre-populates or suggests a rating before the evidence is written. If one does, that is the process fix to make before the next cycle opens.</li>
+      <li>Book the calibration session before ratings exist, not after. Bring the widest-spread sample to it.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public regulation, employee-data rules, and feedback research. This is education for HR professionals, not legal advice, and obligations vary by jurisdiction. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act - performance evaluation, promotion and termination in scope</span><span class="note">Part 1 · why the rating is regulated territory</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR + PDPA - employee data, minimisation, meaningful human involvement</span><span class="note">Part 1 · the data rail inside the cycle</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Written-feedback research - systematic differences by group</span><span class="note">Part 2 · the bias check as a re-read, not a feeling</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">learn-ai-hr b5 - anchored rubrics and calibration</span><span class="note">Part 3 · the same discipline applied to ratings</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Which of the three jobs inside a review must never move to a model?</p>
+      <button class="qopt" type="button">A · Gathering the evidence, because employee data is sensitive</button>
+      <button class="qopt" type="button">B · Writing the words, because tone is personal</button>
+      <button class="qopt" type="button">C · The judgment - the rating, the ranking and the consequence</button>
+      <p class="qwhy">Gathering and drafting are where AI earns its place. The rating moves pay, promotion and eventually who is on a list, which is why it needs a named human who could have decided otherwise - and why performance evaluation sits in the same high-risk category as hiring.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · A manager asks the model to "improve" a review and gets back smoother prose. What most likely happened?</p>
+      <button class="qopt" type="button">A · The review got better - clearer writing is clearer feedback</button>
+      <button class="qopt" type="button">B · The specifics got smoothed away into corporate phrasing that reads well and cannot be acted on</button>
+      <button class="qopt" type="button">C · Nothing meaningful - the wording changes but the content is identical</button>
+      <p class="qwhy">The smoothing trap. "Two Q2 updates went out with no next step" becomes "continue developing in stakeholder communication" - better prose, no information. Instruct it to keep every specific verbatim and fix wording only.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · You re-read a review and every positive point cites an artifact, while the growth advice is one vague sentence. What is that?</p>
+      <button class="qopt" type="button">A · A bias-check failure - developmental advice must be as concrete as the praise</button>
+      <button class="qopt" type="button">B · Fine, since the praise is well evidenced</button>
+      <button class="qopt" type="button">C · A tone problem to fix by softening the praise</button>
+      <p class="qwhy">Specific praise plus vague growth advice is one of the documented patterns in how feedback differs between groups, and it leaves the person with nothing to act on. Make the developmental point as concrete as the strongest positive one.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>HR session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three jobs</b><span>gather evidence (AI helps) · write the words (AI drafts) · the judgment (never).</span></div>
+      <div class="cheat-item"><b>Regulated too</b><span>performance evaluation, promotion and termination sit in the same high-risk scope as hiring.</span></div>
+      <div class="cheat-item"><b>No pre-filled ratings</b><span>a suggested number becomes the anchor and the evidence gets reverse-engineered to fit it.</span></div>
+      <div class="cheat-item"><b>Evidence test</b><span>for every claim, point at the artifact, date or incident. No pointer, no claim.</span></div>
+      <div class="cheat-item"><b>Behaviour, not character</b><span>"missed three of eight agreed dates" beats "is disorganised" - one of them can change.</span></div>
+      <div class="cheat-item"><b>The smoothing trap</b><span>asked to improve, a model deletes the specifics. Keep every specific verbatim, fix wording only.</span></div>
+      <div class="cheat-item"><b>Bias check</b><span>artifact behind every claim · growth advice as concrete as praise · survives being read aloud.</span></div>
+      <div class="cheat-item"><b>Calibrate first</b><span>run it before ratings exist. Afterwards it becomes negotiation, not calibration.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>HR session 8 of 10 · learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-onboarding.html">← Previous: Onboarding that lands</a> &nbsp;·&nbsp; <a href="b9-ld-mobility.html">Next: L&amp;D, mobility and attrition signals →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR session 9 · L&amp;D, mobility and attrition signals - learn AI + HR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-hr-with-phoebe</a> / HR session 9 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe · HR track · Session 9 of 10</div>
+    <h1>L&amp;D, mobility and attrition: <span class="accent">the map that helps people, and the one that watches them</span></h1>
+    <p class="sub">Week 24 at Kestrel. 80 of the 120 roles are filled and engineering is losing people faster than the wave is replacing them, which means the hiring problem and the retention problem have finally met in the same room. Tonight you build a skills map that routes people to opportunities, an internal mobility process that is not "we know them", and an attrition read that finds causes instead of labelling individuals.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 HR track</span>
+      <span class="chip audience">HR partners · L&amp;D · people ops</span>
+      <span class="chip audience">Skills map</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Skills, mobility, signals</span>
+      <span class="a3" style="flex:5">20-42 · The attrition read + stay kit</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">Week 24. Kestrel has hired 80 of the 120 roles, the performance cycle from b8 has just closed, and engineering attrition is running ahead of engineering hiring. Every session so far has been about people coming in: the workspace and house rules (b1), scorecards and ads (b2), sourcing (b3), the screen that failed the four-fifths rule until you fixed it (b4), interviews and calibration (b5), offers and decision records (b6), onboarding (b7), performance and feedback (b8). This is the session where the wave meets the leak. It is also the session with the sharpest temptation in the whole track, because the data that would help you find people opportunities is the same data that would let you rank them.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A skills inventory scoped so it routes opportunities instead of grading people, an internal mobility process that survives contact with a hiring manager who already has a favourite, an aggregate attrition read with the evidence attached to every driver, a prompt that refuses to produce individual risk scores, a five-question stay-interview kit, and a clear line on where monitoring starts.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE SKILLS INVENTORY ============ -->
+  <section class="section" id="skills-map">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers purpose limitation + the monitoring boundary</span>
+      <h2>The skills inventory that is not surveillance <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A skills inventory is a map of what the company can do and what it needs next, built from role scorecards and from what people volunteer about themselves. That is all it is. What it must never quietly become is a per-person score, a stack rank, or the dataset somebody opens when they need to decide who is expendable. The data can be identical in both cases. The difference is purpose, and purpose is not a nuance here - it is a legal duty under GDPR and PDPA and the thing an employee can feel from a mile away.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 372" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One skills dataset feeding two purposes: opportunity routing, which helps people move, and per-person scoring, which is the boundary">
+        <style>
+          .b9sT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b9sI { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .b9sX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b9sXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .b9sXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .b9sN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .b9sH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <defs>
+          <marker id="b9sAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#E9B6A2"/>
+          </marker>
+        </defs>
+        <text class="b9sH" x="30" y="30">ONE DATASET</text>
+        <text class="b9sH" x="290" y="30">TWO PURPOSES</text>
+        <text class="b9sH" x="590" y="30">WHAT YOU GET</text>
+        <rect x="30" y="70" width="200" height="120" rx="12" fill="#6E2A18"/>
+        <text class="b9sT" x="52" y="104">The skills map</text>
+        <text class="b9sX" x="52" y="128">capabilities from</text>
+        <text class="b9sX" x="52" y="146">role scorecards +</text>
+        <text class="b9sX" x="52" y="164">what people offer</text>
+        <line x1="236" y1="112" x2="282" y2="93" stroke="#E9B6A2" stroke-width="2" marker-end="url(#b9sAh)"/>
+        <line x1="236" y1="148" x2="282" y2="207" stroke="#E9B6A2" stroke-width="2" marker-end="url(#b9sAh)"/>
+        <rect x="290" y="44" width="270" height="98" rx="12" fill="#A6472E"/>
+        <text class="b9sT" x="312" y="76">Opportunity routing</text>
+        <text class="b9sX" x="312" y="100">suggests openings TO</text>
+        <text class="b9sX" x="312" y="118">people, with the gap</text>
+        <rect x="290" y="178" width="270" height="98" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="b9sI" x="312" y="210">Per-person scoring</text>
+        <text class="b9sXw" x="312" y="234">ranked, flight-risk flagged,</text>
+        <text class="b9sXw" x="312" y="252">quietly filed as spare</text>
+        <line x1="566" y1="93" x2="582" y2="93" stroke="#E9B6A2" stroke-width="2" marker-end="url(#b9sAh)"/>
+        <line x1="566" y1="227" x2="582" y2="227" stroke="#E9B6A2" stroke-width="2" marker-end="url(#b9sAh)"/>
+        <rect x="590" y="44" width="260" height="98" rx="12" fill="#E9B6A2"/>
+        <text class="b9sI" x="612" y="76">People find moves</text>
+        <text class="b9sXi" x="612" y="100">internal fill rate up,</text>
+        <text class="b9sXi" x="612" y="118">trust intact</text>
+        <rect x="590" y="178" width="260" height="98" rx="12" fill="#C9704F"/>
+        <text class="b9sI" x="612" y="210">A file on a person</text>
+        <text class="b9sXi" x="612" y="234">monitoring scope, and</text>
+        <text class="b9sXi" x="612" y="252">trust that does not return</text>
+        <rect x="30" y="296" width="820" height="34" rx="10" fill="#FBEFE9"/>
+        <text class="b9sXi" x="52" y="318">Same data, two purposes. Purpose is the line, and purpose limitation is a legal duty.</text>
+        <rect x="30" y="346" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="b9sN" x="54" y="358">The inventory exists so people find opportunities, not so the company grades them.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - one skills dataset, two purposes, and which one is the boundary</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What goes in a skills map, and what quietly must not<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Build it from two sources only: the capabilities your role scorecards already name, and what people choose to tell you about themselves. Anything you have to infer about a person without asking them is a different product with a different risk profile.</p>
+        <table class="clean">
+          <thead><tr><th>In the map</th><th>Not in the map</th></tr></thead>
+          <tbody>
+            <tr><td>Capabilities the scorecards name, in scorecard language</td><td>A single number summarising a person</td></tr>
+            <tr><td>What a person volunteers: skills, interests, what they want next</td><td>Inferred skill levels scraped from tickets, calendars or messages</td></tr>
+            <tr><td>Certifications and training completed, where relevant to a role</td><td>Performance ratings pasted in as a skill proxy</td></tr>
+            <tr><td>Gaps at team and company level: what Kestrel is short of</td><td>Gaps expressed as a ranking of individuals</td></tr>
+            <tr><td>Who is open to a move, if they said so</td><td>Who we think is a flight risk</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li><strong>Volunteered means volunteered.</strong> If someone declines to fill in their profile, that is a blank, not a low score. The moment a blank costs a person an opportunity, participation stops being voluntary.</li>
+          <li><strong>Write the purpose down before the first record.</strong> One sentence, published to employees: what this is for, who sees it, what it will never be used for. If you cannot write that sentence honestly, do not build the thing.</li>
+          <li><strong>Do not reuse data collected for something else.</strong> Diversity monitoring data and engagement survey responses were given to you for a stated purpose. Repurposing them into a skills or risk product is the classic failure, and it is exactly what purpose limitation exists to stop.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The map that became a list.</strong> A company built a skills inventory to help people find internal moves, and it worked - participation was high because the pitch was honest. Eighteen months later a cost review needed to identify "lowest-criticality skill holders", and the inventory was the only structured data available, so it was used. Nothing was hacked and no rule was broken in the room. Participation collapsed within a quarter and never recovered, because everybody understood what the data had been for and what it turned out to be for. The technical build was fine. The purpose drifted, and purpose was the whole product.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where AI actually helps in L&amp;D<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most of the useful work here is drafting and structuring, which is the safe half of the split from b1.</p>
+        <ul>
+          <li><strong>Turning scorecards into capability language.</strong> Five role scorecards contain the same skill described five ways. Normalising that into one vocabulary is tedious, mechanical and genuinely well suited to a model.</li>
+          <li><strong>Building learning paths per capability.</strong> Given a gap and the level you need, draft a sequence: what to read, what to practise, what evidence would show it landed. A person still signs off on whether it is worth anyone's month.</li>
+          <li><strong>Writing the opportunity, not selecting the person.</strong> "Here is an internal opening and the two capabilities it needs" is a draft. "Here are the six people best suited to it" is a decision, and it is not yours to delegate.</li>
+          <li><strong>Summarising anonymised exit and stay interview themes.</strong> Strip names first. The themes are the artifact, and the quotes need care because a single quote from a small team identifies its author.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: INTERNAL MOBILITY ============ -->
+  <section class="section" id="mobility">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the process most companies skip</span>
+      <h2>Internal mobility before external hiring <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Kestrel has 40 roles left to fill and an engineering team leaking people who would take a different job at Kestrel if anyone offered them one. The machinery for connecting those two facts is not complicated. It is: know what capabilities the open roles need, know what people have told you they want, put openings in front of people, and then run internal candidates through the same structured process you run external ones through. That last step is where almost everybody fails.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The three moving parts<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Capability gaps from the scorecards.</strong> Every open role already has a scorecard from b2. Strip it to the two or three capabilities that actually gate the role, in the same vocabulary as the skills map. That is your matching key, and it is deliberately coarse - fine-grained matching is how you accidentally build a ranking engine.</li>
+          <li><strong>Suggest TO people, do not filter FOR roles.</strong> The direction of the arrow is the whole design. A system that shows an employee three openings and why they might fit is an opportunity router. A system that hands a hiring manager a ranked list of internal people is a screen, with everything b4 taught you attached to it - criteria, evidence, calibration, decision gate, impact check.</li>
+          <li><strong>Same structured process, no exceptions.</strong> Same scorecard, same questions, same evidence standard, same decision record. Internal candidates get the process, not a chat.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>"We know them" is not evidence.</strong> An internal candidate applied for a team lead role. No structured interview was run, because everyone had worked with her for three years. The panel talked for twenty minutes, decided she was "not quite ready", and wrote two lines in an email. She asked what specifically was missing and nobody could answer without reconstructing it, because nothing had been rated against anything. Meanwhile the external hire for the same role went through six structured interviews and a scorecard. Familiarity had replaced evidence, and the person with the most information about her was the one who ended up with the least defensible decision. She left four months later, and the exit interview said exactly that.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The four ways internal hiring quietly goes wrong<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The hoarding manager.</strong> A manager blocks a move to protect their own delivery. This is a management problem wearing a process costume, and no tooling fixes it. Make internal moves visible to HR by default and make blocking a conversation somebody has to have out loud.</li>
+          <li><strong>The invisible opening.</strong> Roles get posted externally days before internally, or in a system nobody opens. If your internal fill rate is low, check whether people ever saw the job before you conclude nobody wanted it.</li>
+          <li><strong>The unearned discount.</strong> The internal candidate is held to a higher bar because their weaknesses are known and the external candidate's are not. Same scorecard, same evidence standard, both directions.</li>
+          <li><strong>The undocumented no.</strong> The one that costs you the person. An internal rejection with no recorded reason is a rejection the employee cannot act on, and a decision you cannot defend if they raise it. Rail 1 applies to your own staff exactly as hard as it applies to candidates: a named decision-maker, a reason written the same day.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The one-hour audit</strong>
+          Take the last five internal applications at your company. For each, find the recorded reason for the outcome and the name of who decided. If you cannot find both for at least four of them, internal mobility is not a process where you work - it is a set of conversations, and conversations are not something an employee can appeal or improve against.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: ATTRITION SIGNALS ============ -->
+  <section class="section" id="attrition">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the monitoring boundary + Annex III scope</span>
+      <h2>Attrition signals, done defensibly <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Kestrel is losing engineers and somebody senior is going to ask for a model that predicts who is next. The honest answer is that you can build something far more useful and far less dangerous: an aggregate read that tells you <em>why</em> people are leaving, with evidence under every claim. Drivers are actionable. A named risk score is a label on a person, it can put you inside the high-risk category, and it corrodes trust even in places where it is perfectly lawful.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 358" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aggregate attrition drivers versus named individual risk scores, and what each one actually buys you">
+        <style>
+          .b9aT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b9aI { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .b9aX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b9aXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .b9aXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .b9aN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .b9aH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="b9aH" x="30" y="30">DEFENSIBLE</text>
+        <text class="b9aH" x="450" y="30">THE BOUNDARY</text>
+        <rect x="30" y="44" width="400" height="92" rx="12" fill="#6E2A18"/>
+        <text class="b9aT" x="52" y="76">Aggregate drivers</text>
+        <text class="b9aX" x="52" y="100">which teams, which tenure bands, which</text>
+        <text class="b9aX" x="52" y="118">manager spans, where people sit in band</text>
+        <rect x="450" y="44" width="400" height="92" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="b9aI" x="472" y="76">Named risk scores</text>
+        <text class="b9aXw" x="472" y="100">this person is 78% likely to leave,</text>
+        <text class="b9aXw" x="472" y="118">flagged, watched, quietly deprioritised</text>
+        <text class="b9aH" x="30" y="172">WHAT EACH ONE ACTUALLY BUYS YOU</text>
+        <rect x="30" y="186" width="400" height="82" rx="12" fill="#E9B6A2"/>
+        <text class="b9aI" x="52" y="216">A cause you can fix</text>
+        <text class="b9aXi" x="52" y="240">a span of 14, a pay band that drifted,</text>
+        <text class="b9aXi" x="52" y="258">a ladder that stops at level 3</text>
+        <rect x="450" y="186" width="400" height="82" rx="12" fill="#C9704F"/>
+        <text class="b9aI" x="472" y="216">A label you cannot unstick</text>
+        <text class="b9aXi" x="472" y="240">a guess treated as a fact about one</text>
+        <text class="b9aXi" x="472" y="258">person, and every stay interview poisoned</text>
+        <rect x="30" y="282" width="820" height="34" rx="10" fill="#FBEFE9"/>
+        <text class="b9aXi" x="52" y="304">Exit and stay interviews are evidence. A prediction about an individual is not.</text>
+        <rect x="30" y="332" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="b9aN" x="54" y="344">Monitoring of workers sits inside the AI Act's Annex III employment scope. Ask first.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - aggregate drivers versus named risk scores, and what each one gets you</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The five aggregate cuts worth making<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>All five are counts and rates over groups. None of them requires naming a person, and none of them requires a model - a table gets you most of the way. Suppress any cell small enough to identify someone, which in practice means five or fewer.</p>
+        <table class="clean">
+          <thead><tr><th>The cut</th><th>What it tends to reveal</th></tr></thead>
+          <tbody>
+            <tr><td>Leaver rate by team</td><td>Whether this is a company problem or two teams' problem</td></tr>
+            <tr><td>Leaver rate by tenure band</td><td>An onboarding failure at 0-6 months looks nothing like a ceiling at 3 years</td></tr>
+            <tr><td>Leaver rate by manager span</td><td>Spans that grew during a hiring wave and nobody rebalanced</td></tr>
+            <tr><td>Position within pay band</td><td>Long-tenured people sitting below the midpoint that new hires enter above</td></tr>
+            <tr><td>Exit and stay interview themes</td><td>The reason, in the words of the people who have it. The other four cuts are hypotheses; this is testimony</td></tr>
+          </tbody>
+        </table>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The prediction that made itself come true.</strong> A company scored employees for flight risk and shared the list with managers, meaning well - the idea was to intervene early. Managers being human, several stopped putting flagged people on important work, on the reasonable-sounding basis that you do not hand the critical project to someone who might leave. The flagged people noticed within weeks that the interesting work had dried up. Most of them left. The model's accuracy looked excellent in review, which was precisely the problem: it had not predicted the departures, it had caused them. Aggregate drivers cannot do this, because there is nobody to treat differently.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why individual prediction is the monitoring boundary<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Leader session a5 draws this line and it is worth reading in full. The short version, as taught here and not as legal advice:</p>
+        <ul>
+          <li><strong>Scope.</strong> The EU AI Act's Annex III point 4 employment category covers recruitment and selection, performance evaluation, task allocation, monitoring of workers, promotion and termination. A system that scores individual employees on likelihood of leaving, and then feeds how they are managed, sits close to several of those at once. Annex III obligations were postponed to 2 December 2027 in the Digital Omnibus; as of mid-2026 that is the position, it has already moved once, so check it rather than quoting this page.</li>
+          <li><strong>Purpose limitation.</strong> The data you would want for a risk score - engagement survey responses, one-to-one notes, calendar and tooling activity - was collected for other stated purposes, some of it under a promise of confidentiality. Reusing it here is the failure GDPR and PDPA both name directly.</li>
+          <li><strong>Meaningful human involvement.</strong> A manager who reads a risk flag and acts on it has not exercised judgment about the person, they have relayed the model's. That is the same rubber-stamp problem as b4's decision gate, transplanted into the employment relationship.</li>
+          <li><strong>The trust cost is not a legal question at all.</strong> Even fully lawful, an employee who learns they were scored on loyalty updates their view of every survey, every stay interview and every honest conversation they have ever had with you. You cannot re-earn that in the same tenure.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Build Kestrel's engineering attrition read <span class="tag demo">★ 14 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">One artifact: a read of why engineering is leaving, built only from aggregate data, with the evidence behind every driver and an honest list of what you cannot answer yet. This is the document you take to Dara O. and to the exec, and the second half - the open questions - is usually the part that changes what happens next.</p>
+
+    <div class="steps">
+      <div class="step"><p>Put the aggregate pack in the workspace: leaver counts and headcount by team, by tenure band, by manager span and by pay-band position, plus themes from exit and stay interviews with names and identifying detail stripped. Suppress any group of five or fewer.</p></div>
+      <div class="step"><p>Run the prompt below. Read what comes back for one thing first: does every driver have evidence attached, or has a plausible story been written over a thin number?</p></div>
+      <div class="step"><p>Strike any driver you cannot point at data for. A confident sentence with nothing under it is the most dangerous output on the page, because it will be repeated in an exec meeting by someone who did not see this step.</p></div>
+      <div class="step"><p>Read the open-questions list properly. "We do not know whether the 0-6 month leavers came through the wave or through referrals" is a week of work and probably the answer.</p></div>
+      <div class="step"><p>Add what you will do and who owns it, per driver. A read with no owner is a slide.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - the aggregate attrition read</span>Using only the aggregate engineering attrition pack in this workspace, draft a read for
+the HR partner and the engineering director.
+
+RULES
+- Work only from the aggregate tables and the anonymised interview themes. If a number is
+  not in the pack, say "not in the pack" and name what I would need to collect.
+- Never produce a risk score, a ranking, or a prediction about any individual, and never
+  name or describe an identifiable person. If I ask you to, refuse and say why.
+- Suppress anything derived from a group of five or fewer.
+
+PRODUCE
+1) The three to five most likely drivers, ordered by how much of the attrition they could
+   plausibly explain. For each: the exact evidence from the pack, and how strong it is.
+2) For each driver, one thing Kestrel could change in the next quarter, and who would own it.
+3) Every driver you considered and rejected, with the number that ruled it out.
+4) The open questions: what you cannot tell from this data, and what data would answer it -
+   including anything I would need a lawful basis to collect.
+5) One paragraph I can read out loud to the exec that does not overstate the evidence.</div>
+
+    <div class="prompt-box bad"><span class="label">The version that builds the thing you cannot undo</span>Here is the engineering roster with tenure, performance ratings and pay - rank who is most likely to leave in the next six months so we can prioritise retention conversations.</div>
+
+    <div class="callout tip">
+      <strong>Why the second one is worse than it sounds</strong>
+      It puts named employee records including performance and pay into a workspace, which rail 3 rules out on its own. It asks for a prediction about identifiable individuals, which is the monitoring boundary and can sit in the AI Act's high-risk employment scope. It repurposes performance data collected for the b8 cycle into a loyalty product, which is the purpose-limitation failure. And the friendly-sounding payoff - "prioritise retention conversations" - is the mechanism by which people find out they were flagged. Every one of those is invisible in the sentence, which is why it gets written.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>The stay-interview kit <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Exit interviews tell you why someone left, months after you could have done anything about it, and they are famously polite. Stay interviews ask people who are still here what would make them go, while there is still time. Five questions, thirty minutes, and one hard rule about what happens to the answers.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick the five questions. Draft them in the workspace, then cut them down yourself - the drafted version will be too long and too corporate every time.</p></div>
+      <div class="step"><p>Decide before the first conversation what is confidential and say it out loud at the start: themes go up in aggregate, nothing attributed, nothing lands in a system. Then keep that promise even when it is inconvenient.</p></div>
+      <div class="step"><p>Run them as a manager-plus-HR pair where the manager is part of the problem, and as manager-only where they are not. Getting this wrong wastes the whole exercise.</p></div>
+      <div class="step"><p>Aggregate the themes after every batch. Five conversations is a story, twenty is a driver you can put next to the numbers from Demo 1.</p></div>
+      <div class="step"><p>Report back what changed. This is the whole thing. A stay interview that produces no visible change teaches people that telling you the truth is a waste of an afternoon.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - five questions and the honest brief</span>Draft a stay-interview kit for Kestrel engineering, for HR partners and team leads.
+
+FIVE QUESTIONS, no more. They must be:
+- open, short, and answerable in plain speech, not HR language
+- about the work, the growth path, the manager, recognition and what would make them leave
+- free of anything a person could not safely answer to their own manager
+
+ALSO DRAFT
+- The opening script: what this is, what happens to the answers, what does not.
+- Three follow-up probes per question for when the first answer is "yeah, fine".
+- The note-taking rule: themes only, no attributed quotes, nothing that identifies a person
+  in a small team.
+- What we do with the answers in the next 30 days, and how we report back.
+
+Do not produce anything that scores, ranks or profiles an individual employee.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The honest thing to do with the answers.</strong> A team ran stay interviews across a struggling function and heard one theme loudly: the promotion ladder stopped at a level everybody had already reached. That was not fixable in a quarter and the HR partner knew it. So instead of a plan, she went back to every person she had spoken to and said the truth: here is what we heard, here is the one thing we are fixing now, here is the thing we cannot fix this year and why, and here is when we will revisit it. Two people still left. Everyone else stayed through the year, and the next round of interviews was noticeably more honest. Telling people you cannot fix it beats a plan they can tell you do not believe in.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write the one-sentence purpose statement for your skills inventory, in language you would be willing to publish to every employee. If you already have an inventory and cannot write that sentence, that is this week's finding.</li>
+      <li>Run the one-hour audit on your last five internal applications: is there a recorded reason and a named decision-maker for each one?</li>
+      <li>Build the aggregate attrition read for one team. Numbers only, no names, cells of five or fewer suppressed. Mark every driver you cannot evidence.</li>
+      <li>Find out whether anything in your HR stack already scores individuals on retention, engagement or performance risk - including features inside your HRIS that nobody switched on deliberately. Ask what data it uses and what it was collected for.</li>
+      <li>Run two stay interviews. Not a pilot, not a design phase. Two conversations, this week.</li>
+      <li>Bring one thing you are unsure about to b10, where the whole quarter runs end to end and the audit file gets assembled.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public regulation, data protection principles and selection research. This course is education for HR professionals, not legal advice, and obligations vary by jurisdiction. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act - Annex III employment scope including monitoring of workers</span><span class="note">Part 3 · why individual prediction is the boundary; 2 Dec 2027 position</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR + PDPA - purpose limitation, minimisation, meaningful human involvement</span><span class="note">Parts 1 and 3 · the skills map and the reuse failure</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Structured selection research</span><span class="note">Part 2 · why internal candidates need the same process, not less</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Leader session a5 - the monitoring line</span><span class="note">Part 3 · the full version of tonight's boundary</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What separates a legitimate skills inventory from surveillance, given the data can be identical?</p>
+      <button class="qopt" type="button">A · Whether it is stored in an approved HR system</button>
+      <button class="qopt" type="button">B · Purpose - it routes opportunities to people rather than grading them, and that purpose is written down and honoured</button>
+      <button class="qopt" type="button">C · Whether employees consented once when they joined</button>
+      <p class="qwhy">Purpose limitation is the whole line, and it is a duty under GDPR and PDPA rather than a nicety. The same records that help people find internal moves become a ranking product the moment the purpose drifts, which is why the purpose statement gets written before the first record.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · An internal candidate is rejected for a team lead role. What does the process owe her?</p>
+      <button class="qopt" type="button">A · A conversation, since the panel has worked with her for years and knows her well</button>
+      <button class="qopt" type="button">B · Less scrutiny than an external candidate, because there is more information available</button>
+      <button class="qopt" type="button">C · The same structured process as an external candidate: same scorecard, evidence per rating, a named decision-maker and a recorded reason the same day</button>
+      <p class="qwhy">Familiarity is not evidence, and "we know them" is where internal hiring quietly falls apart. Rail 1 applies to your own staff exactly as hard as to candidates - and an undocumented no is a rejection the employee cannot act on and you cannot defend.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · An exec asks for a model flagging which engineers will quit next. What do you build instead, and why?</p>
+      <button class="qopt" type="button">A · An aggregate driver read - team, tenure, span, pay position, interview themes - because drivers are fixable and named risk scores label a person, can land in the monitoring scope, and change how they get managed</button>
+      <button class="qopt" type="button">B · The flight-risk model, but shared only with HR and not with managers</button>
+      <button class="qopt" type="button">C · The model, since retention conversations are the intervention and you need to know who to have them with</button>
+      <p class="qwhy">Aggregate drivers point at something you can change: a span of 14, a pay band that drifted, a ladder that stops. An individual score points at a person, and once a manager acts on the flag the prediction starts making itself true. Monitoring of workers also sits in the AI Act's Annex III employment scope.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>HR session 9 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The skills map</b><span>capabilities from scorecards plus what people volunteer. Never a per-person score.</span></div>
+      <div class="cheat-item"><b>Purpose is the line</b><span>write the one sentence before the first record. Data collected for X does not become Y.</span></div>
+      <div class="cheat-item"><b>Arrow direction</b><span>suggest openings TO people. A ranked list of internal people FOR a manager is a screen.</span></div>
+      <div class="cheat-item"><b>Same process</b><span>internal candidates get the same scorecard, evidence, named decider and recorded reason.</span></div>
+      <div class="cheat-item"><b>Five cuts</b><span>team · tenure band · manager span · position in pay band · exit and stay interview themes.</span></div>
+      <div class="cheat-item"><b>Suppress small cells</b><span>five or fewer identifies someone. One quote from a small team names its author.</span></div>
+      <div class="cheat-item"><b>The boundary</b><span>predicting who quits and managing them differently is monitoring, and it makes itself true.</span></div>
+      <div class="cheat-item"><b>Stay interviews</b><span>five questions, themes only, and report back what changed - or people stop telling you.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>HR session 9 of 10 · learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b8-performance-feedback.html">← Previous: Performance and feedback</a> &nbsp;·&nbsp; <a href="b10-capstone-hiring-wave.html">Next: Capstone - a hiring wave and a cycle →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

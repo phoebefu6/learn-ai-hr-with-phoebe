@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR session 2 · Role definition and the job description - learn AI + HR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-hr-with-phoebe</a> / HR session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe · HR track · Session 2 of 10</div>
+    <h1>Role definition and the job description: <span class="accent">the bar is set here, or it is never set at all</span></h1>
+    <p class="sub">Every unfair screen you will ever run started life as a vague requirement. Tonight you turn a hiring manager's shrug into a scorecard with outcomes, evidenceable capabilities and named proxies, then write the ad that widens the pool instead of describing the person who just left. Kestrel's hiring wave opens this week and Dara O. has already sent you three sentences.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 HR track</span>
+      <span class="chip audience">HR partners · recruiters · hiring managers</span>
+      <span class="chip audience">Role scorecard</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-17 · Scorecard and ad</span>
+      <span class="a3" style="flex:5">17-39 · Build-along: two demos</span>
+      <span class="a4" style="flex:1">39-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 0: WHERE WE ARE ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are: Kestrel, week 1</h2>
+    </div>
+    <p class="lede">The workspace you built in b1 is loaded: three role scorecards, the levelling and band sheet, the house interview guide, the hiring policy, the glossary, the house rules. No CVs. Kestrel is 400 people going to 600, which is 120 roles this year, and the first five open on Monday. You are the HR partner. Nadia S. is the recruiter, and between you that is the entire people team on this wave. This morning Dara O., who runs support engineering, sent you the whole brief for the Senior Support Engineer role: <em>"Same as the last one but better. Someone senior. Can you get it posted today?"</em></p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A finished Senior Support Engineer scorecard for Kestrel with outcomes, evidenceable must-haves, honestly separated nice-to-haves and a named anti-requirement list, a working prompt that turns any manager's ramble into that scorecard without inventing the bar, a job ad rewritten line by line to widen the pool, and a proxy audit you can run on your own live ad tomorrow morning.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE SCORECARD ============ -->
+  <section class="section" id="scorecard">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the artifact everything else hangs off</span>
+      <h2>The role scorecard: outcome, capability, evidence <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A job description describes a job. A scorecard describes what success looks like and how you would recognise it in a stranger. The difference matters because in b4 these exact lines become the screening criteria, and a criterion you cannot evidence turns into a vibe with a number next to it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scorecard anatomy in three columns - outcome, capability and evidence source - with one worked Kestrel row for the Senior Support Engineer role">
+        <style>
+          .b2aT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b2aTi { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .b2aX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b2aXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .b2aN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .b2aH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="b2aH" x="30" y="26">EVERY LINE OF A SCORECARD HAS THREE PARTS</text>
+        <rect x="30" y="40" width="260" height="74" rx="12" fill="#6E2A18"/>
+        <text class="b2aT" x="52" y="70">Outcome</text>
+        <text class="b2aX" x="52" y="94">what is true by month 6</text>
+        <rect x="310" y="40" width="260" height="74" rx="12" fill="#A6472E"/>
+        <text class="b2aT" x="332" y="70">Capability</text>
+        <text class="b2aX" x="332" y="94">written so it can be shown</text>
+        <rect x="590" y="40" width="260" height="74" rx="12" fill="#C9704F"/>
+        <text class="b2aTi" x="612" y="70">Evidence source</text>
+        <text class="b2aXi" x="612" y="94">where the proof comes from</text>
+        <text class="b2aH" x="30" y="140">ONE KESTREL ROW · SENIOR SUPPORT ENGINEER</text>
+        <rect x="30" y="152" width="260" height="110" rx="12" fill="#FBEFE9"/>
+        <text class="b2aXi" x="52" y="180">By month 6, has taken over</text>
+        <text class="b2aXi" x="52" y="202">the escalation queue for our</text>
+        <text class="b2aXi" x="52" y="224">two largest accounts, with</text>
+        <text class="b2aXi" x="52" y="246">no ticket unowned past 48h</text>
+        <rect x="310" y="152" width="260" height="110" rx="12" fill="#FBEFE9"/>
+        <text class="b2aXi" x="332" y="180">Explains a technical failure</text>
+        <text class="b2aXi" x="332" y="202">to a non-technical customer,</text>
+        <text class="b2aXi" x="332" y="224">in writing, under time</text>
+        <text class="b2aXi" x="332" y="246">pressure</text>
+        <rect x="590" y="152" width="260" height="110" rx="12" fill="#FBEFE9"/>
+        <text class="b2aXi" x="612" y="180">Written work sample: rewrite</text>
+        <text class="b2aXi" x="612" y="202">a real Kestrel incident note</text>
+        <text class="b2aXi" x="612" y="224">for a customer. Rated by</text>
+        <text class="b2aXi" x="612" y="246">Dara O. on four anchors</text>
+        <rect x="30" y="286" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="b2aN" x="54" y="298">A capability you cannot evidence is a preference. Write the evidence source or cut the line.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - outcome, capability and evidence source, with one worked Kestrel row</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four blocks of a scorecard<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Four blocks, in this order, because each one constrains the next. Outcomes first, because until you know what this person has to achieve you cannot say what they need to be able to do.</p>
+        <table class="clean">
+          <thead><tr><th>Block</th><th>What goes in it</th></tr></thead>
+          <tbody>
+            <tr><td>Outcomes - 3 to 5</td><td>What must be true by month 6 because this person was here. Written as results, not activities.</td></tr>
+            <tr><td>Must-have capabilities - 4 to 6</td><td>What they have to be able to do to hit those outcomes, each written so a stranger could show you</td></tr>
+            <tr><td>Nice-to-haves - as many as you like</td><td>Genuinely optional, never scored as a gate, kept in a separate block so they cannot creep upward</td></tr>
+            <tr><td>Anti-requirements</td><td>The things people ask for that are proxies. Named out loud so nobody quietly reinstates them</td></tr>
+          </tbody>
+        </table>
+        <p>Four to six must-haves feels uncomfortably few the first time. That discomfort is the point: a fourteen-item must-have list is not a high bar, it is an undefined one, and it will be scored on whatever the reader can actually see.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The list that was really a wish.</strong> A support team wrote eleven must-haves for a senior hire. When someone asked which of the eleven the current top performer would have failed at the point of hire, the answer was five. The list had never been a bar. It was a description of a person after two years in the seat, projected backwards onto strangers.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Writing a capability so it can be evidenced<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Here is the whole skill in one contrast. Read both and ask yourself what you would actually do with each on a Tuesday afternoon with 24 applications open.</p>
+        <table class="clean">
+          <thead><tr><th>Undefined</th><th>Evidenceable</th></tr></thead>
+          <tbody>
+            <tr><td>Strong communicator</td><td>Has explained a technical failure to a non-technical customer, in writing, under time pressure</td></tr>
+            <tr><td>Customer-obsessed</td><td>Has held an escalation open against internal pressure to close it, and can say why</td></tr>
+            <tr><td>Self-starter</td><td>Has built a runbook or process nobody asked for, that other people then used</td></tr>
+            <tr><td>Senior</td><td>Has been the final technical escalation point for a paying customer, unsupervised</td></tr>
+          </tbody>
+        </table>
+        <p>Notice what happens to the rating. With the left column you rate the person. With the right column you ask for an example and rate what they did. The right column also tells you what to ask in the interview, which is why b5 becomes almost mechanical once this document exists.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Undefined criteria do not stay empty.</strong> When a criterion has no definition, raters fill the gap with the most visible signal available, which on paper is the writing itself: fluency, polish, an unbroken timeline, a familiar employer. Those travel with background rather than with ability. This is why structured, evidenceable criteria are not only the fairer choice - they are the more accurate one. You are measuring the job instead of the CV's editing budget.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Nice-to-haves and anti-requirements, kept honest<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>A nice-to-have that gets scored is a must-have.</strong> If it earns points, it gates. Either move it up honestly or take it out of the rating entirely.</li>
+          <li><strong>Anti-requirements are the ones you have to write down.</strong> For Kestrel's Senior Support Engineer: a computer science degree, a named list of prior employers, an unbroken employment history, "native English", availability to start within two weeks, and a specific ticketing tool that takes a week to learn.</li>
+          <li><strong>Each one gets a replacement, not a deletion.</strong> The degree becomes the capability it was standing in for. The ticketing tool becomes "has worked a queue with SLAs". The point is not to lower a bar, it is to state the bar in job terms.</li>
+          <li><strong>Show the anti-requirements to the hiring manager.</strong> Half of them came from that manager, and the conversation goes far better when the list is on a page rather than in your tone of voice.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: WHERE AI HELPS ============ -->
+  <section class="section" id="ai-here">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the honest division of labour</span>
+      <h2>What AI is genuinely good at here, and what it must not touch <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">This session is the strongest case for AI in the whole track, and it is worth being precise about why. Nothing here is a decision about a person. It is structure work on a document, and structure work is exactly what the machine is good at.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Three things it does better than a tired human at 6pm<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Ramble to structure.</strong> A manager's voice note - eight minutes, three tangents, one good sentence about escalations - becomes a draft scorecard with outcomes and capabilities in the right blocks. You are not asking it to know the job. You are asking it to sort what the manager already said.</li>
+          <li><strong>Spotting the requirement that is really a proxy.</strong> Ask it to flag every line that measures background rather than ability and it will catch the degree requirement, the years-of-experience number, the "cultural fit", the coded adjectives. It is unembarrassed about this in a way colleagues sometimes are not.</li>
+          <li><strong>Generating the evidence question.</strong> For every capability, ask "how would a candidate show me this?" and you get the work sample, the interview question and the reference question in one pass. That is three later sessions of work pulled forward into tonight.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Kestrel, ten minutes in.</strong> Dara O.'s actual voice note contains one line worth gold: "the thing that killed us last year was nobody owning the enterprise escalations end to end." That is outcome one. It also contains "someone from a proper software company", which is anti-requirement one. Same recording, and a structured pass separates them in seconds. A tired human at 6pm writes both into the ad.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The two lines it must not cross<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Both failures are quiet, which is what makes them worth naming before you start.</p>
+        <ul>
+          <li><strong>It must not invent a requirement the manager did not ask for.</strong> Ask for a Senior Support Engineer scorecard and a model will happily produce a beautiful, plausible, entirely fictional set of must-haves drawn from every job ad on the internet. It reads as authoritative because it is fluent. Anything not supplied gets marked <em>TBC - ask the hiring manager</em>, and TBC is a perfectly good thing to send back to Dara O.</li>
+          <li><strong>It must not decide the bar.</strong> How many years, what level, what is worth rejecting for - those are Kestrel's calls, made by Dara O. and by you, and they get recorded. The model drafts the sentence. It does not set the threshold, and it certainly does not set it silently by picking a number that looked normal.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The invented five years.</strong> A first-draft scorecard came back with "minimum 5 years in enterprise support" in the must-have block. Nobody had said five. The manager, reading it, assumed a colleague had decided it and left it in. By the time anyone asked, forty applications had been screened against a number that came from nowhere. Invented requirements do not stay drafts for long - they get inherited.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE JOB AD ============ -->
+  <section class="section" id="job-ad">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the document that decides who ever applies</span>
+      <h2>The job ad: what narrows a pool and what widens it <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The scorecard is internal. The ad is the only part a candidate sees, and it does more filtering than any screen you will ever run, because the people it puts off never enter the numbers. You cannot audit a pool for the applications you did not receive.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two versions of the same Senior Support Engineer ad side by side, with the specific lines that narrow the pool marked on the left and their replacements on the right">
+        <style>
+          .b2bT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b2bXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .b2bR { font: 700 12.5px Inter, sans-serif; fill: #7A6660; }
+          .b2bN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+        </style>
+        <rect x="30" y="36" width="390" height="34" rx="10" fill="#6E2A18"/>
+        <text class="b2bT" x="48" y="59">The ad that narrows the pool</text>
+        <rect x="460" y="36" width="390" height="34" rx="10" fill="#A6472E"/>
+        <text class="b2bT" x="478" y="59">The same job, written to widen it</text>
+        <rect x="30" y="78" width="390" height="196" rx="12" fill="#FBEFE9"/>
+        <rect x="44" y="96" width="10" height="10" rx="2" fill="#A6472E"/>
+        <text class="b2bXi" x="64" y="105">Degree in Computer Science required</text>
+        <rect x="44" y="120" width="10" height="10" rx="2" fill="#A6472E"/>
+        <text class="b2bXi" x="64" y="129">8+ years in enterprise support</text>
+        <rect x="44" y="144" width="10" height="10" rx="2" fill="#A6472E"/>
+        <text class="b2bXi" x="64" y="153">14 must-haves, one nice-to-have</text>
+        <rect x="44" y="168" width="10" height="10" rx="2" fill="#A6472E"/>
+        <text class="b2bXi" x="64" y="177">Rockstar who thrives in a fast-paced warzone</text>
+        <rect x="44" y="192" width="10" height="10" rx="2" fill="#A6472E"/>
+        <text class="b2bXi" x="64" y="201">Competitive salary, depending on experience</text>
+        <rect x="44" y="216" width="10" height="10" rx="2" fill="#A6472E"/>
+        <text class="b2bXi" x="64" y="225">Basically, someone like Marcus who just left</text>
+        <text class="b2bR" x="48" y="255">Result: 11 applicants, 9 from the same 3 firms</text>
+        <rect x="460" y="78" width="390" height="196" rx="12" fill="#FBEFE9"/>
+        <rect x="474" y="96" width="10" height="10" rx="2" fill="#C9704F"/>
+        <text class="b2bXi" x="494" y="105">No degree requirement, show us the work</text>
+        <rect x="474" y="120" width="10" height="10" rx="2" fill="#C9704F"/>
+        <text class="b2bXi" x="494" y="129">You have owned a live escalation queue</text>
+        <rect x="474" y="144" width="10" height="10" rx="2" fill="#C9704F"/>
+        <text class="b2bXi" x="494" y="153">5 must-haves, each one evidenceable</text>
+        <rect x="474" y="168" width="10" height="10" rx="2" fill="#C9704F"/>
+        <text class="b2bXi" x="494" y="177">Calm in an outage, clear in writing</text>
+        <rect x="474" y="192" width="10" height="10" rx="2" fill="#C9704F"/>
+        <text class="b2bXi" x="494" y="201">Band published: this is what the role pays</text>
+        <rect x="474" y="216" width="10" height="10" rx="2" fill="#C9704F"/>
+        <text class="b2bXi" x="494" y="225">Written from the scorecard, not from Marcus</text>
+        <text class="b2bR" x="478" y="255">Result: 24 applicants, 9 we had never reached</text>
+        <rect x="30" y="294" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="b2bN" x="54" y="306">Where the ad is targeted, who it is shown to is part of selection, not just who applies.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same Kestrel role, and the six lines that do the damage</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The six lines that narrow a pool<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The long must-have list.</strong> Fourteen bullets does not signal a high bar, it signals an undefined one, and it deters people who read requirements as requirements rather than as an opening offer.</li>
+          <li><strong>Degree requirements that the job does not need.</strong> If the capability is what matters, ask for the capability. A degree line filters on who could afford one.</li>
+          <li><strong>Years-of-experience proxies.</strong> "8+ years" is a stand-in for a capability nobody wrote down. It also quietly filters on age, on career breaks, and on anyone who got good fast.</li>
+          <li><strong>Coded and in-group language.</strong> Rockstar, ninja, warzone, aggressive, "one of the lads", "work hard play hard". Each one is a signal about who belongs, and people read those signals accurately.</li>
+          <li><strong>No pay range.</strong> "Competitive, depending on experience" asks the candidate to guess and then negotiate from behind. It reliably costs you the people who cannot afford to gamble an interview process.</li>
+          <li><strong>Describing the last postholder.</strong> The single most common failure. The ad describes Marcus after three years in the seat, so it selects for people who already resemble Marcus, and the team gets a little more like itself every hire.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Same job, different sentence.</strong> A team replaced "8+ years in enterprise support" with "you have been the final escalation point for a paying customer" and the applications roughly doubled. Nobody lowered anything. The requirement had been there the whole time, hidden inside a number that only some people knew how to translate.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What widens it, without lowering anything<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Five must-haves, each one evidenceable.</strong> Straight out of the scorecard, in the same words you will screen with in b4.</li>
+          <li><strong>The pay band, published.</strong> It costs you nothing you were not going to pay anyway, and it buys you applicants who would otherwise have self-selected out.</li>
+          <li><strong>What the work actually is.</strong> A day, a week, the queue, the on-call, the two accounts. People apply to work they can picture.</li>
+          <li><strong>Plain adjectives about work, not about identity.</strong> Calm in an outage. Clear in writing. Comfortable saying "I do not know yet, here is what I am checking."</li>
+          <li><strong>An honest line about what this job is not.</strong> Kestrel's role is not a stepping stone into product engineering, and saying so up front saves everybody four weeks.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The 24.</strong> Kestrel posts the widened version on Monday. By week 4, 24 applicants have landed for Senior Support Engineer, nine of them from backgrounds the old ad had never reached. That is the slate you will meet in b4, and every one of those 24 is about to be screened against the criteria you write tonight.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Targeting: who sees the ad is part of the selection<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most people think of an ad as passive: you post it, and whoever finds it applies. Paid and algorithmic distribution is not passive. When you target a campaign, or when a platform's delivery model optimises who to show it to, a decision about the audience has been made before anyone has the chance to apply.</p>
+        <ul>
+          <li><strong>It sits inside the regulated scope.</strong> Targeted job advertising falls within the EU AI Act's high-risk employment category (Annex III point 4). Who an ad is shown to is treated as part of selection, not as marketing that happens to sit near a hiring process.</li>
+          <li><strong>Optimisation can narrow without instruction.</strong> A delivery system optimising for clicks or applications can learn to show a role to the audience that historically engaged with it, which is the same backwards-looking pattern that b4 is built around.</li>
+          <li><strong>So audit distribution the way you audit the screen.</strong> Ask where the ad ran, who it was shown to, and what the targeting parameters were. If nobody can tell you, that is the finding.</li>
+          <li><strong>Not legal advice.</strong> This is education for HR professionals; obligations vary by jurisdiction and by what your platforms actually do. Leader session a2 is the legal map, and your DPO owns the position.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Turn Dara O.'s three sentences into a scorecard <span class="tag demo">★ 14 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">This is the whole session in one artifact. You start with a shrug and finish with a document that b4, b5 and b6 all run on.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open the Kestrel workspace from b1. The scorecards, bands, guides and glossary are the context; nothing personal goes anywhere near it.</p></div>
+      <div class="step"><p>Paste the vague request below exactly as Dara O. sent it. Do not clean it up first - the mess is the input you actually get.</p></div>
+      <div class="step"><p>Run the working prompt. Read the draft for one thing only: is any must-have there that Dara O. did not say? Delete it, or mark it TBC.</p></div>
+      <div class="step"><p>Take the TBC list back to Dara O. as questions, not as a document to approve. Five specific questions beat one "does this look right?".</p></div>
+      <div class="step"><p>Set the bar yourself, with Dara O., in writing, and record who set it. That number never comes from the model.</p></div>
+    </div>
+
+    <div class="prompt-box"><span class="label">The input you actually get, unedited</span>From: Dara O. (Support Engineering)
+Subject: senior support eng
+
+Same as the last one but better. Someone senior - Marcus was great, we need
+that but more proactive. Ideally from a proper software company. The thing
+that killed us last year was nobody owning the enterprise escalations end to
+end. Can you get it posted today?</div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - ramble to scorecard, without inventing the bar</span>Draft a role scorecard for Senior Support Engineer at Kestrel, using only the
+attached scorecards, bands, interview guide and glossary, plus the hiring
+manager's message pasted below.
+
+STRUCTURE
+1. Outcomes - 3 to 5, each a result that is true by month 6, not an activity.
+2. Must-have capabilities - 4 to 6 only. Each one must be written so a candidate
+   could EVIDENCE it: name the observable thing they have done. If I cannot say
+   how someone would show it, rewrite it or drop it.
+3. Nice-to-haves - separate block, clearly marked as not scored.
+4. Anti-requirements - every line in the manager's message that measures
+   background rather than ability. Quote the original words, say what it is a
+   proxy for, and offer the job-related replacement.
+
+RULES
+- Use ONLY what the manager actually said plus the attached pack. Invent nothing.
+- Anything not supplied - level, band, years, team size, on-call - is written as
+  "TBC - ask the hiring manager". A TBC is a correct answer. A plausible guess
+  is not.
+- Do not set the bar. No minimum years, no seniority threshold, no "should have".
+  Where a threshold is needed, write "TBC - Dara O. and HR to set".
+- No personal data goes in or comes out. No named candidate, ever.
+- End with: the five questions I should ask Dara O., and a one-line note on
+  which capability will be hardest to evidence.</div>
+
+    <div class="prompt-box bad"><span class="label">The version that produces a beautiful, fictional job</span>Write me a job description for a senior support engineer.</div>
+
+    <div class="callout tip">
+      <strong>Why the short one is worse than doing nothing</strong>
+      With no pack, no manager input and no constraints, the model has to fill the whole document from the average of every support engineer ad ever written. You get fourteen must-haves, an invented five-year minimum, a degree line nobody asked for, and prose so fluent that it reads as considered. It is not a draft of Kestrel's job. It is a draft of the internet's job, and the moment it lands in a document with your name on it, it becomes the bar by default.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>The proxy audit on your own live ad <span class="tag demo">★ 8 min · build your own</span></h2>
+    </div>
+    <p class="lede">Kestrel is practice. This is the one that changes something this week. Open a job ad you are running right now, or the last one you posted.</p>
+
+    <div class="steps">
+      <div class="step"><p>Paste the ad in and mark every line that is a proxy: degree, years, employer names, "native" anything, unbroken timeline, coded adjectives, culture-fit language, availability windows, tool names that take a week to learn.</p></div>
+      <div class="step"><p>For each marked line write two things: what capability it was standing in for, and how a candidate would evidence that capability instead.</p></div>
+      <div class="step"><p>Rewrite three of them. Three, not all of them - three you can defend to the hiring manager tomorrow beats fifteen you never send.</p></div>
+      <div class="step"><p>Check the pay line. If it says "competitive", find out what stops you publishing the band, and write down the actual reason you are given.</p></div>
+      <div class="step"><p>Ask where the ad is being distributed and on what targeting. Note whether anyone can answer.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Bring one rewritten line to b4</strong>
+      In b4 the criteria you wrote become the screen, and the slate that comes out of it looks completely reasonable right up until you check it. The people who bring a real ad to that session get considerably more out of it than the people who bring Kestrel's.
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The line nobody could explain.</strong> An audit turned up "must be able to start within 4 weeks" in the must-have block of a role that had been open for five months. It filtered out everyone on a three-month notice period, which in that market meant everyone currently employed at a competitor. It had been copied from an urgent backfill two years earlier and had ridden along in the template ever since. Nobody defended it. Nobody had ever read it either.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the Kestrel Senior Support Engineer scorecard: outcomes, four to six evidenceable must-haves, nice-to-haves in their own block, anti-requirements with replacements. Save it in the workspace - b4 uses it directly.</li>
+      <li>Do the same for one of your own open roles, and count how many of your must-haves you can name an evidence source for. The count is the finding.</li>
+      <li>Run the proxy audit on a live ad and rewrite three lines. Send them to the hiring manager as a suggestion, not as a correction.</li>
+      <li>Ask one hiring manager the Marcus question: "if the person who just left applied today as a stranger, would this ad have found them?" Write down the answer.</li>
+      <li>Find out where your ads are distributed and on what targeting parameters. Bring the answer, or the silence, to b3.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public regulation, published selection research, and the house rules you wrote in b1. This course is education for HR professionals, not legal advice; obligations vary by jurisdiction and any actual legal position belongs to your own counsel and DPO. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Selection research - structured, evidenceable criteria</span><span class="note">Parts 1-3 · why undefined criteria score CV polish</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">EU AI Act - Annex III point 4, targeted job advertising</span><span class="note">Part 3 · who sees the ad is part of selection; map in a2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The b1 house rules - three rails, never-list, workspace pack</span><span class="note">Part 2 + Demo 1 · the prompt that holds the line</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your scorecard draft says "strong communicator". What is the fix?</p>
+      <button class="qopt" type="button">A · Add "excellent written and verbal communication" so it is clearer</button>
+      <button class="qopt" type="button">B · Move it to nice-to-haves so it does not gate anyone</button>
+      <button class="qopt" type="button">C · Rewrite it as something a stranger could evidence: explained a technical failure to a non-technical customer, in writing, under time pressure</button>
+      <p class="qwhy">Rail 2. Undefined criteria do not stay empty - raters fill them with the most visible signal, which is writing polish, and polish travels with background rather than ability. Naming the observable behaviour also hands you the interview question for free.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · The draft scorecard comes back with "minimum 5 years in enterprise support". Dara O. never mentioned a number. What do you do?</p>
+      <button class="qopt" type="button">A · Keep it - five years is a reasonable bar for a senior role</button>
+      <button class="qopt" type="button">B · Delete it and mark it "TBC - Dara O. and HR to set", because the model must not set the bar or invent a requirement</button>
+      <button class="qopt" type="button">C · Reduce it to three years so it is less exclusionary</button>
+      <p class="qwhy">Two failures in one line: an invented requirement, and a threshold set by a tool rather than a person. Years of experience is also a proxy for a capability nobody wrote down. TBC goes back to the manager, and whoever sets the number is recorded.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Marketing offers to run the Kestrel ad as a targeted campaign to a narrowed audience. What is the HR position?</p>
+      <button class="qopt" type="button">A · Targeting decides who ever gets the chance to apply, so it is part of selection and belongs under the same discipline as the screen</button>
+      <button class="qopt" type="button">B · It is advertising spend, so it sits with marketing and outside the hiring process</button>
+      <button class="qopt" type="button">C · It is fine as long as the ad copy itself contains no proxies</button>
+      <p class="qwhy">Targeted job advertising sits inside the EU AI Act's high-risk employment scope (Annex III point 4). You cannot audit a pool for applications you never received, so ask where the ad ran, who it was shown to, and on what parameters. Not legal advice - check your own position.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>HR session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four blocks</b><span>outcomes, must-have capabilities, nice-to-haves kept separate, anti-requirements named.</span></div>
+      <div class="cheat-item"><b>The test</b><span>if you cannot say how a stranger would evidence it, rewrite the line or cut it.</span></div>
+      <div class="cheat-item"><b>Not this</b><span>"strong communicator". This: explained a technical failure to a customer, in writing, under pressure.</span></div>
+      <div class="cheat-item"><b>4 to 6 must-haves</b><span>a fourteen-item list is not a high bar, it is an undefined one.</span></div>
+      <div class="cheat-item"><b>AI does</b><span>ramble to structure, spot the proxy, generate the evidence question for each capability.</span></div>
+      <div class="cheat-item"><b>AI does not</b><span>invent a requirement nobody asked for, or set the bar. Unsupplied = TBC, ask the manager.</span></div>
+      <div class="cheat-item"><b>Narrows the pool</b><span>long must-have lists, degrees, years proxies, coded language, no pay range, describing the last postholder.</span></div>
+      <div class="cheat-item"><b>Targeting counts</b><span>who the ad is shown to is part of selection, not marketing that sits nearby.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>HR session 2 of 10 · learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-hr-workspace.html">← Previous: Your HR workspace</a> &nbsp;·&nbsp; <a href="b3-sourcing-outreach.html">Next: Sourcing and outreach →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

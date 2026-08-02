@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR session 5 · Structured interviews and calibration - learn AI + HR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-hr-with-phoebe</a> / HR session 5 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe · HR track · Session 5 of 10</div>
+    <h1>Structured interviews: <span class="accent">a clean screen can still be undone in the room</span></h1>
+    <p class="sub">Week 6 at Kestrel. Twelve people are coming in for Senior Support Engineer, four interviewers are running them, and the shortlist you fixed in b4 is finally honest. Tonight you build the interview kit that keeps it honest: the same job-related questions in the same order, anchors written in observable behaviour, evidence captured while the person is still talking, and four raters who agree what a 3 means before anyone walks through the door.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 HR track</span>
+      <span class="chip audience">HR partners · recruiters · hiring managers</span>
+      <span class="chip audience">Interview kit</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Structure and drift</span>
+      <span class="a3" style="flex:5">20-42 · Build the kit + calibrate</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are</h2>
+    </div>
+    <p class="lede">Week 6. The screen is fixed - twelve people are through, the slate went from 61 quality and a 0.09 ratio to 100 and 1.00, and Nadia S. has the diaries booked. Dara O. is hiring manager and wants "just a proper conversation with each of them", which is a completely reasonable sentence and also the exact thing that undoes five sessions of work. A clean slate handed to an unstructured interview is a clean slate handed back to polish. Tonight the room gets a kit.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A complete interview kit for one real role - questions, anchored levels, evidence fields, scoring order - a calibration drill you can run with four busy interviewers in twenty minutes, a clear line on what AI drafts and what it never touches in an interview, and the reason structure is a selection quality practice long before it is a compliance one.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT STRUCTURED MEANS ============ -->
+  <section class="section" id="structured">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers structured selection + the interview kit</span>
+      <h2>What "structured" actually means <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Structured does not mean stiff, and it does not mean reading from a script in a monotone. It means four things: the same job-related questions, asked in the same order, scored against a rubric with anchored levels, with evidence recorded per answer - and the scoring happens after the interview, not during the handshake. Everything else about your style stays yours.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The anatomy of an interview kit row: question, anchored levels, evidence captured, score written afterwards, with one worked Senior Support Engineer example">
+        <style>
+          .b5iT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b5iI { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .b5iX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b5iXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .b5iXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .b5iN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .b5iH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="b5iH" x="30" y="30">ONE ROW OF THE KIT</text>
+        <rect x="30" y="44" width="195" height="72" rx="12" fill="#6E2A18"/>
+        <text class="b5iT" x="50" y="74">Question</text>
+        <text class="b5iX" x="50" y="98">same words, same</text>
+        <text class="b5iX" x="50" y="110">order, every time</text>
+        <rect x="242" y="44" width="195" height="72" rx="12" fill="#A6472E"/>
+        <text class="b5iT" x="262" y="74">Anchored levels</text>
+        <text class="b5iX" x="262" y="98">1 to 5, each one in</text>
+        <text class="b5iX" x="262" y="110">observable behaviour</text>
+        <rect x="454" y="44" width="195" height="72" rx="12" fill="#C9704F"/>
+        <text class="b5iI" x="474" y="74">Evidence</text>
+        <text class="b5iXi" x="474" y="98">what they said and</text>
+        <text class="b5iXi" x="474" y="110">did, in their words</text>
+        <rect x="666" y="44" width="195" height="72" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="b5iI" x="686" y="74">Score, after</text>
+        <text class="b5iXw" x="686" y="98">written alone, then</text>
+        <text class="b5iXw" x="686" y="110">brought to the panel</text>
+        <text class="b5iH" x="30" y="154">SENIOR SUPPORT ENGINEER, ONE WORKED ROW</text>
+        <rect x="30" y="168" width="195" height="96" rx="12" fill="#FBEFE9"/>
+        <text class="b5iXi" x="50" y="196">Walk me through an</text>
+        <text class="b5iXi" x="50" y="216">outage you owned</text>
+        <text class="b5iXi" x="50" y="236">end to end.</text>
+        <rect x="242" y="168" width="195" height="96" rx="12" fill="#FBEFE9"/>
+        <text class="b5iXi" x="262" y="196">5 = named the blast</text>
+        <text class="b5iXi" x="262" y="216">radius and the</text>
+        <text class="b5iXi" x="262" y="236">rollback trigger</text>
+        <rect x="454" y="168" width="195" height="96" rx="12" fill="#FBEFE9"/>
+        <text class="b5iXi" x="474" y="196">Cited the failover,</text>
+        <text class="b5iXi" x="474" y="216">40 min to recover,</text>
+        <text class="b5iXi" x="474" y="236">comms sent at 12</text>
+        <rect x="666" y="168" width="195" height="96" rx="12" fill="#FBEFE9"/>
+        <text class="b5iXi" x="686" y="196">4 - blast radius</text>
+        <text class="b5iXi" x="686" y="216">evidenced, rollback</text>
+        <text class="b5iXi" x="686" y="236">trigger never named</text>
+        <rect x="30" y="284" width="831" height="52" rx="12" fill="#FBEFE9"/>
+        <text class="b5iXi" x="50" y="308">Same question, same order, same anchors is what makes two people actually comparable.</text>
+        <text class="b5iXi" x="50" y="328">Capture evidence while they talk. Score after they leave. Never the other way round.</text>
+        <rect x="30" y="342" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="b5iN" x="54" y="354">An anchor is a behaviour you could watch. "Strong communicator" is not an anchor.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - question, anchors, evidence, score, and one worked Senior Support Engineer row</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Structure is a quality practice first<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The argument people expect is the fairness one, so lead with the other one. Structured interviews - the same job-related questions, in the same order, scored against a defined rubric with evidence - predict job performance substantially better than unstructured conversation. That has been the consistent finding of selection research for decades, and it is the reason to do it even if nobody ever audited you.</p>
+        <ul>
+          <li><strong>It is the same practice that removes the room for bias.</strong> The thing that makes an interview predictive - a defined question, a defined scale, evidence - is the same thing that leaves no gap for impressions to fill. You do not choose between fair and good. You get both from one change, exactly as the b4 levers did.</li>
+          <li><strong>An unstructured interview mostly measures rapport.</strong> Free conversation drifts toward whoever is easiest to talk to, and easy-to-talk-to travels with shared background. That is polish again, wearing a friendlier face.</li>
+          <li><strong>Order matters more than people think.</strong> If Dara asks the hardest question first to one candidate and last to another, their answers are not comparable, and the difference will be read as ability.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The candidate who talked about sailing.</strong> A panel came out of a 50-minute interview convinced they had met the strongest person in the pool. Reading the notes back, twenty minutes had gone on a shared interest in sailing, one job-related question had been asked, and there was no evidence recorded against three of the five capabilities. The panel had not been sloppy - they had been enjoying themselves, which is what unstructured time is for. The score they gave was a real number attached to a feeling.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where the structure usually leaks<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The "quick extra question" for one candidate.</strong> Usually asked because the interviewer liked them and wanted to give them a chance to shine. It is a favour that makes the whole slate uncomparable.</li>
+          <li><strong>Scoring in the room.</strong> A number written while the person is still answering is an impression with a decimal point. Capture evidence live, score afterwards.</li>
+          <li><strong>The panel that debriefs before anyone writes.</strong> The loudest voice sets the anchor and the rest of the room converges on it. Everyone writes independently first, then the panel talks.</li>
+          <li><strong>Anchors made of adjectives.</strong> "Excellent" at level 5 and "adequate" at level 3 defines nothing, so raters go back to instinct. Anchors have to describe something you could watch happening.</li>
+          <li><strong>The kit that exists but nobody opens.</strong> A guide in a shared drive is not a structure. It has to be the thing on the screen during the interview, with the evidence fields being typed into.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: RATER DRIFT ============ -->
+  <section class="section" id="calibration">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers rater drift + the calibration routine</span>
+      <h2>Four raters, one scale, four different meanings <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Kestrel has four interviewers on this role. All four have the same rubric, all four are honest people, and none of them mean the same thing by a 4. Dara is a generous 4. One of the engineers has never awarded a 5 in his life on principle. Nadia scores against the pool she has seen this month, which moves weekly. Nothing here is prejudice, and all of it is a fairness problem.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Drift is the vehicle bias travels in<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Without calibration, two interviewers use the same 1-5 scale to mean different things. That gap is not empty. It fills with impressions - warmth, familiarity, fluency, how much the candidate sounded like the last good hire - because when a scale is undefined, something has to do the deciding, and instinct volunteers immediately.</p>
+        <ul>
+          <li><strong>It is the same disease as an undefined criterion.</strong> In b4 the criterion "strong communication skills" quietly measured background because nobody defined it. An uncalibrated 1-5 scale does exactly the same thing one layer down. Undefined is never neutral.</li>
+          <li><strong>The failure is not usually prejudice.</strong> It is arithmetic. Two honest people applying two private scales produce one incomparable spreadsheet, and the spreadsheet is what the decision gets made from.</li>
+          <li><strong>Range matters as much as average.</strong> A rater who only ever uses 3 and 4 washes out every real difference on their panel. A rater who swings 1 to 5 dominates the average. Both distort a slate without either being wrong about a single candidate.</li>
+          <li><strong>It compounds across a wave.</strong> With 120 roles running, an uncalibrated panel is not one bad interview. It is a systematic tilt applied several hundred times.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The 3 that meant two different things.</strong> Two interviewers scored the same recorded answer a 3. In the debrief it turned out one meant "met the bar, no concerns" and the other meant "did not convince me, would not hire". Same number, opposite recommendation, and for six months the average of those two numbers had been going into a decision. The rubric had never been wrong. It had never been discussed either.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The calibration routine, in twenty minutes<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need a workshop. You need one sample, four people, and the discipline to reveal at the same time.</p>
+        <table class="clean">
+          <thead><tr><th>Step</th><th>What happens</th></tr></thead>
+          <tbody>
+            <tr><td>1 · Pick one sample answer</td><td>A written or recorded answer to a real question from the kit. Same material for everyone.</td></tr>
+            <tr><td>2 · Everyone scores alone</td><td>No discussion, no chat messages, no glancing sideways. Written down before anyone speaks.</td></tr>
+            <tr><td>3 · Reveal together</td><td>All four numbers at once. The spread is the finding, not the average.</td></tr>
+            <tr><td>4 · Argue the gap</td><td>Whoever scored highest and lowest each say what they saw. Both are usually right about different things.</td></tr>
+            <tr><td>5 · Rewrite the anchor</td><td>In the words people actually used in that argument. That sentence is now the anchor.</td></tr>
+            <tr><td>6 · Do it before the real interviews</td><td>Calibration after the slate is a post-mortem. Before it, it is a control.</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>Rewrite the anchors in their own words</strong>
+          The single highest-value output of a calibration session is not agreement, it is language. When an interviewer says "I gave it a 3 because they described what happened but never why they chose that fix" - stop and write that down verbatim. That sentence is a better anchor than anything you or an assistant would have drafted, because four people just agreed it describes what they saw.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: WHERE AI HELPS ============ -->
+  <section class="section" id="ai-lanes">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the three lanes</span>
+      <h2>Where AI helps in the room, and where it stops <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">There is real work here for an assistant, and it is all upstream and downstream of the judgment. It drafts the guide, it generates the probes, it turns messy notes into evidence lines against each criterion. It does not decide anything about a person, and rail 1 has not moved since b1.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three lanes: AI drafts the kit, the interviewer captures evidence, the panel decides and records the reason">
+        <style>
+          .b5lT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .b5lI { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .b5lX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b5lXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .b5lXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .b5lN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .b5lH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <defs>
+          <marker id="b5lAh" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#E9B6A2"/>
+          </marker>
+        </defs>
+        <text class="b5lH" x="30" y="30">BEFORE</text>
+        <text class="b5lH" x="310" y="30">IN THE ROOM</text>
+        <text class="b5lH" x="590" y="30">AFTER</text>
+        <rect x="30" y="44" width="265" height="118" rx="12" fill="#6E2A18"/>
+        <text class="b5lT" x="52" y="76">AI drafts</text>
+        <text class="b5lX" x="52" y="100">questions from the scorecard</text>
+        <text class="b5lX" x="52" y="120">two probes per capability</text>
+        <text class="b5lX" x="52" y="140">flags protected territory</text>
+        <line x1="297" y1="103" x2="308" y2="103" stroke="#E9B6A2" stroke-width="2" marker-end="url(#b5lAh)"/>
+        <rect x="310" y="44" width="265" height="118" rx="12" fill="#A6472E"/>
+        <text class="b5lT" x="332" y="76">The interviewer captures</text>
+        <text class="b5lX" x="332" y="100">what was said, in their words</text>
+        <text class="b5lX" x="332" y="120">against each criterion</text>
+        <text class="b5lX" x="332" y="140">no number while they talk</text>
+        <line x1="577" y1="103" x2="588" y2="103" stroke="#E9B6A2" stroke-width="2" marker-end="url(#b5lAh)"/>
+        <rect x="590" y="44" width="265" height="118" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="b5lI" x="612" y="76">The panel decides</text>
+        <text class="b5lXw" x="612" y="100">independent scores, then talk</text>
+        <text class="b5lXw" x="612" y="120">a named person decides</text>
+        <text class="b5lXw" x="612" y="140">reason written the same day</text>
+        <rect x="30" y="182" width="825" height="76" rx="12" fill="#FBEFE9"/>
+        <text class="b5lI" x="52" y="208">Never the assistant</text>
+        <text class="b5lXi" x="52" y="230">It does not score a candidate. It does not summarise a person into a recommendation.</text>
+        <text class="b5lXi" x="52" y="250">Nothing gets recorded without consent and a policy check first.</text>
+        <rect x="30" y="286" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="b5lN" x="54" y="298">Notes into evidence lines is help. Notes into a hire recommendation is the decision.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - AI drafts before, the interviewer captures during, the panel decides after</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The four jobs worth handing over<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Draft the guide from the scorecard.</strong> Give it the b2 capabilities and it will produce a first set of behavioural questions in an hour instead of an afternoon. You then cut half of them, which is the part only you can do.</li>
+          <li><strong>Generate probing follow-ups per capability.</strong> This is the one interviewers feel immediately. Two good probes per question mean a nervous candidate gets a second route into the answer, which is a fairness gain and a signal gain at the same time.</li>
+          <li><strong>Turn interviewer notes into evidence against each criterion.</strong> Not into a score. Take a page of scrappy notes and reorganise it so each criterion has the quoted evidence sitting under it, with "no evidence captured" written plainly where there is none. The blanks are the useful output.</li>
+          <li><strong>Check a guide for questions that stray into protected territory.</strong> Family plans, health, age signals, nationality, religion, "where are you really from". Interviewers rarely intend these and reliably ask a few. Screening the guide before it is used costs nothing.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The blank column that changed the hire.</strong> A team ran their interview notes through an assistant with one instruction: sort the evidence under each criterion and leave "no evidence captured" wherever there is none. The candidate everyone had described as the obvious yes came back with two of five criteria completely blank. Nobody had been dishonest - the interviews had simply never got to those two capabilities. They asked, in a short follow-up call, and the answer changed the ranking. The assistant scored nothing. It just showed where the room had run out of evidence.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The three things it must not do<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>It does not score a candidate.</strong> Not out of 10, not out of 5, not "on balance a strong yes". A model that scores an individual is substantially assisting a hiring decision, and that is the trigger that pulls a whole set of obligations toward you - NYC's Local Law 144 duties apply at interview and offer stage too, not only at the screen.</li>
+          <li><strong>It does not summarise a person into a recommendation.</strong> "Overall an excellent culture fit" is a decision wearing the clothes of a summary. Evidence per criterion, always. The judgment is a human sentence with a human name on it.</li>
+          <li><strong>Nothing gets recorded without consent and a policy check.</strong> An interview recording or a live transcription tool is candidate personal data, it may be an AEDT depending on what it feeds, and in several jurisdictions recording without clear consent is its own problem. Ask before the first interview, not after the twelfth.</li>
+        </ul>
+        <p>If a tool substantially assists a hiring decision it is in scope of the LL144 duties: an independent annual bias audit, a public summary of it, and at least 10 business days' notice to the candidate, with penalties from $500 per violation and up to $1,500 per day for continuing ones. This is education, not legal advice, and obligations vary by jurisdiction - check your own position before you deploy anything in an interview room.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Build the Senior Support Engineer interview kit <span class="tag demo">★ 14 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">One role, five capabilities, one kit. Build Kestrel's tonight and rebuild it for a live role of your own this week. The kit is the artifact the rest of the hiring wave runs on.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open the Kestrel workspace from b1 with the b2 role scorecard loaded. No CVs, no candidate names - the kit is built against the job, before anyone is in the room.</p></div>
+      <div class="step"><p>Run the prompt below. Expect roughly two questions per capability and far too many in total.</p></div>
+      <div class="step"><p>Cut it to five questions. Forty-five minutes buys you five questions with real probing, or nine that get skated over. Five, properly, beats nine.</p></div>
+      <div class="step"><p>Rewrite every anchor that contains an adjective. If level 5 says "excellent troubleshooting", replace it with the behaviour: what would you actually watch someone do.</p></div>
+      <div class="step"><p>Fix the order and freeze it. Same questions, same sequence, all twelve candidates, all four interviewers.</p></div>
+      <div class="step"><p>Read the protected-territory flags out loud to the panel. Those are the questions someone would otherwise have asked warmly and innocently.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - build the interview kit</span>Build an interview kit for the Senior Support Engineer role, using only the scorecard
+in this workspace.
+
+For each capability on the scorecard:
+1) One behavioural question, in the words we would actually say out loud. Past behaviour
+   on this job, not a hypothetical and not a puzzle.
+2) Anchors for levels 1 to 5, each written as observable behaviour - something an
+   interviewer could watch happen. No adjectives: "excellent", "strong", "solid" and
+   "good" are banned words in an anchor.
+3) Two probing follow-ups, for when the first answer is thin or the candidate is nervous.
+4) An evidence field naming what should be captured: the system, the numbers, the
+   decision, the words they used.
+
+Then:
+- Mark any question that risks straying into protected territory - age, health, family
+  or caring plans, nationality, religion, disability - and rewrite it job-related.
+- List which capabilities on the scorecard have no question yet, and which have too many.
+- Fix a question order and say why that order and not another.
+
+Do NOT produce a scoring recommendation, a candidate summary, or advice on who to hire.
+You build the kit. Four named people score, and one named person decides.</div>
+
+    <div class="prompt-box bad"><span class="label">The version that undoes b4 in one line</span>Here are the candidate's answers from the interview - score them out of 10 on technical depth, communication and culture fit, and tell me who to hire.</div>
+
+    <div class="callout tip">
+      <strong>Why the second one is worse than it looks</strong>
+      It hands a model the decision rail 1 reserves for a person, on three criteria nobody defined, from a transcript that is candidate personal data, with no evidence requirement and no named decision-maker at the end. It also makes the tool an active participant in a hiring decision at interview stage, which is exactly the scope question in Part 3. And it will answer confidently, in a paragraph that reads like a considered judgment, which is the reason people keep typing it.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>The calibration drill <span class="tag demo">★ 8 min · four raters, one answer</span></h2>
+    </div>
+    <p class="lede">Run this in the room tonight with the person next to you. It takes eight minutes and it is the single cheapest fairness control in the whole track.</p>
+
+    <div class="steps">
+      <div class="step"><p>Take one sample answer to the outage question - a written paragraph is enough. Everyone reads the same words.</p></div>
+      <div class="step"><p>Everyone scores it 1 to 5 against the anchors, alone, written down. No talking, no faces, no "what did you get".</p></div>
+      <div class="step"><p>Reveal all at once. Write the spread on the board. If four people land on 2, 3, 4 and 4, your scale currently means four things.</p></div>
+      <div class="step"><p>The highest and the lowest each say what they saw in the answer. Not what they felt - what sentence in the answer moved them.</p></div>
+      <div class="step"><p>Rewrite the anchor where the spread was widest, using the words those two just said. Read it back. Score the same answer again and watch the spread close.</p></div>
+      <div class="step"><p>Book fifteen minutes with all four Kestrel interviewers before the first interview. Send them the kit and one sample answer in advance. That is the whole intervention.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>If you only ever do one thing from this session</strong>
+      Do the reveal-at-once. Not the kit, not the prompt, not the probes - the moment where four people show their numbers simultaneously and discover they were not measuring the same thing. Teams that have seen their own spread once never quite go back to a private scale, and it costs one sample answer and eight minutes.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Build the kit for one live role you are hiring right now. Five questions, anchored levels, two probes each, evidence fields. Not a template you will adapt later - the actual role.</li>
+      <li>Run the calibration drill with your real panel before their next interview. One sample answer, independent scores, reveal together, rewrite the widest anchor.</li>
+      <li>Take the interview guide you used last month and mark every question that strays into protected territory. Most guides have at least one, usually asked with the friendliest intentions.</li>
+      <li>Take one page of your own interview notes, strip the candidate's name and identifying details, and ask an assistant to sort the evidence under each criterion with "no evidence captured" wherever there is none. Count the blanks.</li>
+      <li>Find out whether anything in your interview stage records, transcribes or scores - and whether candidates are told. Bring that answer to b6, where the record gets written.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from long-standing selection research, public regulation and vendor documentation. This course is education for HR professionals, not legal advice, and obligations vary by jurisdiction. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Structured selection research - structure predicts performance</span><span class="note">Part 1 · why the kit is a quality practice first</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">NYC Local Law 144 - AEDT scope at interview and offer stage</span><span class="note">Part 3 · when a tool in the room becomes regulated</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">EU AI Act - human oversight for employment high-risk systems</span><span class="note">Part 3 · the panel decides; full map in a2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Session b4 - the five fixes and the four-fifths rule</span><span class="note">Part 2 · drift is the same disease as a vague criterion</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Dara wants "just a proper conversation" with each of the twelve candidates. What is the strongest argument for the kit?</p>
+      <button class="qopt" type="button">A · It is required, and the panel has no choice in the matter</button>
+      <button class="qopt" type="button">B · Structured interviews predict job performance substantially better - the fairness gain comes free with the quality gain</button>
+      <button class="qopt" type="button">C · It is faster, because scripted questions take less time to ask</button>
+      <p class="qwhy">Lead with quality and Dara is on your side in one sentence. Structure is what makes an interview predictive, and the same defined questions and anchors are what leave no gap for impressions. Same move as b4: the fairness fix and the quality fix are one change.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Two interviewers both score an answer a 3, but one means "met the bar" and the other means "would not hire". What is the actual failure?</p>
+      <button class="qopt" type="button">A · One of them is biased against the candidate</button>
+      <button class="qopt" type="button">B · The rubric has too many levels and should be simplified to pass or fail</button>
+      <button class="qopt" type="button">C · Rater drift from an undefined scale - the same disease as an undefined criterion, one layer down</button>
+      <p class="qwhy">Nobody here is prejudiced, and the rubric is not too long. The scale was never discussed, so each rater filled it privately, and an undefined scale fills with impressions. Calibration is the fix: score a sample independently, reveal together, rewrite the anchor in their own words.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which use of AI in the interview stage stays on the right side of the line?</p>
+      <button class="qopt" type="button">A · Sorting interviewer notes into evidence under each criterion, marking where no evidence was captured</button>
+      <button class="qopt" type="button">B · Producing a one-paragraph summary of each candidate with an overall recommendation</button>
+      <button class="qopt" type="button">C · Scoring the transcript out of 5 per capability so the panel has a starting point</button>
+      <p class="qwhy">Notes into evidence is help; notes into a score or a recommendation is the decision, and a "starting point" is an anchor the panel will not escape. A tool that substantially assists a hiring decision is in scope of obligations like LL144's, at interview stage as much as at the screen.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>HR session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Structured means four things</b><span>same job-related questions, same order, anchored rubric, evidence per answer.</span></div>
+      <div class="cheat-item"><b>Quality first</b><span>structure predicts performance substantially better than free conversation. Fairness comes with it.</span></div>
+      <div class="cheat-item"><b>Score after</b><span>capture evidence while they talk, write the number when they have left, alone before the panel.</span></div>
+      <div class="cheat-item"><b>Anchors are behaviour</b><span>something you could watch happen. "Excellent", "strong" and "solid" are not anchors.</span></div>
+      <div class="cheat-item"><b>Drift is the vehicle</b><span>an undefined 1-5 scale fills with impressions, exactly like an undefined criterion.</span></div>
+      <div class="cheat-item"><b>Calibration drill</b><span>one sample, score alone, reveal at once, argue the widest gap, rewrite the anchor in their words.</span></div>
+      <div class="cheat-item"><b>AI does</b><span>draft the guide, generate probes, sort notes into evidence, flag protected territory.</span></div>
+      <div class="cheat-item"><b>AI never</b><span>scores a person, summarises them into a recommendation, or records anything without consent.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>HR session 5 of 10 · learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b4-screening-simulator.html">← Previous: The screening slate</a> &nbsp;·&nbsp; <a href="b6-offers-decision-record.html">Next: Offers and the decision record →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

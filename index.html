@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn AI + HR with phoebe - a two-track course for the people function</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(166,71,46,.15); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#FAEDE7); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .rail { margin-top: 1.4rem; border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: var(--radius); background: var(--amber-50); padding: 1rem 1.2rem; font-size: .9rem; }
+  .rail b { color: var(--amber-ink); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe</div>
+    <h1>The people function, <span class="accent">with AI drafting and a person deciding</span></h1>
+    <p class="sub">A leader track for CHROs and HR directors - the legal map, the governance, and what fairness actually requires you to measure - and an HR track that puts AI to work across the whole people lifecycle: roles and job descriptions, sourcing, screening, structured interviews, offers, onboarding, performance, and internal mobility. One running company carries all sixteen sessions. This is the domain where a sloppy shortcut is not embarrassing, it is actionable - so every session ends where the law does: a named person decides, and the record shows who.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+      <div class="stat"><b data-count="80">80</b><span>% - the four-fifths threshold</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for CHROs, HR directors &amp; heads of talent · 6 x 45 min · no tooling required</span></h2>
+      <p class="plede">Thinking mode: what AI changes about the people function, the obligations that are live now versus the ones arriving, the governance you build around a vendor, what fairness requires you to measure, and how to roll it out to an HR team without creating exposure. Each session ends with the questions to ask your team.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-people-function.html" style="--diff:#34D399">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>What AI changes about the people function</h3>
+        <p>Where AI genuinely helps across the lifecycle, and the two decisions it must never make. The honest version.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-legal-map.html" style="--diff:#FBBF24">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">Leader 2 · medium</span>
+        <h3>The legal map</h3>
+        <p>EU AI Act employment high-risk (now 2 Dec 2027), NYC Local Law 144 live today, GDPR and PDPA, adverse impact.</p>
+        <span class="meta"><span class="pill light">Obligation map</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-governing-ai-hiring.html" style="--diff:#FBBF24">
+        <span class="cicon">🛡️</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>Governing AI in hiring</h3>
+        <p>Vendor due diligence, the independent bias audit, candidate notice, and the records that make it defensible.</p>
+        <span class="meta"><span class="pill light">Governance checklist</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-fairness-in-practice.html" style="--diff:#FBBF24">
+        <span class="cicon">⚖</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>Fairness in practice</h3>
+        <p>Proxies, the four-fifths rule, what "explainable" means to a rejected candidate, and why passing is not a defence.</p>
+        <span class="meta"><span class="pill light">Impact review</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-people-data.html" style="--diff:#FB923C">
+        <span class="cicon">🔐</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>People data, monitoring &amp; trust</h3>
+        <p>What HR data can go where, the monitoring line, works councils, and what happens to trust when staff find out.</p>
+        <span class="meta"><span class="pill light">Data boundary</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-rollout-to-hr.html" style="--diff:#FB923C">
+        <span class="cicon">🚀</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Rolling it out to an HR function</h3>
+        <p>Pilot design, the quality bar, honest metrics, team capability, and the conversation with the board.</p>
+        <span class="meta"><span class="pill light">Rollout plan</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The HR track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for HR partners, recruiters, L&amp;D &amp; people ops · 10 x 45 min · one running company, no code</span></h2>
+      <p class="plede">Hands on the real artifacts, week by week, at Kestrel: the workspace, role scorecards and job descriptions, sourcing at volume, the screening slate (with a live simulator), structured interviews, offers and decision records, onboarding, performance writing, internal mobility, and a full hiring wave as a capstone.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-hr-workspace.html" style="--diff:#34D399">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">HR 1 · easy</span>
+        <h3>Your HR workspace</h3>
+        <p>The six-document pack, the never-goes-in list, the candidate notice, and the three rails.</p>
+        <span class="meta"><span class="pill amber">▶ HR starts here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-role-and-jd.html" style="--diff:#FBBF24">
+        <span class="cicon">📋</span>
+        <span class="cnum">HR 2 · medium</span>
+        <h3>Role definition &amp; the job description</h3>
+        <p>Scorecards with evidenceable must-haves, and an ad that widens the pool instead of quietly narrowing it.</p>
+        <span class="meta"><span class="pill light">Role scorecard</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-sourcing-outreach.html" style="--diff:#FBBF24">
+        <span class="cicon">📣</span>
+        <span class="cnum">HR 3 · medium</span>
+        <h3>Sourcing &amp; outreach at volume</h3>
+        <p>Reaching more people without spam, without proxies, and without targeting that quietly excludes.</p>
+        <span class="meta"><span class="pill light">Outreach kit</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-screening-simulator.html" style="--diff:#FB923C">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">HR 4 · hands-on</span>
+        <h3>The screening slate</h3>
+        <p>A reasonable-looking shortlist fails the four-fifths rule at 0.09. Fix it live and watch quality climb with it.</p>
+        <span class="meta"><span class="pill light">★ interactive: hr-live</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-structured-interviews.html" style="--diff:#FBBF24">
+        <span class="cicon">🎤</span>
+        <span class="cnum">HR 5 · medium</span>
+        <h3>Structured interviews &amp; calibration</h3>
+        <p>Guides, scorecards, evidence per rating, and the calibration conversation that stops rater drift.</p>
+        <span class="meta"><span class="pill light">Interview kit</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-offers-decision-record.html" style="--diff:#FBBF24">
+        <span class="cicon">✍️</span>
+        <span class="cnum">HR 6 · medium</span>
+        <h3>Offers &amp; the decision record</h3>
+        <p>Comp bands, the offer conversation, and a decision record that survives a challenge months later.</p>
+        <span class="meta"><span class="pill light">Decision record</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-onboarding.html" style="--diff:#34D399">
+        <span class="cicon">🌱</span>
+        <span class="cnum">HR 7 · easy</span>
+        <h3>Onboarding that lands</h3>
+        <p>A 30/60/90 per role, the manager pack, and the knowledge base that answers before anyone asks.</p>
+        <span class="meta"><span class="pill light">30/60/90 kit</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-performance-feedback.html" style="--diff:#FB923C">
+        <span class="cicon">📈</span>
+        <span class="cnum">HR 8 · hands-on</span>
+        <h3>Performance &amp; feedback</h3>
+        <p>Evidence over vibes, the bias check on the writing, and why the rating is never the model's to give.</p>
+        <span class="meta"><span class="pill light">Review clinic</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-ld-mobility.html" style="--diff:#FBBF24">
+        <span class="cicon">🧗</span>
+        <span class="cnum">HR 9 · medium</span>
+        <h3>L&amp;D, mobility &amp; attrition signals</h3>
+        <p>A skills inventory that is not surveillance, internal moves before external hires, and honest attrition reading.</p>
+        <span class="meta"><span class="pill light">Skills map</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-capstone-hiring-wave.html" style="--diff:#F87171">
+        <span class="cicon">🏁</span>
+        <span class="cnum">HR 10 · hardest</span>
+        <h3>Capstone: a wave and a cycle</h3>
+        <p>One hiring wave and one performance cycle, end to end, with the audit trail and the never-delegate list.</p>
+        <span class="meta"><span class="pill light">Full run</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="rail">
+      <b>The three rails this whole course runs on:</b> a person decides, and the record shows which person - with the reason written the same day. Rate the job, not the polish - undefined criteria quietly measure background. And people data is not prompt fodder - no CVs, health, grievances or named pay in a workspace. Kestrel is a fictional company and every number in it is invented. This is education for HR professionals, not legal advice; obligations vary by jurisdiction and the dates in this course have already moved once.
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one people function. Leaders set the boundary and commission the audit; HR builds the artifacts inside it.</p>
+      <div class="path"><b>🤝 Leader (no tooling)</b>
+        <a class="pstep" href="courses/a1-people-function.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-legal-map.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-governing-ai-hiring.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-fairness-in-practice.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-people-data.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-rollout-to-hr.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ HR (the toolkit)</b>
+        <a class="pstep" href="courses/b1-hr-workspace.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-role-and-jd.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-sourcing-outreach.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-screening-simulator.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-structured-interviews.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-offers-decision-record.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-onboarding.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-performance-feedback.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-ld-mobility.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-capstone-hiring-wave.html">b10</a>
+      </div>
+      <div class="path"><b>🌱 Curious follower (a taste)</b>
+        <a class="pstep" href="courses/a1-people-function.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-hr-workspace.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-screening-simulator.html">b4</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (govern AND deliver)</b>
+        <a class="pstep" href="courses/a1-people-function.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-hr-workspace.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · education for HR professionals, not legal advice · sources: EU AI Act Annex III + NYC Local Law 144 + EEOC four-fifths guidance + GDPR/PDPA</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "AI +\nHR",
+  centerColor: "#6E2A18",
+  sessions: [
+    { label: "People\nfunction", href: "courses/a1-people-function.html", color: "#34D399",
+      concepts: [
+        { label: "Draft vs decide", href: "courses/a1-people-function.html" },
+        { label: "Why HR is different", href: "courses/a1-people-function.html" } ] },
+    { label: "The legal\nmap", href: "courses/a2-legal-map.html", color: "#FBBF24",
+      concepts: [
+        { label: "EU AI Act high-risk", href: "courses/a2-legal-map.html" },
+        { label: "NYC Local Law 144", href: "courses/a2-legal-map.html" },
+        { label: "GDPR + PDPA", href: "courses/a2-legal-map.html" } ] },
+    { label: "Governing\nAI hiring", href: "courses/a3-governing-ai-hiring.html", color: "#FBBF24",
+      concepts: [
+        { label: "Vendor diligence", href: "courses/a3-governing-ai-hiring.html" },
+        { label: "The bias audit", href: "courses/a3-governing-ai-hiring.html" },
+        { label: "Candidate notice", href: "courses/a3-governing-ai-hiring.html" } ] },
+    { label: "Fairness in\npractice", href: "courses/a4-fairness-in-practice.html", color: "#FBBF24",
+      concepts: [
+        { label: "Proxies", href: "courses/a4-fairness-in-practice.html" },
+        { label: "Four-fifths rule", href: "courses/a4-fairness-in-practice.html" } ] },
+    { label: "People data\n& trust", href: "courses/a5-people-data.html", color: "#FB923C",
+      concepts: [
+        { label: "The data boundary", href: "courses/a5-people-data.html" },
+        { label: "Monitoring line", href: "courses/a5-people-data.html" } ] },
+    { label: "Roll out\nto HR", href: "courses/a6-rollout-to-hr.html", color: "#FB923C",
+      concepts: [
+        { label: "Pilot design", href: "courses/a6-rollout-to-hr.html" },
+        { label: "Honest metrics", href: "courses/a6-rollout-to-hr.html" } ] },
+    { label: "HR\nworkspace", href: "courses/b1-hr-workspace.html", color: "#34D399",
+      concepts: [
+        { label: "The HR pack", href: "courses/b1-hr-workspace.html" },
+        { label: "Never goes in", href: "courses/b1-hr-workspace.html" },
+        { label: "The three rails", href: "courses/b1-hr-workspace.html" } ] },
+    { label: "Role &\njob ad", href: "courses/b2-role-and-jd.html", color: "#FBBF24",
+      concepts: [
+        { label: "Evidenceable musts", href: "courses/b2-role-and-jd.html" },
+        { label: "Widening the pool", href: "courses/b2-role-and-jd.html" } ] },
+    { label: "Sourcing &\noutreach", href: "courses/b3-sourcing-outreach.html", color: "#FBBF24",
+      concepts: [
+        { label: "Volume without spam", href: "courses/b3-sourcing-outreach.html" },
+        { label: "Targeting limits", href: "courses/b3-sourcing-outreach.html" } ] },
+    { label: "Screening\nslate", href: "courses/b4-screening-simulator.html", color: "#FB923C",
+      concepts: [
+        { label: "Four-fifths live", href: "courses/b4-screening-simulator.html" },
+        { label: "The five fixes", href: "courses/b4-screening-simulator.html" },
+        { label: "Measure ≠ fix", href: "courses/b4-screening-simulator.html" } ] },
+    { label: "Structured\ninterviews", href: "courses/b5-structured-interviews.html", color: "#FBBF24",
+      concepts: [
+        { label: "Scorecards", href: "courses/b5-structured-interviews.html" },
+        { label: "Rater calibration", href: "courses/b5-structured-interviews.html" } ] },
+    { label: "Offers &\nrecords", href: "courses/b6-offers-decision-record.html", color: "#FBBF24",
+      concepts: [
+        { label: "Comp bands", href: "courses/b6-offers-decision-record.html" },
+        { label: "Decision record", href: "courses/b6-offers-decision-record.html" } ] },
+    { label: "Onboarding", href: "courses/b7-onboarding.html", color: "#34D399",
+      concepts: [
+        { label: "30/60/90", href: "courses/b7-onboarding.html" },
+        { label: "Manager pack", href: "courses/b7-onboarding.html" } ] },
+    { label: "Performance\n& feedback", href: "courses/b8-performance-feedback.html", color: "#FB923C",
+      concepts: [
+        { label: "Evidence over vibes", href: "courses/b8-performance-feedback.html" },
+        { label: "Bias check", href: "courses/b8-performance-feedback.html" } ] },
+    { label: "L&D &\nmobility", href: "courses/b9-ld-mobility.html", color: "#FBBF24",
+      concepts: [
+        { label: "Skills inventory", href: "courses/b9-ld-mobility.html" },
+        { label: "Attrition signals", href: "courses/b9-ld-mobility.html" } ] },
+    { label: "Capstone\nwave", href: "courses/b10-capstone-hiring-wave.html", color: "#F87171",
+      concepts: [
+        { label: "Wave + cycle", href: "courses/b10-capstone-hiring-wave.html" },
+        { label: "Never delegate", href: "courses/b10-capstone-hiring-wave.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

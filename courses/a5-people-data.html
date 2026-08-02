@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 5 · People data, monitoring and trust - learn AI + HR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-hr-with-phoebe</a> / Leader session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI + HR with Phoebe · Leader track · Session 5 of 6</div>
+    <h1>People data, monitoring and trust: <span class="accent">the line you cannot un-cross</span></h1>
+    <p class="sub">Sessions a1 to a4 were about the hiring decision - who gets in, and whether the screen is defensible. This one is about the other 400 people. Kestrel already holds performance ratings, sick leave records, grievance files, engagement survey text and every badge swipe in the building, and somebody has just asked whether AI could "look at all of it and find the attrition problem". Tonight you decide what may enter an AI workspace, where the monitoring line sits, and how to do attrition analytics in a way you would still defend at an all-hands.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">CHROs · HR directors</span>
+      <span class="chip audience">Data boundary</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-20 · The boundary and the monitoring line</span>
+      <span class="a3" style="flex:5">20-42 · Build-along: tier your estate, write the notice</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we are in the leader track</h2>
+    </div>
+    <p class="lede">a1 mapped what AI actually changes about the people function. a2 laid out the legal map. a3 built the governance around vendors, audits, notice and records. a4 got specific about fairness - proxies, the four-fifths ratio, and what "explainable" means to a candidate who was rejected. All four were about <strong>the hiring decision</strong>: a person who does not yet work here, being assessed. Tonight is the mirror image. It is about everything HR holds on the people who <em>already</em> work here, and about the quiet moment when someone says "we have all this data, why not point AI at it". The answer is not "no". It is "not like that, and here is the version that survives contact with your own staff". a6 then turns all of it into a pilot you can actually run.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Your own data estate sorted into five tiers by how badly it goes wrong, a marked list of every place an AI tool currently touches tier three or worse, a clear position on where the monitoring line sits for your organisation, an attrition-analytics design you can defend, and the employee-facing paragraph that says what AI is used for on their data and what it is never used for.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE DATA BOUNDARY ============ -->
+  <section class="section" id="boundary">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers GDPR + PDPA on employee data</span>
+      <h2>The data boundary, sorted by how badly it goes wrong <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">HR sits on the richest personal-data estate in the company, and unlike marketing's, none of it was volunteered for analysis. People handed it over because they wanted a job, needed an adjustment, or were required to. So the useful sort order is not "what is interesting" - it is <strong>what happens to a real person when this leaks, or gets used for something they never agreed to</strong>. Five tiers, worst-case ascending.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five tiers of HR data from ordinary employment records through pay, performance and grievance material, health and accommodations, to monitoring and diversity data, with what may touch an AI workspace at each tier">
+        <style>
+          .a5dT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .a5dTi { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .a5dX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a5dXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .a5dXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .a5dVi { font: 700 14px Inter, sans-serif; fill: #2A1A15; }
+          .a5dVw { font: 700 14px Inter, sans-serif; fill: #06343A; }
+          .a5dN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .a5dH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="a5dH" x="30" y="32">WHAT HR HOLDS</text>
+        <text class="a5dH" x="510" y="32">WHAT MAY TOUCH AN AI WORKSPACE</text>
+
+        <rect x="30" y="44" width="460" height="50" rx="10" fill="#FBEFE9"/>
+        <text class="a5dTi" x="48" y="66">Tier 1 · Ordinary employment records</text>
+        <text class="a5dXi" x="48" y="85">job titles, org charts, start dates, training logs</text>
+        <rect x="510" y="44" width="340" height="50" rx="10" fill="#FBEFE9"/>
+        <text class="a5dVi" x="528" y="66">Yes, de-identified</text>
+        <text class="a5dXi" x="528" y="85">lawful basis, minimum fields</text>
+
+        <rect x="30" y="102" width="460" height="50" rx="10" fill="#E9B6A2"/>
+        <text class="a5dTi" x="48" y="124">Tier 2 · Pay, bands and bonus</text>
+        <text class="a5dXi" x="48" y="143">named salaries, offer history, comp review notes</text>
+        <rect x="510" y="102" width="340" height="50" rx="10" fill="#FBEFE9"/>
+        <text class="a5dVi" x="528" y="124">Aggregate only</text>
+        <text class="a5dXi" x="528" y="143">never one person's number</text>
+
+        <rect x="30" y="160" width="460" height="50" rx="10" fill="#C9704F"/>
+        <text class="a5dTi" x="48" y="182">Tier 3 · Performance and grievance</text>
+        <text class="a5dXi" x="48" y="201">ratings, PIPs, complaints, investigation notes</text>
+        <rect x="510" y="160" width="340" height="50" rx="10" fill="#E9B6A2"/>
+        <text class="a5dVi" x="528" y="182">Keep it out</text>
+        <text class="a5dXi" x="528" y="201">a person reads these, not a tool</text>
+
+        <rect x="30" y="218" width="460" height="50" rx="10" fill="#A6472E"/>
+        <text class="a5dT" x="48" y="240">Tier 4 · Health and accommodations</text>
+        <text class="a5dX" x="48" y="259">sick leave, adjustments, occupational health</text>
+        <rect x="510" y="218" width="340" height="50" rx="10" fill="#E9B6A2"/>
+        <text class="a5dVi" x="528" y="240">Never</text>
+        <text class="a5dXi" x="528" y="259">special category, treated as such</text>
+
+        <rect x="30" y="276" width="460" height="50" rx="10" fill="#6E2A18"/>
+        <text class="a5dT" x="48" y="298">Tier 5 · Monitoring and DEI data</text>
+        <text class="a5dX" x="48" y="317">activity logs, message sentiment, self-declarations</text>
+        <rect x="510" y="276" width="340" height="50" rx="10" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="a5dVw" x="528" y="298">Never, and see below</text>
+        <text class="a5dXw" x="528" y="317">this is the tempting one</text>
+
+        <rect x="30" y="344" width="820" height="60" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="a5dXw" x="52" y="370">The tier 5 trap: it was collected for one narrow purpose - security, or a diversity report -</text>
+        <text class="a5dXw" x="52" y="390">and it is the richest-looking pile in the building. Purpose limitation is the whole answer.</text>
+
+        <rect x="30" y="424" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="a5dN" x="54" y="436">Tiers 3 to 5 are where an AI shortcut stops being embarrassing and becomes a data breach.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - five tiers of HR data and what may touch an AI workspace at each one</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The five tiers, and why the order matters<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most organisations run a two-tier model in their heads: "confidential" and "very confidential". That is not enough resolution to make a decision with, because it does not tell you what changes when the data moves into a new tool. Five tiers does.</p>
+        <ul>
+          <li><strong>Tier 1 - ordinary employment records.</strong> Titles, teams, reporting lines, start dates, completed training. Still personal data, still needs a basis and a retention limit, but the failure mode is embarrassment rather than harm. This is the tier that makes AI genuinely useful for org design questions.</li>
+          <li><strong>Tier 2 - pay.</strong> Aggregate is a management tool. Named is a career and a relationship. A pay band chart may enter a workspace; a spreadsheet with 400 names and 400 numbers may not, and the fact that it is the easiest export in your HRIS is not an argument.</li>
+          <li><strong>Tier 3 - performance, grievance, disciplinary.</strong> Written by humans, about humans, often in the middle of a conflict, and frequently contested. Anything drafted from this material inherits its contestedness. If the underlying rating was unfair, an AI summary of it is unfair and now also fluent.</li>
+          <li><strong>Tier 4 - health and accommodations.</strong> Special category under GDPR and treated with heightened care under the PDPA regime too. Nothing here belongs in a prompt, and there is no clever de-identification that makes "adjusted hours for a chronic condition" safe when the team has nine people in it.</li>
+          <li><strong>Tier 5 - monitoring output and anything collected about protected characteristics.</strong> Both were collected for a stated, narrow purpose. Reusing them is a new purpose, and a new purpose needs its own basis, its own assessment, and usually its own conversation with people. This is Part 2.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The helpful export.</strong> An HR analyst was asked for a view on why one department kept losing people. The fastest route was the full employee extract - every field the HRIS offered, because filtering columns takes longer than not filtering them. That single file carried named pay, two open grievances and four accommodation flags into a tool nobody had cleared for tier 3. Nothing leaked, nobody was harmed, and the review still took six weeks. The failure was not malice or even carelessness. It was that "export everything" is one click and "export what I need" is twenty.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What lawful basis actually asks you<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>GDPR and the Singapore PDPA both govern candidate and employee data through the same practical spine: you need a <strong>lawful basis</strong> for processing, you may only use the data for the <strong>purpose</strong> you collected it for, you take the <strong>minimum</strong> you need, you <strong>keep it for a limited time</strong>, and there are constraints on decisions taken about a person without meaningful human involvement. Four of those five are silently broken the moment somebody pastes an HRIS export into a chat window.</p>
+        <ul>
+          <li><strong>Consent is the weakest basis in an employment relationship</strong>, because the power imbalance makes "freely given" hard to argue. Leaders reach for it because it feels safe; it usually is not the right instrument here, and your DPO will tell you which one is.</li>
+          <li><strong>Purpose limitation is the one AI projects trip over</strong>, every time. The data exists. It is right there. But "we already have it" answers a storage question, not a use question.</li>
+          <li><strong>Minimisation is a design constraint, not a virtue.</strong> Ask what the smallest field set is that could answer the question, then build to that. It is also the cheapest risk reduction available to you.</li>
+          <li><strong>Retention limits bite hardest on the material nobody owns</strong> - old interview notes, shared drives of engagement free text, the folder from the reorganisation two years ago. This is where an AI project usually discovers what you actually still hold.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The not-legal-advice line, stated plainly</strong>
+          This session teaches what the obligations are about and how to run the conversation with the people who own them. It is not legal advice, obligations differ by jurisdiction, and the position on employee data and AI is still moving. Your DPO and your counsel decide; you make sure they are asked before the project starts, not after the export.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The de-identification habit, and when it stops working<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The HR track teaches this as a reflex in b1: before anything real touches a tool, strip the name, contact details, employer, dates of birth, protected characteristics and any free text about health or family. It works well for tier 1 and tier 2, and it is the reason most useful HR AI work is possible at all.</p>
+        <p>It stops working at small numbers. In a team of nine, "the person on adjusted hours" is a name. In one office, "the grievance from last March" is a name. Re-identification is not a technical attack in an HR context - it is just colleagues knowing each other. So the honest rule is: <strong>de-identification protects tier 1 and tier 2 data at scale, and it does not rescue tier 3, 4 or 5 at any scale.</strong></p>
+        <p>And the diagnostic from b1 still holds. If stripping the identifiers makes the task impossible, the task needed a person rather than a prompt.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE MONITORING LINE ============ -->
+  <section class="section" id="monitoring">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the EU AI Act's monitoring scope</span>
+      <h2>The monitoring line, and the question that actually decides it <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Productivity scoring. Sentiment analysis on internal messages. Always-on activity tracking. Attrition-risk prediction attached to named individuals. Every one of these arrives with a business case that sounds reasonable in a room of four people and reads very differently in a room of four hundred. Three things are engaged at once, and leaders usually only check the first.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A two-axis view of monitoring proposals: legal footing on the horizontal axis and how it reads to staff on the vertical, with the observation that the second axis stops more projects than the first">
+        <style>
+          .a5mT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .a5mTi { font: 700 15px Inter, sans-serif; fill: #2A1A15; }
+          .a5mX { font: 400 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a5mXi { font: 400 12.5px Inter, sans-serif; fill: #2A1A15; }
+          .a5mXw { font: 400 12.5px Inter, sans-serif; fill: #06343A; }
+          .a5mN { font: 600 14px Inter, sans-serif; fill: #06343A; }
+          .a5mH { font: 700 12px Inter, sans-serif; fill: #7A6660; letter-spacing: .08em; }
+        </style>
+        <text class="a5mH" x="150" y="42">WEAK LEGAL FOOTING</text>
+        <text class="a5mH" x="470" y="42">STRONG LEGAL FOOTING</text>
+        <text class="a5mH" transform="rotate(-90 116 128)" x="116" y="128" text-anchor="middle">READS FINE</text>
+        <text class="a5mH" transform="rotate(-90 116 273)" x="116" y="273" text-anchor="middle">READS BADLY</text>
+
+        <rect x="140" y="56" width="310" height="145" rx="10" fill="#E9B6A2"/>
+        <text class="a5mTi" x="160" y="86">Nearly empty</text>
+        <text class="a5mXi" x="160" y="110">If staff would shrug at it, it</text>
+        <text class="a5mXi" x="160" y="130">usually has a basis already.</text>
+        <text class="a5mXi" x="160" y="154">If this box is full, someone</text>
+        <text class="a5mXi" x="160" y="174">has not asked the DPO.</text>
+
+        <rect x="460" y="56" width="310" height="145" rx="10" fill="#FBEFE9"/>
+        <text class="a5mTi" x="480" y="86">Build here</text>
+        <text class="a5mXi" x="480" y="110">Aggregate attrition drivers.</text>
+        <text class="a5mXi" x="480" y="130">Anonymised survey themes.</text>
+        <text class="a5mXi" x="480" y="154">Policy answers. Manager</text>
+        <text class="a5mXi" x="480" y="174">coaching on request.</text>
+
+        <rect x="140" y="211" width="310" height="145" rx="10" fill="#6E2A18"/>
+        <text class="a5mT" x="160" y="241">Nobody defends this</text>
+        <text class="a5mX" x="160" y="265">Named attrition-risk scores</text>
+        <text class="a5mX" x="160" y="285">handed to line managers.</text>
+        <text class="a5mX" x="160" y="309">Message sentiment tied to</text>
+        <text class="a5mX" x="160" y="329">an individual employee.</text>
+
+        <rect x="460" y="211" width="310" height="145" rx="10" fill="#A6472E"/>
+        <text class="a5mT" x="480" y="241">The killer quadrant</text>
+        <text class="a5mX" x="480" y="265">Always-on activity tracking.</text>
+        <text class="a5mX" x="480" y="285">Productivity scoring. Lawful</text>
+        <text class="a5mX" x="480" y="309">in places, and still the end</text>
+        <text class="a5mX" x="480" y="329">of a trust relationship.</text>
+
+        <rect x="30" y="374" width="820" height="56" rx="12" fill="#DFF1F2" stroke="#1E8A93" stroke-width="1.5"/>
+        <text class="a5mXw" x="52" y="400">The second axis stops more projects than the first. Plenty of monitoring is lawful somewhere;</text>
+        <text class="a5mXw" x="52" y="420">very little of it survives the meeting where staff find out it has been running.</text>
+
+        <rect x="30" y="446" width="14" height="14" rx="3" fill="#1E8A93"/>
+        <text class="a5mN" x="54" y="458">Not "may we". Ask "would we say it out loud at an all-hands, and mean it".</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - legal footing on one axis, how it reads to staff on the other</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Three things monitoring engages at once<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Leaders check the first of these, occasionally the second, and are ambushed by the third.</p>
+        <ul>
+          <li><strong>It can be high-risk under the EU AI Act.</strong> Annex III point 4 is wider than hiring. It covers performance evaluation, task allocation, <strong>monitoring of workers</strong>, promotion and termination. So people analytics and monitoring tooling can land in the same high-risk category as a screening tool - with the risk management, data governance, documentation, record-keeping, transparency and human-oversight obligations that come with it. Annex III obligations were postponed to <strong>2 December 2027</strong> under the Digital Omnibus agreement; that is the position as of mid-2026, it has moved once already, so check before you act on it.</li>
+          <li><strong>It can engage consultation duties.</strong> In parts of Europe, introducing employee monitoring is not a decision the employer simply takes - works councils and employee representative bodies have a say, and the process matters as much as the outcome. Discovering this after procurement is an expensive way to learn it.</li>
+          <li><strong>It always engages trust, and no legal basis answers that.</strong> You can be entirely lawful and still have destroyed something. This is the axis with no compliance workaround, and it is the one that should be discussed first because it is the one that is irreversible.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The pilot that was never announced.</strong> A people-analytics team ran a six-week trial scoring internal message tone as an "engagement early-warning signal". It was scoped narrowly, the output was aggregate, and legal had signed it. Nobody told staff, on the reasoning that announcing a trial would distort the results - which was true, and which was also the tell. When it surfaced in a town hall question, the discussion was not about the score. It was about six weeks of reading, and about what else people had not been told. The tool was switched off that week; the question "what else are they running" outlasted it by a year.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The leader question, and how to ask it in the room<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When a monitoring proposal reaches you, the temptation is to send it to legal and wait. Do that, but do not <em>start</em> there, because a "yes, lawfully possible" tends to end the conversation before the important part of it happens.</p>
+        <table class="clean">
+          <thead><tr><th>Ask this</th><th>What it surfaces</th></tr></thead>
+          <tbody>
+            <tr><td>What decision changes because of this data?</td><td>Most monitoring proposals cannot name one. That is the finding.</td></tr>
+            <tr><td>Would we put this in the employee handbook, in plain words?</td><td>If the honest sentence is unwriteable, the practice is unrunnable.</td></tr>
+            <tr><td>What happens the day staff find out - because they will?</td><td>Turns an abstract risk into a specific meeting you can picture.</td></tr>
+            <tr><td>Does it attach to a named individual, or to a pattern?</td><td>The single most useful design fork in the whole conversation.</td></tr>
+            <tr><td>Who consults whom before this starts?</td><td>Works councils, employee reps, the DPO. Order matters and is often statutory.</td></tr>
+            <tr><td>What would make us switch it off?</td><td>A project with no stop condition is not a pilot, it is a rollout.</td></tr>
+          </tbody>
+        </table>
+        <div class="callout tip">
+          <strong>The all-hands test</strong>
+          Draft the two sentences you would say from the stage. Not the FAQ, not the policy annex - the two sentences, in your own voice, to the people it is done to. If you flinch while writing them, you have your answer, and you got it before spending anything.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "we anonymised it" is not the end of the argument<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Aggregation genuinely reduces risk, and Part 3 is built on it. But two things still travel with monitoring data even after the names come off.</p>
+        <ul>
+          <li><strong>Small groups re-identify themselves.</strong> An "aggregate" view of a seven-person team is a view of seven people, and everyone on that team knows it. Set a minimum group size before you build anything, publish the number, and hold it even when a director asks nicely.</li>
+          <li><strong>The collection is the intrusion, not just the output.</strong> Staff do not object to a chart. They object to being read. An aggregate dashboard built on always-on capture is still built on always-on capture, and the honest employee-facing sentence has to describe the capture.</li>
+        </ul>
+        <p>Which is why the strongest position is usually the boring one: collect less, keep it shorter, aggregate higher, and spend the credibility you save on the projects that actually change something.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: ATTRITION DONE DEFENSIBLY ============ -->
+  <section class="section" id="attrition">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · Kestrel's engineering attrition, done properly</span>
+      <h2>Attrition analytics you would defend in the open <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Kestrel is losing engineers faster than it is replacing them, in the middle of a 120-role hiring wave. That is a real problem and it deserves real analysis. The failure mode is not analysing it - it is analysing it in the shape of a watchlist. There is a version of this that is genuinely useful and entirely defensible, and the difference is three design choices made at the start.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Aggregate not named, drivers not scores, system not person<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Aggregate, not named.</strong> The unit of analysis is a team, a level, a tenure band, a manager span - never an individual with a risk percentage next to their name. A named score is a decision-support tool about one person's future, which is exactly the territory Annex III point 4 describes and exactly the thing that turns a manager into a surveillance operator. Set your minimum group size before you look at anything.</li>
+          <li><strong>Drivers, not scores.</strong> The output you want is "engineers at level 3 with no internal move in 24 months leave at roughly twice the rate of their peers", not "Priya: 71% flight risk". The first sentence tells you to build an internal mobility path. The second tells a manager to behave strangely towards Priya.</li>
+          <li><strong>Used to change the system, not to watch a person.</strong> Write down, in advance, what you will do with the finding. If the answer is "have a conversation with the at-risk individuals", stop - you have designed a watchlist with an analytics wrapper. If the answer is "fix the level 3 progression gap", you have designed people analytics.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The retention bonus that taught the wrong lesson.</strong> One company built named flight-risk scores and used them to target retention offers. It worked, briefly. Then people noticed the pattern - the offers went to the ones who had been visibly unhappy - and the lesson the whole engineering group learned was that the route to a raise ran through looking like you were leaving. Attrition went up. The model was accurate; the intervention taught a behaviour, and the behaviour was the actual output.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What Kestrel should actually build<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Tier 1 and de-identified tier 2 data, no monitoring feed, minimum group size of eight, and a written purpose that names the change you intend to make.</p>
+        <table class="clean">
+          <thead><tr><th>Question</th><th>Cut it by</th><th>Then what</th></tr></thead>
+          <tbody>
+            <tr><td>Who is leaving?</td><td>Level, tenure band, team size</td><td>Names the population, not the people</td></tr>
+            <tr><td>When do they go?</td><td>Months since last internal move or level change</td><td>Usually the sharpest signal Kestrel has</td></tr>
+            <tr><td>What do exits say?</td><td>Themes across a quarter, minimum eight responses</td><td>Themes are safe; verbatims are identifiable</td></tr>
+            <tr><td>Where is pay drifting?</td><td>Band position by cohort, never named</td><td>A comp fix is a system fix</td></tr>
+            <tr><td>Which managers?</td><td>Span, tenure, promotion rate - not sentiment</td><td>Coach the role, and be careful here</td></tr>
+          </tbody>
+        </table>
+        <p>The manager row is the one to argue about in the room. It is legitimate, it is where a lot of attrition actually lives, and it is also one small step from a named performance judgment built out of other people's data. Set the group-size floor and the "no individual output" rule <em>before</em> you run it, not after somebody sees an interesting name.</p>
+        <div class="callout tip">
+          <strong>Hand-off to the HR track</strong>
+          <strong>b9</strong> builds this for real - the skills inventory, internal mobility and attrition signals on Kestrel at week 24, with the aggregate discipline baked into the artifacts rather than bolted on. If your people-analytics team attends one HR-track session, make it that one.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Tier your own data estate, then mark the tool contact <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Do this for your own organisation, not for Kestrel. It takes twelve minutes and it is the only artifact from tonight that your DPO will ask you for. The output is not the tier list - it is the marked list underneath it.</p>
+
+    <div class="steps">
+      <div class="step"><p>List the data stores HR actually owns or touches. Not the ones on the architecture diagram - the ones people use. Include the shared drives, the exports, the trackers, the survey platform and the two spreadsheets everyone pretends are temporary.</p></div>
+      <div class="step"><p>Put each one in a tier: 1 ordinary records, 2 pay, 3 performance and grievance, 4 health and accommodations, 5 monitoring output and protected-characteristic data. Anything that spans tiers takes the highest tier it contains, which is the whole reason the full HRIS export is a tier 4 object.</p></div>
+      <div class="step"><p>Now the real step. Against each store, write every AI or automation tool that currently touches it - including the ones nobody calls AI: the survey platform's summariser, the ATS ranking feature, the note-taker in your one-to-ones, the browser extension somebody installed.</p></div>
+      <div class="step"><p>Highlight every line where a tool touches tier 3 or worse. That list is the output of this session. Do not fix it in the room.</p></div>
+      <div class="step"><p>For each highlighted line, name one owner and one date. Not a remediation plan - a name and a date. The plan is a3's territory and the pilot is a6's.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ Try it now - structure the estate review, with no real data in it</span>You are helping me structure an HR data review. You will not see any real data, and you
+must not ask for any.
+
+CONTEXT: I am the HR director of a 400-person services firm scaling to 600. I am sorting
+our people-data estate into five tiers by worst-case harm: 1 ordinary employment records,
+2 pay, 3 performance and grievance, 4 health and accommodations, 5 monitoring output and
+protected-characteristic data.
+
+DO THIS
+- Give me the list of data stores an HR function of this size typically holds, including
+  the informal ones people forget: exports, trackers, shared drives, survey platforms,
+  note-takers, ATS features nobody switched off.
+- For each, say which tier it most often lands in, and what makes it jump a tier.
+- Then give me the questions I should ask each system owner to find out whether any AI
+  or automation feature is already reading it.
+- Flag anything where reuse of the data would be a new purpose rather than the original one.
+
+DO NOT
+- Ask me to paste any record, extract, name or free text. If I offer, refuse and tell me why.
+- Assert what is lawful in my jurisdiction. Name the question and who I should ask.</div>
+
+    <div class="prompt-box bad"><span class="label">The version that turns a review into an incident</span>Here is our full HRIS export (400 rows - names, salaries, performance ratings, sick leave, open grievances). Analyse it and tell me who is at risk of leaving and who is underperforming.</div>
+
+    <div class="callout tip">
+      <strong>Why the second one fails five ways in one line</strong>
+      It carries tier 2, 3 and 4 data into a tool in a single paste. It reuses data collected for payroll and case management for a completely new purpose. It takes everything rather than the minimum. It asks for named individual predictions, which is the design choice Part 3 exists to prevent. And it produces judgments about people who never knew the question was asked. It is also, as always, the most tempting prompt on the page.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write the employee-facing paragraph <span class="tag demo">★ 10 min · build your own</span></h2>
+    </div>
+    <p class="lede">Same discipline as the candidate notice in b1, pointed inward. Four things, in plain words: what AI is used for on employee data here, what it is never used for, that a person decides, and who to ask. Under 150 words. If a sentence is hard to write honestly, you have not found a wording problem - you have found a practice problem.</p>
+
+    <div class="steps">
+      <div class="step"><p>Write the "what we use it for" sentences first, and make them specific enough to be checkable. "To improve HR processes" is not a sentence, it is a shrug.</p></div>
+      <div class="step"><p>Write the "what we never use it for" sentences. These are the ones people actually read, and they are the ones that buy you credibility for the first set.</p></div>
+      <div class="step"><p>Write the human sentence: which decisions are made by a named person, and that a model does not decide pay, rating, promotion or exit.</p></div>
+      <div class="step"><p>Write the route: who to ask, how to object, how to request a human review. A named team or role, not a mailbox nobody answers.</p></div>
+      <div class="step"><p>Now audit it line by line against what actually happens today. Every sentence you cannot honestly write is this session's finding, and it goes on the list from Demo 1.</p></div>
+    </div>
+
+    <div class="prompt-box good"><span class="label">★ The employee-facing paragraph - starter, then edit hard</span>HOW WE USE AI ON EMPLOYEE DATA AT [COMPANY]
+
+We use AI assistance to draft things: job descriptions, interview guides, onboarding
+plans, learning material, and first drafts of written feedback that a manager then
+rewrites and owns.
+
+We use aggregate people data - never one person's record - to understand patterns such
+as why teams lose people, and we use those patterns to change how we work.
+
+We do not use AI to score, rank or predict anything about you as a named individual.
+We do not read your messages or analyse their tone. We do not put health, accommodation,
+grievance or disciplinary information into these tools.
+
+Decisions about pay, performance ratings, promotion and leaving are made by named people
+who can explain their reasons from evidence, and who record them.
+
+If you want to know what is held about you, object to a use, or ask for a human review,
+contact [named role] at [route]. You will get an answer, not a form.</div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The sentence that could not be written.</strong> A people team drafting this paragraph got stuck on "we do not read your messages". They did not, deliberately - but the collaboration suite had shipped an analytics feature eighteen months earlier and it had been on by default the whole time. Nobody had chosen it, nobody was using the output, and the honest paragraph was still unwriteable until it was switched off. That is the entire value of this exercise: it audits reality rather than intent, and it does it for the price of one hard afternoon.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 45-60 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the tier map for your real estate, including the informal stores. Send it to your DPO with one question: "is anything on here being used for a purpose it was not collected for?"</li>
+      <li>Take the tier 3-or-worse contact list from Demo 1 and get a name and a date against every line. That is your whole obligation this week.</li>
+      <li>Find out what monitoring capability you already own and have not switched on - in the collaboration suite, the endpoint tooling, the survey platform. Most organisations own more than they have decided to use, and the decision was never actually taken.</li>
+      <li>Ask whether any employee monitoring in your organisation triggers a consultation duty, and with whom. If nobody knows, that is the finding.</li>
+      <li>Write your employee-facing paragraph and read it out loud to one person outside HR. Watch their face on the "we do not" sentences.</li>
+      <li>Before a6: pick the one team and the one artifact you would pilot with. You will need both next session.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from public regulation and vendor documentation. Certification content and any actual legal position stay with their owners. <strong>This course is education for HR leaders, not legal advice</strong>, obligations vary by jurisdiction, and the dates below have already moved once. Verify the current position before you act on anything here. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR + Singapore PDPA - lawful basis, purpose, minimisation, retention</span><span class="note">Part 1 · the five tiers and the boundary</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act - Annex III point 4 monitoring and worker-management scope</span><span class="note">Part 2 · monitoring can be high-risk; obligations moved to 2 Dec 2027</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">NYC Local Law 144 - AEDT audit, public summary, candidate notice</span><span class="note">Part 2 · contrast with the live obligation; full depth in a2-a3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">HR track b9 - L&amp;D, internal mobility and attrition signals</span><span class="note">Part 3 · where the aggregate attrition work gets built</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your analytics lead proposes reusing badge and login data - collected for building security - to study attrition. What is the first objection?</p>
+      <button class="qopt" type="button">A · None, the data is already lawfully held so the analysis is fine</button>
+      <button class="qopt" type="button">B · The data is probably too messy to be useful</button>
+      <button class="qopt" type="button">C · It was collected for one purpose and this is a new one, which needs its own basis and its own conversation</button>
+      <p class="qwhy">Purpose limitation. "We already hold it" answers a storage question, not a use question. Anonymising helps but does not create a purpose, and at team size the anonymity is thinner than it looks.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Legal confirms a productivity-scoring tool would be lawful in your main jurisdiction. What have you learned?</p>
+      <button class="qopt" type="button">A · That you can proceed, since the compliance question is settled</button>
+      <button class="qopt" type="button">B · One of three things. Consultation duties may still apply, and the trust question has no legal answer at all</button>
+      <button class="qopt" type="button">C · That the tool has been assessed as low-risk under the AI Act</button>
+      <p class="qwhy">Worker monitoring sits inside Annex III point 4, so high-risk obligations can attach; consultation duties apply in some jurisdictions; and the all-hands question is untouched by any of it. Lawful and defensible are different tests, and the second one is the one that ends projects.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which attrition-analytics design is the defensible one?</p>
+      <button class="qopt" type="button">A · Aggregate cohorts above a minimum group size, reporting drivers, used to change a system</button>
+      <button class="qopt" type="button">B · Named flight-risk scores shared privately with each line manager for a supportive conversation</button>
+      <button class="qopt" type="button">C · Named scores, as long as every employee has consented in their contract</button>
+      <p class="qwhy">Aggregate, drivers, system. A named score is decision support about one person's future, it hands managers something they cannot use well, and consent buried in an employment contract is the weakest ground you could stand on given the power imbalance.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The five tiers</b><span>ordinary records · pay · performance and grievance · health · monitoring and DEI data.</span></div>
+      <div class="cheat-item"><b>What may enter</b><span>tier 1 and de-identified tier 2, with a basis and minimum fields. Very little else.</span></div>
+      <div class="cheat-item"><b>The spine</b><span>lawful basis, purpose limitation, minimisation, retention, and limits on decisions without a human.</span></div>
+      <div class="cheat-item"><b>The tier 5 trap</b><span>monitoring data was collected for one purpose and is tempting for another. New use, new basis.</span></div>
+      <div class="cheat-item"><b>Monitoring engages three things</b><span>AI Act Annex III point 4, consultation duties in places, and trust everywhere.</span></div>
+      <div class="cheat-item"><b>The real test</b><span>not "may we" but "what happens the day staff find out, and would we defend it out loud".</span></div>
+      <div class="cheat-item"><b>Attrition, done right</b><span>aggregate not named, drivers not scores, used to change the system not to watch a person.</span></div>
+      <div class="cheat-item"><b>The unwriteable sentence</b><span>any line you cannot honestly put in the employee notice is a finding, not a wording problem.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 5 of 6 · learn-ai-hr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a4-fairness-in-practice.html">← Previous: Fairness in practice</a> &nbsp;·&nbsp; <a href="a6-rollout-to-hr.html">Next: Rolling it out to an HR function →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
